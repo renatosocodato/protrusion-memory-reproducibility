@@ -1,0 +1,340 @@
+{
+  "study_doi": "10.1371/journal.pone.0135204",
+  "source_doi": "10.1371/journal.pone.0135204.s001",
+  "source_sha256": "5d6cda93f76ca04c02f71459f4fab87365b99d2b6b9f8a420ecc6fbeb1d7d4d3",
+  "fit": {
+    "schema": "forecast-v1",
+    "software_version": "1.4.0",
+    "plan_sha256": "df5baa2beca1203f92031a5b2fd477ecdc9eb89fcc02cbe374155f577da8d889",
+    "calibration_sha256": "4f253ba43bc65f66c56e42838caa484c4c276ccfdb8b85518fbd38f3e3b0162a",
+    "calibration_preparations": [
+      "20110617",
+      "20110705",
+      "20110727",
+      "20110801",
+      "20110803",
+      "20110807",
+      "20110810",
+      "20110815",
+      "20110818",
+      "20110824",
+      "20110827",
+      "20110830"
+    ],
+    "heldout_preparations_reserved": [
+      "20110902",
+      "20110906",
+      "20110914",
+      "20110918",
+      "20120110",
+      "20120128",
+      "20120210"
+    ],
+    "clock": {
+      "sample_s": 300.0,
+      "horizon_s": 300.0,
+      "prefix_frames": 6,
+      "motion_delay_frames": 1,
+      "motion_unit": "um2"
+    },
+    "counts": {
+      "preparations": 12,
+      "cells": 90,
+      "origins": 4393
+    },
+    "coefficients": {
+      "motion_only": [
+        0.4984218364064012
+      ],
+      "actin_modulated": [
+        0.49465772693309107,
+        17.249795752651288
+      ]
+    },
+    "rank": {
+      "motion_only": 1,
+      "actin_modulated": 2
+    }
+  },
+  "score": {
+    "schema": "forecast-v1",
+    "software_version": "1.4.0",
+    "fit_sha256": "92bcb01da4871ec65fb6dac8b7a20b202902b9777d5c3a81bbee16d092c9e0cd",
+    "heldout_sha256": "0d3e3ed3af28530a83a4a47ca469380a7b329c295e3e69e5de428ac64d7ad2b3",
+    "heldout_preparations": [
+      "20110902",
+      "20110906",
+      "20110914",
+      "20110918",
+      "20120110",
+      "20120128",
+      "20120210"
+    ],
+    "clock": {
+      "sample_s": 300.0,
+      "horizon_s": 300.0,
+      "prefix_frames": 6,
+      "motion_delay_frames": 1,
+      "motion_unit": "um2"
+    },
+    "counts": {
+      "preparations": 7,
+      "cells": 32,
+      "origins": 1131
+    },
+    "candidates": {
+      "stationary": {
+        "scaled_mse": 2280.8861555077738,
+        "scaled_rmse": 47.75862388624461,
+        "channel_rmse": {
+          "protrusion": 47.75862388624461
+        },
+        "channel_mean_signed_error": {
+          "protrusion": -9.122800760799922
+        }
+      },
+      "persistence": {
+        "scaled_mse": 2988.2316144033275,
+        "scaled_rmse": 54.66472001577734,
+        "channel_rmse": {
+          "protrusion": 54.66472001577734
+        },
+        "channel_mean_signed_error": {
+          "protrusion": -2.502872128829801
+        }
+      },
+      "motion_only": {
+        "scaled_mse": 2111.7701710764413,
+        "scaled_rmse": 45.954000599256226,
+        "channel_rmse": {
+          "protrusion": 45.954000599256226
+        },
+        "channel_mean_signed_error": {
+          "protrusion": -5.823283775174058
+        }
+      },
+      "actin_modulated": {
+        "scaled_mse": 2122.0457912608344,
+        "scaled_rmse": 46.06566824936804,
+        "channel_rmse": {
+          "protrusion": 46.06566824936804
+        },
+        "channel_mean_signed_error": {
+          "protrusion": -5.545790092783369
+        }
+      }
+    },
+    "by_preparation": {
+      "stationary": {
+        "20110902": {
+          "rmse": 46.64075793493042,
+          "preparations": 1,
+          "cells": 3,
+          "origins": 140
+        },
+        "20110906": {
+          "rmse": 51.06053465719176,
+          "preparations": 1,
+          "cells": 4,
+          "origins": 121
+        },
+        "20110914": {
+          "rmse": 31.543786953311127,
+          "preparations": 1,
+          "cells": 4,
+          "origins": 179
+        },
+        "20110918": {
+          "rmse": 38.821401072861214,
+          "preparations": 1,
+          "cells": 6,
+          "origins": 185
+        },
+        "20120110": {
+          "rmse": 41.69669354855875,
+          "preparations": 1,
+          "cells": 6,
+          "origins": 260
+        },
+        "20120128": {
+          "rmse": 47.340545307503675,
+          "preparations": 1,
+          "cells": 2,
+          "origins": 96
+        },
+        "20120210": {
+          "rmse": 68.56975593380292,
+          "preparations": 1,
+          "cells": 7,
+          "origins": 150
+        }
+      },
+      "persistence": {
+        "20110902": {
+          "rmse": 53.73901381943559,
+          "preparations": 1,
+          "cells": 3,
+          "origins": 140
+        },
+        "20110906": {
+          "rmse": 55.100170126459965,
+          "preparations": 1,
+          "cells": 4,
+          "origins": 121
+        },
+        "20110914": {
+          "rmse": 37.14283017402446,
+          "preparations": 1,
+          "cells": 4,
+          "origins": 179
+        },
+        "20110918": {
+          "rmse": 49.85378946164295,
+          "preparations": 1,
+          "cells": 6,
+          "origins": 185
+        },
+        "20120110": {
+          "rmse": 40.950007542956,
+          "preparations": 1,
+          "cells": 6,
+          "origins": 260
+        },
+        "20120128": {
+          "rmse": 61.32183151571123,
+          "preparations": 1,
+          "cells": 2,
+          "origins": 96
+        },
+        "20120210": {
+          "rmse": 75.4417036614451,
+          "preparations": 1,
+          "cells": 7,
+          "origins": 150
+        }
+      },
+      "motion_only": {
+        "20110902": {
+          "rmse": 44.54350276496721,
+          "preparations": 1,
+          "cells": 3,
+          "origins": 140
+        },
+        "20110906": {
+          "rmse": 46.582513101150944,
+          "preparations": 1,
+          "cells": 4,
+          "origins": 121
+        },
+        "20110914": {
+          "rmse": 30.938856268700363,
+          "preparations": 1,
+          "cells": 4,
+          "origins": 179
+        },
+        "20110918": {
+          "rmse": 39.65191289842941,
+          "preparations": 1,
+          "cells": 6,
+          "origins": 185
+        },
+        "20120110": {
+          "rmse": 36.07507586735592,
+          "preparations": 1,
+          "cells": 6,
+          "origins": 260
+        },
+        "20120128": {
+          "rmse": 49.851226200777035,
+          "preparations": 1,
+          "cells": 2,
+          "origins": 96
+        },
+        "20120210": {
+          "rmse": 65.66806039367306,
+          "preparations": 1,
+          "cells": 7,
+          "origins": 150
+        }
+      },
+      "actin_modulated": {
+        "20110902": {
+          "rmse": 44.92975271823687,
+          "preparations": 1,
+          "cells": 3,
+          "origins": 140
+        },
+        "20110906": {
+          "rmse": 46.65447743183347,
+          "preparations": 1,
+          "cells": 4,
+          "origins": 121
+        },
+        "20110914": {
+          "rmse": 31.109469921266978,
+          "preparations": 1,
+          "cells": 4,
+          "origins": 179
+        },
+        "20110918": {
+          "rmse": 39.634460124596906,
+          "preparations": 1,
+          "cells": 6,
+          "origins": 185
+        },
+        "20120110": {
+          "rmse": 37.17341736188284,
+          "preparations": 1,
+          "cells": 6,
+          "origins": 260
+        },
+        "20120128": {
+          "rmse": 49.58104664103219,
+          "preparations": 1,
+          "cells": 2,
+          "origins": 96
+        },
+        "20120210": {
+          "rmse": 65.42296922744376,
+          "preparations": 1,
+          "cells": 7,
+          "origins": 150
+        }
+      }
+    },
+    "actin_modulated_minus": {
+      "stationary": {
+        "rmse_difference": -1.6929556368765688,
+        "paired_mse_difference_by_preparation": {
+          "20110902": -156.67762142286165,
+          "20110906": -430.5379350408225,
+          "20110914": -27.211376573666485,
+          "20110918": 63.78924810831245,
+          "20120110": -356.7512945216881,
+          "20120128": 217.15295600840136,
+          "20120210": -421.64652628624845
+        },
+        "leave_one_preparation_out_rmse_difference_range": [
+          -2.374601655465561,
+          -1.2190467949013097
+        ]
+      },
+      "motion_only": {
+        "rmse_difference": 0.11166765011181212,
+        "paired_mse_difference_by_preparation": {
+          "20110902": 34.55904074927207,
+          "20110906": 6.709737618559302,
+          "20110914": 10.586291566915065,
+          "20110918": -1.383767136370352,
+          "20120110": 80.45185952524707,
+          "20120128": -26.86456770082941,
+          "20120210": -32.12925333204021
+        },
+        "leave_one_preparation_out_rmse_difference_range": [
+          -0.014985465553422728,
+          0.2070722519922441
+        ]
+      }
+    }
+  }
+}

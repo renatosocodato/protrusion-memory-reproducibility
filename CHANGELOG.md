@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.4.0
+
+- Added causal-prefix forecast fitting and held-out scoring on paired actin and motion records.
+- Added the H1299 benchmark, with stationary, persistence, movement-history and actin-modulated forecasts.
+- Preserved the paper and its original software citation.
+
 ## 1.3.0
 
 - Added bounded calibration and separate scoring of frozen fits on held-out preparations.

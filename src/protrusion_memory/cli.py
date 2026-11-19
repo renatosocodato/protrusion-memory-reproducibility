@@ -11,7 +11,7 @@ import sys
 import tomllib
 
 from .model import Model, Pulse, Reporter, compare_reporter, simulate_pair
-from . import calibration, portable
+from . import calibration, forecast, portable
 
 
 def load_config(path):
@@ -136,6 +136,13 @@ def main(argv=None):
     calibrate.add_argument("--output", type=Path, required=True, help="new JSON file for the frozen fit")
     score.add_argument("--fit", type=Path, required=True, help="frozen JSON from calibrate")
     score.add_argument("--output", type=Path, help="new JSON report (default: stdout)")
+    forecast_fit = commands.add_parser("forecast-fit", help="fit temporal forecasters on calibration preparations")
+    forecast_score = commands.add_parser("forecast-score", help="score frozen forecasters on reserved preparations")
+    for command in (forecast_fit, forecast_score):
+        command.add_argument("--plan", type=Path, required=True, help="forecast-v1 TOML plan")
+        command.add_argument("--data", type=Path, required=True, help="paired time series CSV for this split")
+        command.add_argument("--output", type=Path, required=True, help="new JSON file")
+    forecast_score.add_argument("--fit", type=Path, required=True, help="frozen JSON from forecast-fit")
     args = parser.parse_args(argv)
     try:
         if args.command == "reproduce":
@@ -146,6 +153,12 @@ def main(argv=None):
                 result = calibration.fit(plan, args.data, installed_version)
             else:
                 result = calibration.score(plan, args.data, args.fit, installed_version)
+        elif args.command in ("forecast-fit", "forecast-score"):
+            plan = forecast.Plan(args.plan.resolve())
+            if args.command == "forecast-fit":
+                result = forecast.fit(plan, args.data, installed_version)
+            else:
+                result = forecast.score(plan, args.data, args.fit, installed_version)
         else:
             result = command_result(args, installed_version)
         text = json.dumps(result, indent=2, allow_nan=False) + "\n"
