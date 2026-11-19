@@ -1,0 +1,125 @@
+{
+  "data_kind": "synthetic assigned parameters",
+  "coefficient_order": [
+    "actin_mediated",
+    "direct"
+  ],
+  "challenge_order": [
+    "mediated_only",
+    "direct_only",
+    "both"
+  ],
+  "designs": {
+    "fast_1s": {
+      "samples": 319,
+      "equal_area_case_l2_shape_difference_um": 2.9328350067663456,
+      "acquisition": {
+        "acquisition_aware": {
+          "rank": 2,
+          "relative_smallest_singular_value": 0.25497906332913867,
+          "estimated_components": [
+            [
+              1.0000000000000007,
+              6.819141291207942e-17
+            ],
+            [
+              -5.0897323150305444e-17,
+              1.0000000000000002
+            ],
+            [
+              1.0000000000000004,
+              1.0000000000000002
+            ]
+          ]
+        },
+        "instantaneous": {
+          "rank": 2,
+          "relative_smallest_singular_value": 0.25598661056920086,
+          "estimated_components": [
+            [
+              1.114725100898378,
+              -0.1168898808147662
+            ],
+            [
+              0.18349514904622471,
+              0.8497266916632035
+            ],
+            [
+              1.298220249944603,
+              0.732836810848437
+            ]
+          ]
+        }
+      }
+    },
+    "guv_clock": {
+      "samples": 5,
+      "equal_area_case_l2_shape_difference_um": 0.10765677307016873,
+      "acquisition": {
+        "acquisition_aware": {
+          "rank": 2,
+          "relative_smallest_singular_value": 0.43480198475876763,
+          "estimated_components": [
+            [
+              0.9999999999999997,
+              -7.910834414191658e-17
+            ],
+            [
+              -1.2853733245087615e-16,
+              1.0
+            ],
+            [
+              1.0,
+              1.0
+            ]
+          ]
+        },
+        "instantaneous": {
+          "rank": 2,
+          "relative_smallest_singular_value": 0.2665171684223571,
+          "estimated_components": [
+            [
+              1.0918802388347881,
+              -0.07243793614687097
+            ],
+            [
+              0.5320755371051905,
+              0.1691479887464586
+            ],
+            [
+              1.6239557759399788,
+              0.09671005259958765
+            ]
+          ]
+        }
+      }
+    }
+  },
+  "guv_clock_phase_scan": [
+    {
+      "onset_fraction_of_frame": 0.0,
+      "relative_smallest_singular_value": 0.00016047566833649903,
+      "l2_shape_difference_um": 0.058416411782841036
+    },
+    {
+      "onset_fraction_of_frame": 0.25,
+      "relative_smallest_singular_value": 0.0005681503170861097,
+      "l2_shape_difference_um": 0.12473962011139428
+    },
+    {
+      "onset_fraction_of_frame": 0.5,
+      "relative_smallest_singular_value": 0.002192399046964932,
+      "l2_shape_difference_um": 0.22203332246943214
+    },
+    {
+      "onset_fraction_of_frame": 0.75,
+      "relative_smallest_singular_value": 0.011633767417680737,
+      "l2_shape_difference_um": 0.03836294189527007
+    },
+    {
+      "onset_fraction_of_frame": 0.99,
+      "relative_smallest_singular_value": 0.00454287948463512,
+      "l2_shape_difference_um": 0.05665602523141622
+    }
+  ]
+}

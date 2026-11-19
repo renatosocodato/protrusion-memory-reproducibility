@@ -80,21 +80,21 @@ def reproduction(args, installed_version):
 def command_result(args, installed_version):
     config = load_config(args.config)
     result = {"software_version": installed_version}
-    if config.get("schema") == portable.SCHEMA:
+    if config.get("schema") in portable.SCHEMAS:
         result["configuration"] = config
         if args.command == "simulate":
             if args.order is not None:
-                raise ValueError("declare pulse changes as modulations in the ode-v1 configuration")
+                raise ValueError("declare pulse changes as modulations in the ode-v1 or ode-v2 configuration")
             result.update(portable.simulate(config))
         else:
             if args.against is None:
-                raise ValueError("portable comparison requires --against with a second ode-v1 configuration")
+                raise ValueError("portable comparison requires --against with a second ode-v1 or ode-v2 configuration")
             other = load_config(args.against)
             result["against_configuration"] = other
             result.update(portable.compare(config, other))
     else:
         if args.command == "compare" and args.against is not None:
-            raise ValueError("--against requires two ode-v1 configurations")
+            raise ValueError("--against requires two ode-v1 or ode-v2 configurations")
         model, reporter = read_exact_config(config)
         result["model"] = asdict(model)
         if args.command == "simulate":
@@ -120,7 +120,7 @@ def main(argv=None):
         command.add_argument("--output", type=Path, help="new JSON file (default: standard output)")
     sim.add_argument("--order", choices=("uv", "vu"),
                      help="use configured windows (uv) or swap them (vu)")
-    compare.add_argument("--against", type=Path, help="second model in the ode-v1 schema")
+    compare.add_argument("--against", type=Path, help="second model in the ode-v1 or ode-v2 schema")
     reproduce = commands.add_parser("reproduce", help="rebuild the frozen paper workflow")
     reproduce.add_argument("--target", choices=("paper",), default="paper")
     reproduce.add_argument("--bundle", type=Path, default=Path.cwd(),

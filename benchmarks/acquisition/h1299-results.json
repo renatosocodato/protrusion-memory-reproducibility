@@ -1,0 +1,60 @@
+{
+  "data_kind": "public H1299 data + assigned observation operators",
+  "sample_s": 300.0,
+  "results": {
+    "matched_point": {
+      "counts": {
+        "preparations": 7,
+        "cells": 32,
+        "origins": 1067
+      },
+      "rmse": {
+        "motion_only": 48.117952533490985,
+        "actin_modulated": 48.24157482847444
+      },
+      "actin_increment": {
+        "rmse_difference": 0.12362229498345556,
+        "paired_mse_difference_by_preparation": {
+          "20110902": -0.6589305802003764,
+          "20110906": 6.357820656809508,
+          "20110914": 16.251188985997032,
+          "20110918": 0.5656487195722093,
+          "20120110": 56.17630204141642,
+          "20120128": 1.4105190636573752,
+          "20120210": 3.2827525248030724
+        },
+        "leave_one_preparation_out_rmse_difference_range": [
+          0.04546328642201303,
+          0.1585020789644247
+        ]
+      }
+    },
+    "coarse_acquisition_stress": {
+      "counts": {
+        "preparations": 7,
+        "cells": 32,
+        "origins": 1067
+      },
+      "rmse": {
+        "motion_only": 48.117952533490985,
+        "actin_modulated": 48.0730860207098
+      },
+      "actin_increment": {
+        "rmse_difference": -0.04486651278118359,
+        "paired_mse_difference_by_preparation": {
+          "20110902": 0.1913316446657518,
+          "20110906": 0.7783758337168365,
+          "20110914": 7.956246812274117,
+          "20110918": 2.270672733832953,
+          "20120110": 50.9517203890955,
+          "20120128": -62.25381503983226,
+          "20120210": -30.104827598844167
+        },
+        "leave_one_preparation_out_rmse_difference_range": [
+          -0.13585989389691377,
+          0.05582285426007161
+        ]
+      }
+    }
+  }
+}

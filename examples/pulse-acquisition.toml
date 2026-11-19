@@ -1,0 +1,48 @@
+schema = "ode-v2"
+
+[time]
+stop_s = 320
+sample_s = 1
+
+[states]
+a = 0
+h = 0
+
+[parameters]
+u = 0
+g = 0.05
+direct = 0
+
+[equations]
+a = "u - a/8"
+h = "g*a + direct*u - h/20"
+
+[[modulations]]
+parameter = "u"
+start_s = 130
+stop_s = 135
+operation = "set"
+value = 1
+
+[reporters.actin]
+expression = "a"
+response_s = 4
+initial = 0
+
+[reporters.membrane]
+expression = "h"
+
+[reporters.actuator_signal]
+expression = "u"
+
+[observations.actin]
+unit = "au"
+mix = {actin = 1, actuator_signal = 0.1}
+exposure_s = 0.7
+delay_s = 0.6
+
+[observations.deformation]
+unit = "um"
+mix = {membrane = 1}
+exposure_s = 0.7
+delay_s = 0.6

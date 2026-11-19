@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.6.0
+
+- Added causal reporter response, exposure, delay and linear channel mixing through `ode-v2`.
+- Enabled v2 models in simulation, comparison, calibration and scoring.
+- Added a direct-versus-mediated pulse benchmark and replay of G01 and H1299 actin–motion recordings.
+
 ## 1.5.1
 
 - Synchronized the title, text, significance statement and reading-copy layout with the final article prepared for Biophysical Journal.

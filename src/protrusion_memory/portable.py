@@ -1,6 +1,7 @@
 """Declarative deterministic ODEs, parameter interventions and observation maps."""
 
 import ast
+from bisect import bisect_right
 from dataclasses import dataclass
 from decimal import Decimal
 import keyword
@@ -10,9 +11,11 @@ import re
 
 import numpy as np
 from scipy import __version__ as scipy_version
-from scipy.integrate import solve_ivp
+from scipy.integrate import quad, solve_ivp
 
 SCHEMA = "ode-v1"
+ACQUISITION_SCHEMA = "ode-v2"
+SCHEMAS = (SCHEMA, ACQUISITION_SCHEMA)
 RTOL, ATOL = 1e-9, 1e-11
 BINARY = {ast.Add: operator.add, ast.Sub: operator.sub, ast.Mult: operator.mul,
           ast.Div: operator.truediv, ast.Pow: operator.pow}
@@ -104,12 +107,152 @@ def read_modulations(items, parameters, end):
     return mods
 
 
+@dataclass(frozen=True)
+class Reporter:
+    source: object
+    tau: float
+    index: int | None
+
+
+@dataclass(frozen=True)
+class Detector:
+    unit: str
+    operator: str
+    noise_sd: float | None
+    weights: dict
+    delay: Decimal
+    exposure: Decimal
+    index: int | None
+
+
+class Acquisition:
+    """Source response, detector mixing and a causal shutter."""
+
+    def __init__(self, config, symbols, y):
+        self.reporters = {}
+        self.detectors = {}
+        sources = table(config["reporters"], "reporters")
+        channels = table(config["observations"], "observations")
+        if len(sources) > 128 or len(channels) > 128:
+            raise ValueError("ode-v2 supports at most 128 reporters and 128 detectors")
+        for name, spec in sources.items():
+            table(spec, name, fields={"expression", "response_s", "initial"})
+            tau = number(spec.get("response_s", 0), f"{name} response_s")
+            if tau < 0 or (tau > 0) != ("initial" in spec):
+                raise ValueError(f"{name}: a positive response_s requires an explicit initial value")
+            self.reporters[name] = Reporter(expression(spec["expression"], symbols), tau, len(y) if tau else None)
+            if tau:
+                y.append(number(spec["initial"], f"{name} initial"))
+        self.exposures = {}
+        for name, spec in channels.items():
+            table(spec, name, fields={"unit", "operator", "noise_sd", "mix", "delay_s", "exposure_s"})
+            unit, kind, sd = channel_metadata(name, spec)
+            weights = {k: number(v, f"{name}/{k} mix coefficient")
+                       for k, v in table(spec["mix"], f"{name} mix", fields=sources.keys()).items()}
+            if not any(weights.values()):
+                raise ValueError(f"{name}: at least one mix coefficient must be nonzero")
+            delay = number(spec.get("delay_s", 0), f"{name} delay_s")
+            exposure = number(spec.get("exposure_s", 0), f"{name} exposure_s")
+            if min(delay, exposure) < 0:
+                raise ValueError(f"{name}: delay_s and exposure_s must be nonnegative")
+            detector = Detector(unit, kind, sd, weights, Decimal(str(delay)), Decimal(str(exposure)),
+                                len(y) if exposure else None)
+            self.detectors[name] = detector
+            if exposure:
+                self.exposures[name] = detector
+                y.append(0.0)
+
+    def response(self, name, context, values):
+        reporter = self.reporters[name]
+        return reporter.source(context) if reporter.index is None else values[reporter.index]
+
+    def signal(self, detector, context, values):
+        return math.fsum(weight * self.response(name, context, values)
+                         for name, weight in detector.weights.items() if weight)
+
+    def derivatives(self, context, values):
+        response = [(reporter.source(context) - values[reporter.index]) / reporter.tau
+                    for reporter in self.reporters.values() if reporter.tau]
+        return response + [self.signal(d, context, values) for d in self.exposures.values()]
+
+    def observe(self, times, edges, solutions, at_time):
+        def segment(time):
+            return min(bisect_right(edges, time) - 1, len(solutions) - 1)
+
+        def average(detector, left, right, exposure):
+            if left >= right:
+                raise ValueError("exposure is below floating-point clock resolution")
+            first, last = segment(left), segment(right)
+            areas = []
+            for i in range(first, last + 1):
+                l, r = max(left, edges[i]), min(right, edges[i + 1])
+                if l == r:
+                    continue
+                solve = solutions[i]
+                before, after = solve(l)[detector.index], solve(r)[detector.index]
+                area = after - before
+                if abs(area) <= 1e-7 * max(abs(before), abs(after)):
+                    # Avoid cancellation when shutter times nearly coincide on a long trajectory.
+                    def integrand(t):
+                        values = solve(t)
+                        return self.signal(detector, at_time(t, values), values)
+                    area, _ = quad(integrand, l, r, epsabs=ATOL, epsrel=RTOL)
+                areas.append(area)
+            return math.fsum(areas) / exposure
+
+        observed = {}
+        for name, detector in self.detectors.items():
+            complete_times, readings = [], []
+            for time in times:
+                end = Decimal(str(time)) - detector.delay
+                start = end - detector.exposure
+                if start < 0:
+                    continue
+                endpoint = float(end)
+                if detector.index is None:
+                    last = solutions[segment(endpoint)](endpoint)
+                    value = self.signal(detector, at_time(endpoint, last), last)
+                else:
+                    value = average(detector, float(start), endpoint, float(detector.exposure))
+                readings.append(value)
+                complete_times.append(time)
+            if len(complete_times) <= int(detector.operator == "interval_rate"):
+                raise ValueError(f"{name}: acquisition leaves no samples on the declared clock")
+            observed[name] = observation(name, detector.unit, detector.operator, detector.noise_sd,
+                                         np.asarray(complete_times), readings)
+        return observed
+
+
+def channel_metadata(name, channel):
+    unit = channel["unit"]
+    kind = channel.get("operator", "point")
+    if not isinstance(unit, str) or not unit.strip() or kind not in ("point", "interval_rate"):
+        raise ValueError(f"{name} requires a unit and a point or interval_rate operator")
+    sd = number(channel["noise_sd"], f"{name} noise_sd") if "noise_sd" in channel else None
+    if sd is not None and sd <= 0:
+        raise ValueError(f"{name} noise_sd must be positive")
+    return unit, kind, sd
+
+
+def observation(name, unit, kind, sd, times, values):
+    rate = kind == "interval_rate"
+    series = (np.diff(values) / np.diff(times)).tolist() if rate else list(map(float, values))
+    for value in series:
+        number(value, f"{name} observation")
+    return {"unit": unit, "operator": kind, "noise_sd": sd,
+            "time_s": times[int(rate):].tolist(), "values": series}
+
+
 def simulate(config):
     """Solve a portable TOML system and return observed channels in declared units."""
-    table(config, "configuration",
-          fields={"schema", "time", "states", "parameters", "equations", "observations", "modulations"})
-    if config.get("schema") != SCHEMA:
-        raise ValueError(f"expected schema {SCHEMA}")
+    table(config, "configuration")
+    schema = config.get("schema")
+    fields = {"schema", "time", "states", "parameters", "equations", "observations", "modulations"}
+    if schema == ACQUISITION_SCHEMA:
+        fields.add("reporters")
+    table(config, "configuration", fields=fields)
+    if schema not in SCHEMAS:
+        raise ValueError(f"expected schema {SCHEMA} or {ACQUISITION_SCHEMA}")
     clock = table(config["time"], "time", fields={"stop_s", "sample_s"})
     end = number(clock["stop_s"], "stop_s")
     step = number(clock["sample_s"], "sample_s")
@@ -142,16 +285,11 @@ def simulate(config):
     derivatives = [expression(eq[name], symbols) for name in states]
     modulations = read_modulations(config.get("modulations", []), parameters, end)
     channels = {}
-    for name, channel in table(config["observations"], "observations").items():
-        table(channel, name, fields={"expression", "unit", "operator", "noise_sd"})
-        unit = channel["unit"]
-        kind = channel.get("operator", "point")
-        if not isinstance(unit, str) or not unit.strip() or kind not in ("point", "interval_rate"):
-            raise ValueError(f"{name} requires a unit and a point or interval_rate operator")
-        sd = number(channel["noise_sd"], f"{name} noise_sd") if "noise_sd" in channel else None
-        if sd is not None and sd <= 0:
-            raise ValueError(f"{name} noise_sd must be positive")
-        channels[name] = (unit, kind, sd, expression(channel["expression"], symbols))
+    acquisition = Acquisition(config, symbols, y) if schema == ACQUISITION_SCHEMA else None
+    if acquisition is None:
+        for name, channel in table(config["observations"], "observations").items():
+            table(channel, name, fields={"expression", "unit", "operator", "noise_sd"})
+            channels[name] = (*channel_metadata(name, channel), expression(channel["expression"], symbols))
 
     def parameters_at(time):
         active = parameters.copy()
@@ -161,14 +299,21 @@ def simulate(config):
                                                 f"modulated {item.parameter}")
         return active
 
+    def context(time, values, active):
+        return {**active, "t": float(time), **dict(zip(states, map(float, values)))}
+
     edges = sorted({0.0, end, *(m.start_s for m in modulations), *(m.stop_s for m in modulations)})
     traces = np.empty((len(times), len(states)))
+    solutions = []
     for left, right in zip(edges, edges[1:]):
         active = parameters_at(left)
 
         def rhs(time, values):
-            context = {**active, "t": float(time), **dict(zip(states, map(float, values)))}
-            return [equation(context) for equation in derivatives]
+            current = context(time, values, active)
+            rates = [equation(current) for equation in derivatives]
+            if acquisition is not None:
+                rates.extend(acquisition.derivatives(current, values))
+            return rates
 
         solution = solve_ivp(rhs, (left, right), y, dense_output=True,
                              method="DOP853", rtol=RTOL, atol=ATOL)
@@ -176,25 +321,29 @@ def simulate(config):
             raise ValueError(f"ODE integration failed: {solution.message}")
         selected = (times >= left) & ((times < right) if right < end else (times <= right))
         if np.any(selected):
-            traces[selected] = solution.sol(times[selected]).T
+            traces[selected] = solution.sol(times[selected])[:len(states)].T
+        if acquisition is not None:
+            solutions.append(solution.sol)
         y = solution.y[:, -1]
+        if acquisition is not None:
+            y = y.copy()
+            for detector in acquisition.exposures.values():
+                y[detector.index] = 0.0
     if not np.isfinite(traces).all():
         raise ValueError("ODE trajectory contains non-finite values")
 
-    values = {name: [] for name in channels}
-    for time, state in zip(times, traces):
-        context = {**parameters_at(float(time)), "t": float(time), **dict(zip(states, map(float, state)))}
-        for name, (_, _, _, measure) in channels.items():
-            values[name].append(measure(context))
-    observed = {}
-    for name, (unit, kind, sd, _) in channels.items():
-        rate = kind == "interval_rate"
-        series = (np.diff(values[name]) / np.diff(times)).tolist() if rate else values[name]
-        for value in series:
-            number(value, f"{name} observation")
-        observed[name] = {"unit": unit, "operator": kind, "noise_sd": sd,
-                          "time_s": times[int(rate):].tolist(), "values": series}
-    return {"schema": SCHEMA, "time_s": times.tolist(), "states": dict(zip(states, traces.T.tolist())),
+    if acquisition is not None:
+        observed = acquisition.observe(times, edges, solutions,
+                                       lambda t, y: context(t, y, parameters_at(t)))
+    else:
+        values = {name: [] for name in channels}
+        for time, state in zip(times, traces):
+            current = context(time, state, parameters_at(float(time)))
+            for name, (_, _, _, measure) in channels.items():
+                values[name].append(measure(current))
+        observed = {name: observation(name, unit, kind, sd, times, values[name])
+                    for name, (unit, kind, sd, _) in channels.items()}
+    return {"schema": schema, "time_s": times.tolist(), "states": dict(zip(states, traces.T.tolist())),
             "observations": observed,
             "solver": {"method": "DOP853", "rtol": RTOL, "atol": ATOL, "scipy": scipy_version}}
 
@@ -210,9 +359,12 @@ def compare(left, right):
         if any(x[key] != y[key] for key in ("unit", "operator", "time_s", "noise_sd")):
             raise ValueError(f"{name}: observation units, operators, times and noise scales must match")
         residual = np.asarray(x["values"]) - np.asarray(y["values"])
+        if not len(residual):
+            raise ValueError(f"{name}: comparison requires at least one sample")
         rmse = math.hypot(*residual) / math.sqrt(len(residual))
         sd = x["noise_sd"]
         results[name] = {"unit": x["unit"], "samples": len(residual), "rmse": number(rmse, "RMSE"),
                          "max_absolute_difference": number(float(np.max(abs(residual))), "maximum deviation"),
                          "rmse_in_noise_sd": number(rmse / sd, "scaled RMSE") if sd is not None else None}
-    return {"schema": SCHEMA, "comparison": "deterministic expected observations", "channels": results}
+    schema = ACQUISITION_SCHEMA if ACQUISITION_SCHEMA in (left["schema"], right["schema"]) else SCHEMA
+    return {"schema": schema, "comparison": "deterministic expected observations", "channels": results}

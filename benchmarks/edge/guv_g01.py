@@ -17,7 +17,7 @@ SAMPLE_S = 65.58921813964844
 FRAMES = 28
 
 
-def extract(membrane_path, actin_path, output):
+def extract(membrane_path, actin_path, output, include_membrane=False):
     for path, expected in zip((membrane_path, actin_path), CHECKSUMS):
         if hashlib.sha256(path.read_bytes()).hexdigest() != expected:
             raise ValueError(f"source checksum mismatch for {path.name}")
@@ -32,7 +32,10 @@ def extract(membrane_path, actin_path, output):
         previous_ridge = None
         with output.open("x", newline="") as stream:
             writer = csv.writer(stream)
-            writer.writerow(["frame", "region", "radius_px", "radial_velocity_px_per_min", "actin_au"])
+            columns = ["frame", "region", "radius_px", "radial_velocity_px_per_min", "actin_au"]
+            if include_membrane:
+                columns.append("membrane_au")
+            writer.writerow(columns)
             mem_pages = ImageSequence.Iterator(membrane)
             act_pages = ImageSequence.Iterator(actin)
             for frame, (mem, act) in enumerate(zip(mem_pages, act_pages)):
@@ -58,10 +61,15 @@ def extract(membrane_path, actin_path, output):
                 intensity = local.reshape(8, 12).mean(axis=1)
                 position = np.where(good_sector, radii[ridge].reshape(8, 12).mean(axis=1), np.nan)
                 velocity = np.full(8, np.nan) if last is None else (position - last) * 60 / SAMPLE_S
+                if include_membrane:
+                    ridge_signal = profile[np.arange(len(ridge)), ridge].reshape(8, 12).mean(axis=1)
                 for region in range(8):
-                    writer.writerow([frame, region, position[region] if good_sector[region] else "",
-                                     velocity[region] if np.isfinite(velocity[region]) else "",
-                                     intensity[region] if good_sector[region] else ""])
+                    row = [frame, region, position[region] if good_sector[region] else "",
+                           velocity[region] if np.isfinite(velocity[region]) else "",
+                           intensity[region] if good_sector[region] else ""]
+                    if include_membrane:
+                        row.append(ridge_signal[region] if good_sector[region] else "")
+                    writer.writerow(row)
                 last = position
 
 
@@ -70,5 +78,6 @@ if __name__ == "__main__":
     parser.add_argument("membrane", type=Path)
     parser.add_argument("actin", type=Path)
     parser.add_argument("output", type=Path)
+    parser.add_argument("--include-membrane", action="store_true", help="also export local mCherry")
     args = parser.parse_args()
-    extract(args.membrane, args.actin, args.output)
+    extract(args.membrane, args.actin, args.output, args.include_membrane)

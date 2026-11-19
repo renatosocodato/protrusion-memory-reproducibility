@@ -13,7 +13,7 @@ import tomllib
 import numpy as np
 from scipy.optimize import least_squares
 
-from .portable import SCHEMA as ODE_SCHEMA, number, simulate, table
+from .portable import SCHEMAS as ODE_SCHEMAS, number, simulate, table
 
 SCHEMA = "calibration-v1"
 MODELS = ("stationary", "modulated")
@@ -82,8 +82,8 @@ class Plan:
         for candidate in MODELS:
             item = table(models[candidate], candidate, fields={"path", "fit"})
             model, model_hash = load_table(path.parent / item["path"])
-            if model.get("schema") != ODE_SCHEMA:
-                raise ValueError(f"{candidate} must use the {ODE_SCHEMA} schema")
+            if model.get("schema") not in ODE_SCHEMAS:
+                raise ValueError(f"{candidate} must use the ode-v1 or ode-v2 schema")
             self.identity["model_sha256"][candidate] = model_hash
             self.models[candidate] = model
             specs = item.get("fit", {})
