@@ -11,13 +11,17 @@ import sys
 import tomllib
 
 from .model import Model, Pulse, Reporter, compare_reporter, simulate_pair
+from . import portable
 
 
-def read_config(path):
+def load_config(path):
     if path is None:
-        return Model(), Reporter()
+        return {}
     with path.open("rb") as stream:
-        sections = tomllib.load(stream)
+        return tomllib.load(stream)
+
+
+def read_exact_config(sections):
     unknown = sections.keys() - {"model", "gate_pulse", "actin_pulse", "reporter"}
     if unknown:
         raise ValueError(f"unknown TOML section: {', '.join(sorted(unknown))}")
@@ -78,13 +82,14 @@ def main(argv=None):
     parser = argparse.ArgumentParser(prog="protrusion-memory", description=__doc__)
     parser.add_argument("--version", action="version", version=f"%(prog)s {installed_version}")
     commands = parser.add_subparsers(dest="command", required=True)
-    sim = commands.add_parser("simulate", help="simulate the exact linear model pair")
-    compare = commands.add_parser("compare", help="compare the calibrated reporter predictions")
+    sim = commands.add_parser("simulate", help="simulate the exact pair or a declarative ode-v1 model")
+    compare = commands.add_parser("compare", help="compare the exact-pair reporter or two declarative models")
     for command in (sim, compare):
-        command.add_argument("--config", type=Path, help="optional TOML with model and reporter settings")
+        command.add_argument("--config", type=Path, help="optional exact-pair or ode-v1 TOML configuration")
         command.add_argument("--output", type=Path, help="new JSON file (default: standard output)")
-    sim.add_argument("--order", choices=("uv", "vu"), default="uv",
+    sim.add_argument("--order", choices=("uv", "vu"),
                      help="use configured windows (uv) or swap them (vu)")
+    compare.add_argument("--against", type=Path, help="second model in the ode-v1 schema")
     reproduce = commands.add_parser("reproduce", help="rebuild the frozen paper workflow")
     reproduce.add_argument("--target", choices=("paper",), default="paper")
     reproduce.add_argument("--bundle", type=Path, default=Path.cwd(),
@@ -96,23 +101,40 @@ def main(argv=None):
     try:
         if args.command == "reproduce":
             return reproduction(args, installed_version)
-        model, reporter = read_config(args.config)
-        result = {"software_version": installed_version, "model": asdict(model)}
-        if args.command == "simulate":
-            result.update(simulation(model, args.order))
+        config = load_config(args.config)
+        result = {"software_version": installed_version}
+        if config.get("schema") == portable.SCHEMA:
+            result["configuration"] = config
+            if args.command == "simulate":
+                if args.order is not None:
+                    raise ValueError("declare pulse changes as modulations in the ode-v1 configuration")
+                result.update(portable.simulate(config))
+            else:
+                if args.against is None:
+                    raise ValueError("portable comparison requires --against with a second ode-v1 configuration")
+                other = load_config(args.against)
+                result["against_configuration"] = other
+                result.update(portable.compare(config, other))
         else:
-            result.update(compare_reporter(model, reporter))
-            result["reporter"] = asdict(reporter)
-            result["assumptions"] = ["known unit gain", "exact common actin subtraction",
-                                     "independent Gaussian noise with fixed SD per sample",
-                                     "single-record decision without multiplicity adjustment"]
+            if args.command == "compare" and args.against is not None:
+                raise ValueError("--against requires two ode-v1 configurations")
+            model, reporter = read_exact_config(config)
+            result["model"] = asdict(model)
+            if args.command == "simulate":
+                result.update(simulation(model, args.order or "uv"))
+            else:
+                result.update(compare_reporter(model, reporter))
+                result["reporter"] = asdict(reporter)
+                result["assumptions"] = ["known unit gain", "exact common actin subtraction",
+                                         "independent Gaussian noise with fixed SD per sample",
+                                         "single-record decision without multiplicity adjustment"]
         text = json.dumps(result, indent=2, allow_nan=False) + "\n"
         if args.output is None:
             sys.stdout.write(text)
         else:
             with args.output.open("x", encoding="utf-8") as stream:
                 stream.write(text)
-    except (OSError, ValueError, TypeError, KeyError, ArithmeticError) as error:
+    except (OSError, ValueError, TypeError, KeyError, ArithmeticError, RecursionError) as error:
         if isinstance(error, FileNotFoundError) and args.command == "reproduce":
             parser.error(f"{error}. Provide --bundle with the extracted paper bundle or full checkout.")
         parser.error(str(error))

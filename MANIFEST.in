@@ -1,3 +1,4 @@
-include CITATION.cff
+include CITATION.cff PORTABLE_MODELS.md
 recursive-include examples *.toml
 recursive-include tests *.py
+recursive-include benchmarks *.py *.md *.json
