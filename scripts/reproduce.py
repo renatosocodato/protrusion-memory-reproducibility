@@ -25,14 +25,23 @@ def main():
     parser.add_argument("--amiri-workbook", type=Path,
                         help="Use a local copy of the checksum-verified public workbook.")
     args = parser.parse_args()
+    if args.artwork_only and args.amiri_workbook is not None:
+        parser.error("--amiri-workbook is only used for full reproduction")
     build = args.output.resolve()
+    if build.exists() and (not build.is_dir() or any(build.iterdir())):
+        parser.error("--output must be a new or empty directory")
+    required = ("Rscript", "pdfinfo", "pandoc", "xelatex")
+    missing = [tool for tool in required if shutil.which(tool) is None]
+    if missing:
+        parser.error(f"missing system dependencies: {', '.join(missing)}")
     manuscript = build / "article"
     submission = manuscript / "submission_biophysj"
     figures = submission / "figures"
     submission.mkdir(parents=True, exist_ok=True)
 
     environment = dict(os.environ, OPENBLAS_NUM_THREADS="1", OMP_NUM_THREADS="1",
-                       VECLIB_MAXIMUM_THREADS="1", MKL_NUM_THREADS="1")
+                       VECLIB_MAXIMUM_THREADS="1", MKL_NUM_THREADS="1",
+                       REPRO_DATA_DIR=str(ROOT / "figures" / "data"))
     if not args.artwork_only:
         output = build / "computations"
         command = [sys.executable, ROOT / "scripts/run_computations.py",

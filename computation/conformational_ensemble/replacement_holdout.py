@@ -2,15 +2,12 @@
 """Reconstruct frozen m=1 training and apply it to new, independent parents."""
 from pathlib import Path
 from reproduction_io import output_directory
-import ast,json,math
+import json
 import numpy as np
-root=output_directory(Path(__file__))
-source=Path(__file__).with_name('run_challenge.py')
-tree=ast.parse(source.read_text())
-# Compile only frozen helper definitions. This does not execute the consumed test.
-funcs=[x for x in tree.body if isinstance(x,ast.FunctionDef)]
-module=ast.fix_missing_locations(ast.Module(body=funcs,type_ignores=[]));space={'np':np,'math':math};exec(compile(module,str(source),'exec'),space)
-draw,simulate,features,fit,predict,report=(space[x] for x in ('draw','simulate','features','fit','predict','report'))
+
+from run_challenge import draw, features, fit, predict, report, simulate
+
+root = output_directory(Path(__file__))
 n=200;m=1.
 train=draw(2026111811,n);test=draw(2026111842,n)
 trf,_=simulate(train,m,train[:,5]);trs,_=simulate(train,m,train[:,6]);tef,_=simulate(test,m,test[:,5]);tes,_=simulate(test,m,test[:,6])

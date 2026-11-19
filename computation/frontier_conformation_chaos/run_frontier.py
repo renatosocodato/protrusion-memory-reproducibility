@@ -1,20 +1,28 @@
 #!/usr/bin/env python3
 """Frozen independent synthetic perturbation and optical-reference study."""
-import ast, json, math
+import json
 from pathlib import Path
 from reproduction_io import output_directory
 import numpy as np
 from scipy.linalg import expm
+
+from joint_fret_actin_mechanics.run_joint_observation import (
+    TALL,
+    draw,
+    feature,
+    fit,
+    observations,
+    predict,
+    rep,
+    rhs,
+    sim,
+    streams,
+)
+
 ROOT=output_directory(Path(__file__))
 OUT=ROOT/'results_v1'
 if OUT.exists(): raise FileExistsError('Consumed run preserved')
 OUT.mkdir()
-source=Path(__file__).resolve().parent.parent/'joint_fret_actin_mechanics'/'run_joint_observation.py'
-tree=ast.parse(source.read_text())
-names={'streams','draw','rhs','sim','observations','feature','fit','predict','wilson','rep'}
-functions=ast.Module(body=[x for x in tree.body if isinstance(x,ast.FunctionDef) and x.name in names],type_ignores=[])
-T=np.array([0,20,35,50,65,80,95,110,140,155,170,185,200,215,230,260,300]); TX=np.array([0,60,120,180,240,300]); TALL=sorted(set(T)|set(TX))
-exec(compile(functions,str(source),'exec'),globals())
 # Exact reconstruction of the previous development cohort; no holdout is reused.
 trrng,_=streams(202611180101); ptrain=draw(trrng[0],300)
 trainstates,_=sim(ptrain,'both'); train,_=observations(ptrain,trainstates,trrng[3])

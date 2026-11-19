@@ -32,3 +32,5 @@ magnitude in pascals, and FRET efficiency on a unit scale. The renderer converts
 efficiency to percent and leaves the 30-minute sampling gap unconnected. The
 figure is redrawn from those values. The workbook checksum is retained in the
 JSON.
+
+The published values are credited to Amiri and colleagues under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). The JSON changes the format and selects three traces. It retains the numerical values and original units.
