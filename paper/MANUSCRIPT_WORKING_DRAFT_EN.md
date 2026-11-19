@@ -121,7 +121,7 @@ We compared \(\eta=0.5\) at \(r=10\) and \(r=28\). Bounded proxies \(q=\sigma(U/
 
 ### Computational implementation
 
-Python 3.14.7 with NumPy 2.3.5 and SciPy 1.16.3 was used to integrate the models and evaluate the observation and classification rules. Numba 0.63.1 accelerated the fixed-step variational runs, and SymPy 1.14.0 checked the exact model identity. Figures were rendered with R 4.5.2 and ggplot2 4.0.2. The repository lists the complete set of direct software dependencies and provides the random seeds, reference checks and figure input tables.
+Python 3.14.7 with NumPy 2.3.5 and SciPy 1.16.3 was used to integrate the models and evaluate the observation and classification rules. Numba 0.63.1 accelerated the fixed-step variational runs, and SymPy 1.14.0 checked the exact model identity. Figures were rendered with R 4.5.2 and ggplot2 4.0.2. Protrusion Memory 1.1.0 exposes the exact paired-model integrator and reporter comparison as configurable commands. The full paper workflow uses frozen settings and records the random seeds, numerical checks and figure inputs.
 
 ## Results
 
@@ -205,7 +205,7 @@ AI-assisted tools were used for code review and manuscript proofreading.
 
 ## Data and code availability
 
-The article reports analytical results and simulations. Previously published measurements are cited where discussed. The processed proteomic dataset cited in the Introduction is a restricted Zenodo deposit with a reserved DOI. Simulation code, figure inputs and a reconstruction workflow are publicly available in the [article’s GitHub repository](https://github.com/renatosocodato/protrusion-memory-reproducibility) at tag `v1.0.0`. Reproduction uses the public source workbook from Amiri et al. [7] for the paired U2OS recordings. The proteomic deposit provides biological context only.
+The article reports analytical results and simulations. Previously published measurements are cited where discussed. The processed proteomic dataset cited in the Introduction is a restricted Zenodo deposit with a reserved DOI. Simulation code, figure inputs and a reconstruction workflow are publicly available in the [Protrusion Memory v1.1.0 software release](https://github.com/renatosocodato/protrusion-memory-reproducibility/releases/tag/v1.1.0), which includes the installable software and the paper bundle. Reproduction uses the public source workbook from Amiri et al. [7] for the paired U2OS recordings. The proteomic deposit provides biological context only.
 
 ## Supplementary Results
 

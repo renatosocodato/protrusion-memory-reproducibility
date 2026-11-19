@@ -1,0 +1,16 @@
+# Half-open, integer-second pulse windows. Time is in assigned seconds.
+[model]
+fast_s = 8
+slow_s = 25
+deformation_s = 20
+duration_s = 300
+
+[gate_pulse]
+start_s = 20
+stop_s = 80
+amplitude = 0.3
+
+[actin_pulse]
+start_s = 140
+stop_s = 200
+amplitude = 0.2

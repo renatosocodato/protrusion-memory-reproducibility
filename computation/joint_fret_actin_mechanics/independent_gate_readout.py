@@ -4,9 +4,9 @@ from pathlib import Path
 from reproduction_io import output_directory
 
 import numpy as np
-from scipy.linalg import expm
 from scipy.special import ndtr
 from scipy.integrate import solve_ivp
+from protrusion_memory.model import CRITICAL, Model, filtered_contrast as model_contrast
 
 TAUS = (0, 10, 30)
 CADENCES = (5, 15, 60)
@@ -14,28 +14,11 @@ MIXING_BOUNDS = (0.20, 0.50, 0.68)
 NOISE = 0.03
 SEED = 202611180301
 DRAWS = 10000
-CRITICAL = 1.959963984540054
+MODEL = Model()
 
 
 def filtered_contrast(tau, order):
-    """Propagate q_A, a and, if needed, the filtered q_A minus a."""
-    dynamics = np.zeros((5, 5))
-    dynamics[0, [0, 3]] = [-1 / 8, 1 / 8]
-    dynamics[1, [0, 1, 4]] = [1 / 25, -1 / 25, 1 / 25]
-    if tau:
-        dynamics[2, :3] = np.array([1, -1, -1]) / tau
-    step = expm(dynamics)
-    state = np.zeros(3)
-    contrast = [0.0]
-    windows = [(20, 80), (140, 200)]
-    if order == "vu":
-        windows.reverse()
-    for t in range(300):
-        u = 0.3 * (windows[0][0] <= t < windows[0][1])
-        v = 0.2 * (windows[1][0] <= t < windows[1][1])
-        state = (step @ np.r_[state, u, v])[:3]
-        contrast.append(state[2] if tau else state[0] - state[1])
-    return np.array(contrast)
+    return model_contrast(MODEL, tau, order)
 
 
 def independent_check():

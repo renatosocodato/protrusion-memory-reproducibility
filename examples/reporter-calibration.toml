@@ -1,0 +1,7 @@
+# Omitted model settings use the exact-pair defaults.
+[reporter]
+response_s = 10
+cadence_s = 15
+noise_sd = 0.03
+mixing_bound = 0.20
+both_orders = true

@@ -1,18 +1,40 @@
-# Conformational and actin memory can leave identical signatures in protrusion models
+# Protrusion Memory
 
-This repository rebuilds the numerical tests, the three main figures, the seven supporting figures and the manuscript and supporting-information reading copies. The biological application motivates a prospective test. The quantitative checks compare synthetic or analytical results and previously published source data.
+Companion software for “Conformational and actin memory can leave identical signatures in protrusion models.” The software simulates the exact paired models, compares the information supplied by a calibrated reporter and rebuilds the numerical tests, the three main figures, the seven supporting figures and the manuscript and supporting-information reading copies. The biological application motivates a prospective test. The quantitative checks compare synthetic or analytical results and previously published source data.
+
+## Install and run
+
+Download the wheel and paper bundle from [GitHub Release v1.1.0](https://github.com/renatosocodato/protrusion-memory-reproducibility/releases/tag/v1.1.0). Python 3.13 or 3.14 is supported by the pinned numerical dependencies. The two modeling commands need only the Python installation.
+
+    python -m pip install protrusion_memory-1.1.0-py3-none-any.whl
+    protrusion-memory simulate
+    protrusion-memory compare
+
+Commands write JSON to standard output or to a new file passed with `--output`. `simulate` returns the latent gate, actin, deformation and original optical precursor for both models. `compare` reports the smallest standardized mean separation over the chosen pulse orders and all integer sampling phases. It reports correct, wrong and inconclusive decision probabilities at the closest means when the intervals are separated. At touching means it reports the probability of either declaration under the common mean. Overlapping means or a zero sampled template leave no uniform family distinction.
+
+To change the design, copy `examples/exact-pair.toml` or `examples/reporter-calibration.toml` from the paper bundle and pass it with `--config`. Pulse windows are half-open and must lie on the one-second grid. `simulate --order vu` swaps the signal windows and retains each input's amplitude. The ratio of the fast to slow time constants sets the reporter's touching bound. The calculations assume unit gain, exact subtraction of the common actin trace and independent Gaussian noise at a fixed variance per sample. These synthetic probabilities apply to the specified observation model.
+
+## Rebuild the paper
+
+Extract the paper bundle and then run:
+
+    python -m pip install -r protrusion-memory-paper-1.1.0/requirements.txt
+    Rscript --vanilla protrusion-memory-paper-1.1.0/scripts/install_r_dependencies.R
+    protrusion-memory reproduce --target paper --bundle protrusion-memory-paper-1.1.0 --output build/paper
+
+The paper bundle includes the reading copies, vector figures, panel exports, plotting inputs, all source, and an internal SHA-256 manifest. The wheel supplies the modeling interface and entry point. The paper rebuild uses the R and document tools described below. A full source checkout of the same version can serve as `--bundle`.
 
 ## Reproduce from a fresh clone
 
 The reference run used Python 3.14.7 and R 4.5.2. For figure and document generation install R with Cairo support, Pandoc, XeLaTeX, Poppler and the Arial font or a compatible substitute. The PDF template also supports Liberation Sans, Liberation Serif and Latin Modern Math. On Debian or Ubuntu, the system packages commonly needed include fontconfig, fonts-liberation, texlive-xetex, texlive-latex-extra, poppler-utils, libcairo2-dev, libfreetype6-dev, libharfbuzz-dev, libfribidi-dev, libpng-dev, libjpeg-dev and libtiff-dev.
 
-    git clone --branch v1.0.0 https://github.com/renatosocodato/protrusion-memory-reproducibility.git
+    git clone --branch v1.1.0 https://github.com/renatosocodato/protrusion-memory-reproducibility.git
     cd protrusion-memory-reproducibility
     python3 -m venv .venv
     . .venv/bin/activate
-    python -m pip install -r requirements.txt
+    python -m pip install . -r requirements.txt
     Rscript --vanilla scripts/install_r_dependencies.R
-    python scripts/reproduce.py --output build/run-1
+    protrusion-memory reproduce --output build/run-1
 
 The full run downloads the published Amiri source workbook from EMBL-EBI and verifies its SHA-256 digest. Supply a locally downloaded original with `--amiri-workbook PATH` for a run without network access. The output directory for each build must be new or empty. The computation runner uses a single numerical thread per process and applies a 150-second limit to each script.
 

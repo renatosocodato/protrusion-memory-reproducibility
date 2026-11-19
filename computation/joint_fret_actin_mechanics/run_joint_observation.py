@@ -4,7 +4,7 @@ from pathlib import Path
 from reproduction_io import output_directory
 import json, math
 import numpy as np
-from scipy.linalg import expm
+from protrusion_memory.model import simulate_pair
 import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
@@ -60,14 +60,7 @@ def rep(pr):
  ok=pr==np.array([0,1]);k=ok.sum(0);return {'accuracy':float(ok.mean()),'correct':[int(v) for v in k],'class_wilson95':[wilson(int(v),len(pr)) for v in k],'predicted_fast':[int((pr[:,i]==0).sum()) for i in range(2)]}
 
 def twin():
- def calc(kind):
-  M=np.zeros((5,5))
-  if kind=='A':M[0,0]=-1/8;M[0,3]=1/8;M[1,0]=1/25;M[1,1]=-1/25;M[1,4]=1/25
-  else:M[0,0]=-1/25;M[0,3]=1/25;M[0,4]=.68/25;M[1,0]=1/8;M[1,1]=-1/8;M[1,4]=.32/8
-  M[2,1]=1/20;M[2,2]=-1/20;P=expm(M);z=np.zeros(3);ys=[z.copy()]
-  for t in range(300):z=(P@np.r_[z,.3*float(20<=t<80),.2*float(140<=t<200)])[:3];ys.append(z.copy())
-  return np.stack(ys)
- A=calc('A');B=calc('B');f=.32*A[:,0]+.68*A[:,1];fp=B[:,0];err={'FRET_preoptical':float(np.max(np.abs(f-fp))),'actin':float(np.max(np.abs(A[:,1]-B[:,1]))),'deformation':float(np.max(np.abs(A[:,2]-B[:,2]))),'latent_gate_max_difference':float(np.max(np.abs(A[:,0]-B[:,0])))}
+ A,B,f=simulate_pair();fp=B[:,0];err={'FRET_preoptical':float(np.max(np.abs(f-fp))),'actin':float(np.max(np.abs(A[:,1]-B[:,1]))),'deformation':float(np.max(np.abs(A[:,2]-B[:,2]))),'latent_gate_max_difference':float(np.max(np.abs(A[:,0]-B[:,0])))}
  if max(err[k] for k in ('FRET_preoptical','actin','deformation'))>1e-12 or err['latent_gate_max_difference']<.01:raise ValueError('twin check failed')
  return err,A,B,f
 

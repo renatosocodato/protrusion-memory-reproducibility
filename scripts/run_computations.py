@@ -168,7 +168,7 @@ def main() -> None:
     env = {
         **os.environ,
         **THREAD_LIMITS,
-        "PYTHONPATH": str(COMPUTATION),
+        "PYTHONPATH": os.pathsep.join((str(COMPUTATION), str(COMPUTATION.parent / "src"))),
         "PYTHONDONTWRITEBYTECODE": "1",
         "MPLCONFIGDIR": str(output / ".matplotlib"),
         "PROTRUSION_REPRO_OUTPUT": str(output),

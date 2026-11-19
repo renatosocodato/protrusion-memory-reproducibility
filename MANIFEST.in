@@ -1,0 +1,3 @@
+include CITATION.cff
+recursive-include examples *.toml
+recursive-include tests *.py
