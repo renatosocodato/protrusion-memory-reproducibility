@@ -11,7 +11,7 @@ import sys
 import tomllib
 
 from .model import Model, Pulse, Reporter, compare_reporter, simulate_pair
-from . import calibration, forecast, portable
+from . import calibration, forecast, portable, spatial
 
 
 def load_config(path):
@@ -80,7 +80,19 @@ def reproduction(args, installed_version):
 def command_result(args, installed_version):
     config = load_config(args.config)
     result = {"software_version": installed_version}
-    if config.get("schema") in portable.SCHEMAS:
+    if config.get("schema") == spatial.SCHEMA:
+        result["configuration"] = config
+        if args.command == "simulate":
+            if args.order is not None:
+                raise ValueError("declare pulse changes as modulations in the ring-v1 configuration")
+            result.update(spatial.simulate(config))
+        else:
+            if args.against is None:
+                raise ValueError("ring comparison requires --against")
+            other = load_config(args.against)
+            result["against_configuration"] = other
+            result.update(spatial.compare(config, other))
+    elif config.get("schema") in portable.SCHEMAS:
         result["configuration"] = config
         if args.command == "simulate":
             if args.order is not None:
@@ -116,11 +128,11 @@ def main(argv=None):
     sim = commands.add_parser("simulate", help="simulate the exact pair, deterministic ODEs or a seeded Itô SDE")
     compare = commands.add_parser("compare", help="compare the exact-pair reporter or two declarative models")
     for command in (sim, compare):
-        command.add_argument("--config", type=Path, help="optional exact-pair, ode-v1, ode-v2 or sde-v1 TOML")
+        command.add_argument("--config", type=Path, help="optional exact-pair, ode-v1, ode-v2, sde-v1 or ring-v1 TOML")
         command.add_argument("--output", type=Path, help="new JSON file (default: standard output)")
     sim.add_argument("--order", choices=("uv", "vu"),
                      help="use configured windows (uv) or swap them (vu)")
-    compare.add_argument("--against", type=Path, help="second model in the ode-v1 or ode-v2 schema")
+    compare.add_argument("--against", type=Path, help="second deterministic model in the corresponding schema")
     ensemble = commands.add_parser("ensemble", help="summarize independent stochastic trajectories")
     ensemble.add_argument("--config", type=Path, required=True)
     ensemble.add_argument("--replicates", type=int, required=True)

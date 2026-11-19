@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.8.0
+
+- Added a periodic, linear reaction–diffusion ring with modal projections and the existing detector acquisition laws.
+- Separated centroid displacement from radial deformation in public G01 membrane masks.
+- Tested pathway recovery from modes 2–4 under shared and mode-specific gains.
+
 ## 1.7.0
 
 - Added seeded finite-dimensional Itô dynamics with event-aligned Euler–Maruyama, shared or independent Wiener drivers and optional detector noise.

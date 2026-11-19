@@ -45,3 +45,15 @@ The optional `measurement_noise = true` draws independent Gaussian error of each
     protrusion-memory ensemble --config examples/stochastic-pulse.toml --replicates 64
 
 The ensemble command returns independent path seeds, detector means, sample standard deviations and pointwise quantiles. The deterministic comparison and calibration commands retain their existing contracts. The [stochastic pulse challenge](benchmarks/stochastic/README.md) supplies a mechanism-specific discrimination test with atomic conditions and stated noise assumptions.
+
+## Linear periodic fields with `ring-v1`
+
+The ring has a fixed angular coordinate, evenly spaced nodes and periodic boundary conditions. Declare `ring.nodes` and the Fourier `ring.modes`. Each field has a nonnegative `decay_s_inv` and `diffusion_rad2_per_s` (both optional, default zero), optional initial cosine and sine coefficients, local linear coupling to other fields, and linear drives. An input multiplies a declared temporal parameter by separate cosine and sine patterns. Coupling and drive strengths may be real numbers or declared parameter names. Parameter modulation follows the deterministic interface.
+
+The solver diagonalizes the second-order centered periodic difference operator. Mode n sees the nonnegative value 4 sin²(πn/N)/(2π/N)² as the negative Laplacian eigenvalue. Each field retains its declared real modes, with only a cosine coefficient for zero. Nyquist and aliased modes are excluded. Reconstruct a field by summing the cosine and sine terms. Units for angular diffusivity differ from diffusivity in physical distance. A fixed physical radius can convert between them. Enlarging the node count changes the discrete eigenvalues towards the continuous values n².
+
+Reporters select a `field`, `mode` and `component` (cosine by default, spelled `cos`, or `sin`). The existing first-order response, detector mixing, exposure and delay are available after projection. This assumes the optical processing is spatially homogeneous and linear on the selected modes. The output contains the unfiltered mode coefficients and the detector readouts.
+
+    protrusion-memory simulate --config examples/spatial-pulse.toml
+
+`compare` accepts two ring configurations with the same grid and reporter definitions. `ring-v1` describes linear fields on a fixed ring. It has no moving boundary, nonlinear intermode coupling or spatial stochastic forcing. The [G01 and spatial pulse comparisons](benchmarks/spatial/README.md) give the assumptions and scientific use.

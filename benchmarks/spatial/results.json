@@ -1,0 +1,1799 @@
+{
+  "data_kind": "synthetic spatial pulse, radial fluctuation scale from one vesicle",
+  "mode_order": [
+    2,
+    3,
+    4
+  ],
+  "baseline_sd_um": [
+    0.09760093252457086,
+    0.0960544823145553,
+    0.08090593224971471
+  ],
+  "calibration_nulls": 6000,
+  "test_paths_per_class": 4000,
+  "results": [
+    {
+      "clock": "1s",
+      "pulse_s": 130.0,
+      "phase": 0.0,
+      "actin_diffusivity": 0.0,
+      "model": "mode2_only",
+      "confusion": {
+        "null": {
+          "unresolved": 3982,
+          "mediated": 7,
+          "direct": 11,
+          "detected": 163
+        },
+        "mediated": {
+          "unresolved": 0,
+          "mediated": 4000,
+          "direct": 0,
+          "detected": 4000
+        },
+        "direct": {
+          "unresolved": 0,
+          "mediated": 0,
+          "direct": 4000,
+          "detected": 4000
+        }
+      }
+    },
+    {
+      "clock": "1s",
+      "pulse_s": 130.0,
+      "phase": 0.0,
+      "actin_diffusivity": 0.0,
+      "model": "common_gain",
+      "confusion": {
+        "null": {
+          "unresolved": 3987,
+          "mediated": 6,
+          "direct": 7,
+          "detected": 191
+        },
+        "mediated": {
+          "unresolved": 0,
+          "mediated": 4000,
+          "direct": 0,
+          "detected": 4000
+        },
+        "direct": {
+          "unresolved": 0,
+          "mediated": 0,
+          "direct": 4000,
+          "detected": 4000
+        }
+      }
+    },
+    {
+      "clock": "1s",
+      "pulse_s": 130.0,
+      "phase": 0.0,
+      "actin_diffusivity": 0.0,
+      "model": "mode_specific_gains",
+      "confusion": {
+        "null": {
+          "unresolved": 3942,
+          "mediated": 27,
+          "direct": 31,
+          "detected": 222
+        },
+        "mediated": {
+          "unresolved": 0,
+          "mediated": 4000,
+          "direct": 0,
+          "detected": 4000
+        },
+        "direct": {
+          "unresolved": 0,
+          "mediated": 0,
+          "direct": 4000,
+          "detected": 4000
+        }
+      }
+    },
+    {
+      "clock": "1s",
+      "pulse_s": 130.0,
+      "phase": 0.0,
+      "actin_diffusivity": 0.015,
+      "model": "mode2_only",
+      "confusion": {
+        "null": {
+          "unresolved": 3993,
+          "mediated": 2,
+          "direct": 5,
+          "detected": 221
+        },
+        "mediated": {
+          "unresolved": 0,
+          "mediated": 4000,
+          "direct": 0,
+          "detected": 4000
+        },
+        "direct": {
+          "unresolved": 0,
+          "mediated": 0,
+          "direct": 4000,
+          "detected": 4000
+        }
+      }
+    },
+    {
+      "clock": "1s",
+      "pulse_s": 130.0,
+      "phase": 0.0,
+      "actin_diffusivity": 0.015,
+      "model": "common_gain",
+      "confusion": {
+        "null": {
+          "unresolved": 3992,
+          "mediated": 4,
+          "direct": 4,
+          "detected": 173
+        },
+        "mediated": {
+          "unresolved": 0,
+          "mediated": 4000,
+          "direct": 0,
+          "detected": 4000
+        },
+        "direct": {
+          "unresolved": 0,
+          "mediated": 0,
+          "direct": 4000,
+          "detected": 4000
+        }
+      }
+    },
+    {
+      "clock": "1s",
+      "pulse_s": 130.0,
+      "phase": 0.0,
+      "actin_diffusivity": 0.015,
+      "model": "mode_specific_gains",
+      "confusion": {
+        "null": {
+          "unresolved": 3984,
+          "mediated": 5,
+          "direct": 11,
+          "detected": 186
+        },
+        "mediated": {
+          "unresolved": 0,
+          "mediated": 4000,
+          "direct": 0,
+          "detected": 4000
+        },
+        "direct": {
+          "unresolved": 0,
+          "mediated": 0,
+          "direct": 4000,
+          "detected": 4000
+        }
+      }
+    },
+    {
+      "clock": "1s",
+      "pulse_s": 130.25,
+      "phase": 0.25,
+      "actin_diffusivity": 0.0,
+      "model": "mode2_only",
+      "confusion": {
+        "null": {
+          "unresolved": 3984,
+          "mediated": 7,
+          "direct": 9,
+          "detected": 217
+        },
+        "mediated": {
+          "unresolved": 0,
+          "mediated": 4000,
+          "direct": 0,
+          "detected": 4000
+        },
+        "direct": {
+          "unresolved": 0,
+          "mediated": 0,
+          "direct": 4000,
+          "detected": 4000
+        }
+      }
+    },
+    {
+      "clock": "1s",
+      "pulse_s": 130.25,
+      "phase": 0.25,
+      "actin_diffusivity": 0.0,
+      "model": "common_gain",
+      "confusion": {
+        "null": {
+          "unresolved": 3974,
+          "mediated": 10,
+          "direct": 16,
+          "detected": 175
+        },
+        "mediated": {
+          "unresolved": 0,
+          "mediated": 4000,
+          "direct": 0,
+          "detected": 4000
+        },
+        "direct": {
+          "unresolved": 0,
+          "mediated": 0,
+          "direct": 4000,
+          "detected": 4000
+        }
+      }
+    },
+    {
+      "clock": "1s",
+      "pulse_s": 130.25,
+      "phase": 0.25,
+      "actin_diffusivity": 0.0,
+      "model": "mode_specific_gains",
+      "confusion": {
+        "null": {
+          "unresolved": 3943,
+          "mediated": 31,
+          "direct": 26,
+          "detected": 168
+        },
+        "mediated": {
+          "unresolved": 0,
+          "mediated": 4000,
+          "direct": 0,
+          "detected": 4000
+        },
+        "direct": {
+          "unresolved": 0,
+          "mediated": 0,
+          "direct": 4000,
+          "detected": 4000
+        }
+      }
+    },
+    {
+      "clock": "1s",
+      "pulse_s": 130.25,
+      "phase": 0.25,
+      "actin_diffusivity": 0.015,
+      "model": "mode2_only",
+      "confusion": {
+        "null": {
+          "unresolved": 3989,
+          "mediated": 7,
+          "direct": 4,
+          "detected": 203
+        },
+        "mediated": {
+          "unresolved": 0,
+          "mediated": 4000,
+          "direct": 0,
+          "detected": 4000
+        },
+        "direct": {
+          "unresolved": 0,
+          "mediated": 0,
+          "direct": 4000,
+          "detected": 4000
+        }
+      }
+    },
+    {
+      "clock": "1s",
+      "pulse_s": 130.25,
+      "phase": 0.25,
+      "actin_diffusivity": 0.015,
+      "model": "common_gain",
+      "confusion": {
+        "null": {
+          "unresolved": 3991,
+          "mediated": 4,
+          "direct": 5,
+          "detected": 186
+        },
+        "mediated": {
+          "unresolved": 0,
+          "mediated": 4000,
+          "direct": 0,
+          "detected": 4000
+        },
+        "direct": {
+          "unresolved": 0,
+          "mediated": 0,
+          "direct": 4000,
+          "detected": 4000
+        }
+      }
+    },
+    {
+      "clock": "1s",
+      "pulse_s": 130.25,
+      "phase": 0.25,
+      "actin_diffusivity": 0.015,
+      "model": "mode_specific_gains",
+      "confusion": {
+        "null": {
+          "unresolved": 3984,
+          "mediated": 11,
+          "direct": 5,
+          "detected": 183
+        },
+        "mediated": {
+          "unresolved": 0,
+          "mediated": 4000,
+          "direct": 0,
+          "detected": 4000
+        },
+        "direct": {
+          "unresolved": 0,
+          "mediated": 0,
+          "direct": 4000,
+          "detected": 4000
+        }
+      }
+    },
+    {
+      "clock": "1s",
+      "pulse_s": 130.5,
+      "phase": 0.5,
+      "actin_diffusivity": 0.0,
+      "model": "mode2_only",
+      "confusion": {
+        "null": {
+          "unresolved": 3987,
+          "mediated": 6,
+          "direct": 7,
+          "detected": 171
+        },
+        "mediated": {
+          "unresolved": 0,
+          "mediated": 4000,
+          "direct": 0,
+          "detected": 4000
+        },
+        "direct": {
+          "unresolved": 0,
+          "mediated": 0,
+          "direct": 4000,
+          "detected": 4000
+        }
+      }
+    },
+    {
+      "clock": "1s",
+      "pulse_s": 130.5,
+      "phase": 0.5,
+      "actin_diffusivity": 0.0,
+      "model": "common_gain",
+      "confusion": {
+        "null": {
+          "unresolved": 3978,
+          "mediated": 9,
+          "direct": 13,
+          "detected": 173
+        },
+        "mediated": {
+          "unresolved": 0,
+          "mediated": 4000,
+          "direct": 0,
+          "detected": 4000
+        },
+        "direct": {
+          "unresolved": 0,
+          "mediated": 0,
+          "direct": 4000,
+          "detected": 4000
+        }
+      }
+    },
+    {
+      "clock": "1s",
+      "pulse_s": 130.5,
+      "phase": 0.5,
+      "actin_diffusivity": 0.0,
+      "model": "mode_specific_gains",
+      "confusion": {
+        "null": {
+          "unresolved": 3936,
+          "mediated": 32,
+          "direct": 32,
+          "detected": 221
+        },
+        "mediated": {
+          "unresolved": 0,
+          "mediated": 4000,
+          "direct": 0,
+          "detected": 4000
+        },
+        "direct": {
+          "unresolved": 0,
+          "mediated": 0,
+          "direct": 4000,
+          "detected": 4000
+        }
+      }
+    },
+    {
+      "clock": "1s",
+      "pulse_s": 130.5,
+      "phase": 0.5,
+      "actin_diffusivity": 0.015,
+      "model": "mode2_only",
+      "confusion": {
+        "null": {
+          "unresolved": 3995,
+          "mediated": 3,
+          "direct": 2,
+          "detected": 175
+        },
+        "mediated": {
+          "unresolved": 0,
+          "mediated": 4000,
+          "direct": 0,
+          "detected": 4000
+        },
+        "direct": {
+          "unresolved": 0,
+          "mediated": 0,
+          "direct": 4000,
+          "detected": 4000
+        }
+      }
+    },
+    {
+      "clock": "1s",
+      "pulse_s": 130.5,
+      "phase": 0.5,
+      "actin_diffusivity": 0.015,
+      "model": "common_gain",
+      "confusion": {
+        "null": {
+          "unresolved": 3992,
+          "mediated": 5,
+          "direct": 3,
+          "detected": 188
+        },
+        "mediated": {
+          "unresolved": 0,
+          "mediated": 4000,
+          "direct": 0,
+          "detected": 4000
+        },
+        "direct": {
+          "unresolved": 0,
+          "mediated": 0,
+          "direct": 4000,
+          "detected": 4000
+        }
+      }
+    },
+    {
+      "clock": "1s",
+      "pulse_s": 130.5,
+      "phase": 0.5,
+      "actin_diffusivity": 0.015,
+      "model": "mode_specific_gains",
+      "confusion": {
+        "null": {
+          "unresolved": 3983,
+          "mediated": 10,
+          "direct": 7,
+          "detected": 215
+        },
+        "mediated": {
+          "unresolved": 0,
+          "mediated": 4000,
+          "direct": 0,
+          "detected": 4000
+        },
+        "direct": {
+          "unresolved": 0,
+          "mediated": 0,
+          "direct": 4000,
+          "detected": 4000
+        }
+      }
+    },
+    {
+      "clock": "1s",
+      "pulse_s": 130.75,
+      "phase": 0.75,
+      "actin_diffusivity": 0.0,
+      "model": "mode2_only",
+      "confusion": {
+        "null": {
+          "unresolved": 3980,
+          "mediated": 8,
+          "direct": 12,
+          "detected": 211
+        },
+        "mediated": {
+          "unresolved": 0,
+          "mediated": 4000,
+          "direct": 0,
+          "detected": 4000
+        },
+        "direct": {
+          "unresolved": 0,
+          "mediated": 0,
+          "direct": 4000,
+          "detected": 4000
+        }
+      }
+    },
+    {
+      "clock": "1s",
+      "pulse_s": 130.75,
+      "phase": 0.75,
+      "actin_diffusivity": 0.0,
+      "model": "common_gain",
+      "confusion": {
+        "null": {
+          "unresolved": 3982,
+          "mediated": 7,
+          "direct": 11,
+          "detected": 237
+        },
+        "mediated": {
+          "unresolved": 0,
+          "mediated": 4000,
+          "direct": 0,
+          "detected": 4000
+        },
+        "direct": {
+          "unresolved": 0,
+          "mediated": 0,
+          "direct": 4000,
+          "detected": 4000
+        }
+      }
+    },
+    {
+      "clock": "1s",
+      "pulse_s": 130.75,
+      "phase": 0.75,
+      "actin_diffusivity": 0.0,
+      "model": "mode_specific_gains",
+      "confusion": {
+        "null": {
+          "unresolved": 3925,
+          "mediated": 32,
+          "direct": 43,
+          "detected": 213
+        },
+        "mediated": {
+          "unresolved": 0,
+          "mediated": 4000,
+          "direct": 0,
+          "detected": 4000
+        },
+        "direct": {
+          "unresolved": 0,
+          "mediated": 0,
+          "direct": 4000,
+          "detected": 4000
+        }
+      }
+    },
+    {
+      "clock": "1s",
+      "pulse_s": 130.75,
+      "phase": 0.75,
+      "actin_diffusivity": 0.015,
+      "model": "mode2_only",
+      "confusion": {
+        "null": {
+          "unresolved": 3991,
+          "mediated": 4,
+          "direct": 5,
+          "detected": 198
+        },
+        "mediated": {
+          "unresolved": 0,
+          "mediated": 4000,
+          "direct": 0,
+          "detected": 4000
+        },
+        "direct": {
+          "unresolved": 0,
+          "mediated": 0,
+          "direct": 4000,
+          "detected": 4000
+        }
+      }
+    },
+    {
+      "clock": "1s",
+      "pulse_s": 130.75,
+      "phase": 0.75,
+      "actin_diffusivity": 0.015,
+      "model": "common_gain",
+      "confusion": {
+        "null": {
+          "unresolved": 3993,
+          "mediated": 3,
+          "direct": 4,
+          "detected": 183
+        },
+        "mediated": {
+          "unresolved": 0,
+          "mediated": 4000,
+          "direct": 0,
+          "detected": 4000
+        },
+        "direct": {
+          "unresolved": 0,
+          "mediated": 0,
+          "direct": 4000,
+          "detected": 4000
+        }
+      }
+    },
+    {
+      "clock": "1s",
+      "pulse_s": 130.75,
+      "phase": 0.75,
+      "actin_diffusivity": 0.015,
+      "model": "mode_specific_gains",
+      "confusion": {
+        "null": {
+          "unresolved": 3988,
+          "mediated": 6,
+          "direct": 6,
+          "detected": 180
+        },
+        "mediated": {
+          "unresolved": 0,
+          "mediated": 4000,
+          "direct": 0,
+          "detected": 4000
+        },
+        "direct": {
+          "unresolved": 0,
+          "mediated": 0,
+          "direct": 4000,
+          "detected": 4000
+        }
+      }
+    },
+    {
+      "clock": "1s",
+      "pulse_s": 130.99,
+      "phase": 0.99,
+      "actin_diffusivity": 0.0,
+      "model": "mode2_only",
+      "confusion": {
+        "null": {
+          "unresolved": 3983,
+          "mediated": 11,
+          "direct": 6,
+          "detected": 212
+        },
+        "mediated": {
+          "unresolved": 0,
+          "mediated": 4000,
+          "direct": 0,
+          "detected": 4000
+        },
+        "direct": {
+          "unresolved": 0,
+          "mediated": 0,
+          "direct": 4000,
+          "detected": 4000
+        }
+      }
+    },
+    {
+      "clock": "1s",
+      "pulse_s": 130.99,
+      "phase": 0.99,
+      "actin_diffusivity": 0.0,
+      "model": "common_gain",
+      "confusion": {
+        "null": {
+          "unresolved": 3977,
+          "mediated": 14,
+          "direct": 9,
+          "detected": 218
+        },
+        "mediated": {
+          "unresolved": 0,
+          "mediated": 4000,
+          "direct": 0,
+          "detected": 4000
+        },
+        "direct": {
+          "unresolved": 0,
+          "mediated": 0,
+          "direct": 4000,
+          "detected": 4000
+        }
+      }
+    },
+    {
+      "clock": "1s",
+      "pulse_s": 130.99,
+      "phase": 0.99,
+      "actin_diffusivity": 0.0,
+      "model": "mode_specific_gains",
+      "confusion": {
+        "null": {
+          "unresolved": 3928,
+          "mediated": 38,
+          "direct": 34,
+          "detected": 207
+        },
+        "mediated": {
+          "unresolved": 0,
+          "mediated": 4000,
+          "direct": 0,
+          "detected": 4000
+        },
+        "direct": {
+          "unresolved": 0,
+          "mediated": 0,
+          "direct": 4000,
+          "detected": 4000
+        }
+      }
+    },
+    {
+      "clock": "1s",
+      "pulse_s": 130.99,
+      "phase": 0.99,
+      "actin_diffusivity": 0.015,
+      "model": "mode2_only",
+      "confusion": {
+        "null": {
+          "unresolved": 3996,
+          "mediated": 2,
+          "direct": 2,
+          "detected": 214
+        },
+        "mediated": {
+          "unresolved": 0,
+          "mediated": 4000,
+          "direct": 0,
+          "detected": 4000
+        },
+        "direct": {
+          "unresolved": 0,
+          "mediated": 0,
+          "direct": 4000,
+          "detected": 4000
+        }
+      }
+    },
+    {
+      "clock": "1s",
+      "pulse_s": 130.99,
+      "phase": 0.99,
+      "actin_diffusivity": 0.015,
+      "model": "common_gain",
+      "confusion": {
+        "null": {
+          "unresolved": 3991,
+          "mediated": 7,
+          "direct": 2,
+          "detected": 219
+        },
+        "mediated": {
+          "unresolved": 0,
+          "mediated": 4000,
+          "direct": 0,
+          "detected": 4000
+        },
+        "direct": {
+          "unresolved": 0,
+          "mediated": 0,
+          "direct": 4000,
+          "detected": 4000
+        }
+      }
+    },
+    {
+      "clock": "1s",
+      "pulse_s": 130.99,
+      "phase": 0.99,
+      "actin_diffusivity": 0.015,
+      "model": "mode_specific_gains",
+      "confusion": {
+        "null": {
+          "unresolved": 3981,
+          "mediated": 9,
+          "direct": 10,
+          "detected": 193
+        },
+        "mediated": {
+          "unresolved": 0,
+          "mediated": 4000,
+          "direct": 0,
+          "detected": 4000
+        },
+        "direct": {
+          "unresolved": 0,
+          "mediated": 0,
+          "direct": 4000,
+          "detected": 4000
+        }
+      }
+    },
+    {
+      "clock": "G01",
+      "pulse_s": 131.17843627929688,
+      "phase": 0.0,
+      "actin_diffusivity": 0.0,
+      "model": "mode2_only",
+      "confusion": {
+        "null": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected": 138
+        },
+        "mediated": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected": 939
+        },
+        "direct": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected": 478
+        }
+      }
+    },
+    {
+      "clock": "G01",
+      "pulse_s": 131.17843627929688,
+      "phase": 0.0,
+      "actin_diffusivity": 0.0,
+      "model": "common_gain",
+      "confusion": {
+        "null": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected": 207
+        },
+        "mediated": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected": 1231
+        },
+        "direct": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected": 555
+        }
+      }
+    },
+    {
+      "clock": "G01",
+      "pulse_s": 131.17843627929688,
+      "phase": 0.0,
+      "actin_diffusivity": 0.0,
+      "model": "mode_specific_gains",
+      "confusion": {
+        "null": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected": 171
+        },
+        "mediated": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected": 964
+        },
+        "direct": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected": 442
+        }
+      }
+    },
+    {
+      "clock": "G01",
+      "pulse_s": 131.17843627929688,
+      "phase": 0.0,
+      "actin_diffusivity": 0.015,
+      "model": "mode2_only",
+      "confusion": {
+        "null": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected": 181
+        },
+        "mediated": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected": 451
+        },
+        "direct": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected": 379
+        }
+      }
+    },
+    {
+      "clock": "G01",
+      "pulse_s": 131.17843627929688,
+      "phase": 0.0,
+      "actin_diffusivity": 0.015,
+      "model": "common_gain",
+      "confusion": {
+        "null": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected": 185
+        },
+        "mediated": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected": 471
+        },
+        "direct": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected": 414
+        }
+      }
+    },
+    {
+      "clock": "G01",
+      "pulse_s": 131.17843627929688,
+      "phase": 0.0,
+      "actin_diffusivity": 0.015,
+      "model": "mode_specific_gains",
+      "confusion": {
+        "null": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected": 218
+        },
+        "mediated": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected": 444
+        },
+        "direct": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected": 383
+        }
+      }
+    },
+    {
+      "clock": "G01",
+      "pulse_s": 147.57574081420898,
+      "phase": 0.25,
+      "actin_diffusivity": 0.0,
+      "model": "mode2_only",
+      "confusion": {
+        "null": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected": 191
+        },
+        "mediated": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected": 2986
+        },
+        "direct": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected": 1471
+        }
+      }
+    },
+    {
+      "clock": "G01",
+      "pulse_s": 147.57574081420898,
+      "phase": 0.25,
+      "actin_diffusivity": 0.0,
+      "model": "common_gain",
+      "confusion": {
+        "null": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected": 197
+        },
+        "mediated": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected": 3743
+        },
+        "direct": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected": 1930
+        }
+      }
+    },
+    {
+      "clock": "G01",
+      "pulse_s": 147.57574081420898,
+      "phase": 0.25,
+      "actin_diffusivity": 0.0,
+      "model": "mode_specific_gains",
+      "confusion": {
+        "null": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected": 197
+        },
+        "mediated": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected": 3569
+        },
+        "direct": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected": 1641
+        }
+      }
+    },
+    {
+      "clock": "G01",
+      "pulse_s": 147.57574081420898,
+      "phase": 0.25,
+      "actin_diffusivity": 0.015,
+      "model": "mode2_only",
+      "confusion": {
+        "null": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected": 189
+        },
+        "mediated": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected": 1410
+        },
+        "direct": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected": 902
+        }
+      }
+    },
+    {
+      "clock": "G01",
+      "pulse_s": 147.57574081420898,
+      "phase": 0.25,
+      "actin_diffusivity": 0.015,
+      "model": "common_gain",
+      "confusion": {
+        "null": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected": 179
+        },
+        "mediated": {
+          "unresolved": 3996,
+          "mediated": 3,
+          "direct": 1,
+          "detected": 1529
+        },
+        "direct": {
+          "unresolved": 3997,
+          "mediated": 1,
+          "direct": 2,
+          "detected": 1084
+        }
+      }
+    },
+    {
+      "clock": "G01",
+      "pulse_s": 147.57574081420898,
+      "phase": 0.25,
+      "actin_diffusivity": 0.015,
+      "model": "mode_specific_gains",
+      "confusion": {
+        "null": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected": 206
+        },
+        "mediated": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected": 1241
+        },
+        "direct": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected": 940
+        }
+      }
+    },
+    {
+      "clock": "G01",
+      "pulse_s": 163.9730453491211,
+      "phase": 0.5,
+      "actin_diffusivity": 0.0,
+      "model": "mode2_only",
+      "confusion": {
+        "null": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected": 242
+        },
+        "mediated": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected": 4000
+        },
+        "direct": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected": 3864
+        }
+      }
+    },
+    {
+      "clock": "G01",
+      "pulse_s": 163.9730453491211,
+      "phase": 0.5,
+      "actin_diffusivity": 0.0,
+      "model": "common_gain",
+      "confusion": {
+        "null": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected": 209
+        },
+        "mediated": {
+          "unresolved": 3909,
+          "mediated": 84,
+          "direct": 7,
+          "detected": 4000
+        },
+        "direct": {
+          "unresolved": 3999,
+          "mediated": 0,
+          "direct": 1,
+          "detected": 3997
+        }
+      }
+    },
+    {
+      "clock": "G01",
+      "pulse_s": 163.9730453491211,
+      "phase": 0.5,
+      "actin_diffusivity": 0.0,
+      "model": "mode_specific_gains",
+      "confusion": {
+        "null": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected": 211
+        },
+        "mediated": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected": 4000
+        },
+        "direct": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected": 3983
+        }
+      }
+    },
+    {
+      "clock": "G01",
+      "pulse_s": 163.9730453491211,
+      "phase": 0.5,
+      "actin_diffusivity": 0.015,
+      "model": "mode2_only",
+      "confusion": {
+        "null": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected": 207
+        },
+        "mediated": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected": 3762
+        },
+        "direct": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected": 2909
+        }
+      }
+    },
+    {
+      "clock": "G01",
+      "pulse_s": 163.9730453491211,
+      "phase": 0.5,
+      "actin_diffusivity": 0.015,
+      "model": "common_gain",
+      "confusion": {
+        "null": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected": 221
+        },
+        "mediated": {
+          "unresolved": 3700,
+          "mediated": 270,
+          "direct": 30,
+          "detected": 3922
+        },
+        "direct": {
+          "unresolved": 3843,
+          "mediated": 15,
+          "direct": 142,
+          "detected": 3737
+        }
+      }
+    },
+    {
+      "clock": "G01",
+      "pulse_s": 163.9730453491211,
+      "phase": 0.5,
+      "actin_diffusivity": 0.015,
+      "model": "mode_specific_gains",
+      "confusion": {
+        "null": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected": 202
+        },
+        "mediated": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected": 3827
+        },
+        "direct": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected": 3559
+        }
+      }
+    },
+    {
+      "clock": "G01",
+      "pulse_s": 180.3703498840332,
+      "phase": 0.75,
+      "actin_diffusivity": 0.0,
+      "model": "mode2_only",
+      "confusion": {
+        "null": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected": 201
+        },
+        "mediated": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected": 4000
+        },
+        "direct": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected": 4000
+        }
+      }
+    },
+    {
+      "clock": "G01",
+      "pulse_s": 180.3703498840332,
+      "phase": 0.75,
+      "actin_diffusivity": 0.0,
+      "model": "common_gain",
+      "confusion": {
+        "null": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected": 190
+        },
+        "mediated": {
+          "unresolved": 3809,
+          "mediated": 173,
+          "direct": 18,
+          "detected": 4000
+        },
+        "direct": {
+          "unresolved": 3930,
+          "mediated": 8,
+          "direct": 62,
+          "detected": 4000
+        }
+      }
+    },
+    {
+      "clock": "G01",
+      "pulse_s": 180.3703498840332,
+      "phase": 0.75,
+      "actin_diffusivity": 0.0,
+      "model": "mode_specific_gains",
+      "confusion": {
+        "null": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected": 193
+        },
+        "mediated": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected": 4000
+        },
+        "direct": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected": 4000
+        }
+      }
+    },
+    {
+      "clock": "G01",
+      "pulse_s": 180.3703498840332,
+      "phase": 0.75,
+      "actin_diffusivity": 0.015,
+      "model": "mode2_only",
+      "confusion": {
+        "null": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected": 180
+        },
+        "mediated": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected": 4000
+        },
+        "direct": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected": 4000
+        }
+      }
+    },
+    {
+      "clock": "G01",
+      "pulse_s": 180.3703498840332,
+      "phase": 0.75,
+      "actin_diffusivity": 0.015,
+      "model": "common_gain",
+      "confusion": {
+        "null": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected": 209
+        },
+        "mediated": {
+          "unresolved": 1800,
+          "mediated": 2102,
+          "direct": 98,
+          "detected": 4000
+        },
+        "direct": {
+          "unresolved": 1692,
+          "mediated": 76,
+          "direct": 2232,
+          "detected": 4000
+        }
+      }
+    },
+    {
+      "clock": "G01",
+      "pulse_s": 180.3703498840332,
+      "phase": 0.75,
+      "actin_diffusivity": 0.015,
+      "model": "mode_specific_gains",
+      "confusion": {
+        "null": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected": 223
+        },
+        "mediated": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected": 4000
+        },
+        "direct": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected": 4000
+        }
+      }
+    },
+    {
+      "clock": "G01",
+      "pulse_s": 196.11176223754885,
+      "phase": 0.99,
+      "actin_diffusivity": 0.0,
+      "model": "mode2_only",
+      "confusion": {
+        "null": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected": 179
+        },
+        "mediated": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected": 879
+        },
+        "direct": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected": 470
+        }
+      }
+    },
+    {
+      "clock": "G01",
+      "pulse_s": 196.11176223754885,
+      "phase": 0.99,
+      "actin_diffusivity": 0.0,
+      "model": "common_gain",
+      "confusion": {
+        "null": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected": 215
+        },
+        "mediated": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected": 1212
+        },
+        "direct": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected": 584
+        }
+      }
+    },
+    {
+      "clock": "G01",
+      "pulse_s": 196.11176223754885,
+      "phase": 0.99,
+      "actin_diffusivity": 0.0,
+      "model": "mode_specific_gains",
+      "confusion": {
+        "null": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected": 204
+        },
+        "mediated": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected": 944
+        },
+        "direct": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected": 459
+        }
+      }
+    },
+    {
+      "clock": "G01",
+      "pulse_s": 196.11176223754885,
+      "phase": 0.99,
+      "actin_diffusivity": 0.015,
+      "model": "mode2_only",
+      "confusion": {
+        "null": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected": 212
+        },
+        "mediated": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected": 474
+        },
+        "direct": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected": 378
+        }
+      }
+    },
+    {
+      "clock": "G01",
+      "pulse_s": 196.11176223754885,
+      "phase": 0.99,
+      "actin_diffusivity": 0.015,
+      "model": "common_gain",
+      "confusion": {
+        "null": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected": 193
+        },
+        "mediated": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected": 510
+        },
+        "direct": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected": 373
+        }
+      }
+    },
+    {
+      "clock": "G01",
+      "pulse_s": 196.11176223754885,
+      "phase": 0.99,
+      "actin_diffusivity": 0.015,
+      "model": "mode_specific_gains",
+      "confusion": {
+        "null": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected": 222
+        },
+        "mediated": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected": 390
+        },
+        "direct": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected": 354
+        }
+      }
+    },
+    {
+      "clock": "G01_near_frame",
+      "pulse_s": 130.0,
+      "phase": null,
+      "actin_diffusivity": 0.0,
+      "model": "mode2_only",
+      "confusion": {
+        "null": {
+          "unresolved": 3875,
+          "mediated": 74,
+          "direct": 51,
+          "detected": 203
+        },
+        "mediated": {
+          "unresolved": 3584,
+          "mediated": 358,
+          "direct": 58,
+          "detected": 669
+        },
+        "direct": {
+          "unresolved": 3553,
+          "mediated": 55,
+          "direct": 392,
+          "detected": 711
+        }
+      }
+    },
+    {
+      "clock": "G01_near_frame",
+      "pulse_s": 130.0,
+      "phase": null,
+      "actin_diffusivity": 0.0,
+      "model": "common_gain",
+      "confusion": {
+        "null": {
+          "unresolved": 3867,
+          "mediated": 59,
+          "direct": 74,
+          "detected": 193
+        },
+        "mediated": {
+          "unresolved": 3371,
+          "mediated": 580,
+          "direct": 49,
+          "detected": 886
+        },
+        "direct": {
+          "unresolved": 2815,
+          "mediated": 47,
+          "direct": 1138,
+          "detected": 1561
+        }
+      }
+    },
+    {
+      "clock": "G01_near_frame",
+      "pulse_s": 130.0,
+      "phase": null,
+      "actin_diffusivity": 0.0,
+      "model": "mode_specific_gains",
+      "confusion": {
+        "null": {
+          "unresolved": 3825,
+          "mediated": 92,
+          "direct": 83,
+          "detected": 202
+        },
+        "mediated": {
+          "unresolved": 3390,
+          "mediated": 515,
+          "direct": 95,
+          "detected": 696
+        },
+        "direct": {
+          "unresolved": 2885,
+          "mediated": 52,
+          "direct": 1063,
+          "detected": 1238
+        }
+      }
+    },
+    {
+      "clock": "G01_near_frame",
+      "pulse_s": 130.0,
+      "phase": null,
+      "actin_diffusivity": 0.015,
+      "model": "mode2_only",
+      "confusion": {
+        "null": {
+          "unresolved": 3879,
+          "mediated": 65,
+          "direct": 56,
+          "detected": 205
+        },
+        "mediated": {
+          "unresolved": 3745,
+          "mediated": 186,
+          "direct": 69,
+          "detected": 416
+        },
+        "direct": {
+          "unresolved": 3681,
+          "mediated": 84,
+          "direct": 235,
+          "detected": 506
+        }
+      }
+    },
+    {
+      "clock": "G01_near_frame",
+      "pulse_s": 130.0,
+      "phase": null,
+      "actin_diffusivity": 0.015,
+      "model": "common_gain",
+      "confusion": {
+        "null": {
+          "unresolved": 3861,
+          "mediated": 65,
+          "direct": 74,
+          "detected": 211
+        },
+        "mediated": {
+          "unresolved": 3736,
+          "mediated": 199,
+          "direct": 65,
+          "detected": 386
+        },
+        "direct": {
+          "unresolved": 3386,
+          "mediated": 50,
+          "direct": 564,
+          "detected": 866
+        }
+      }
+    },
+    {
+      "clock": "G01_near_frame",
+      "pulse_s": 130.0,
+      "phase": null,
+      "actin_diffusivity": 0.015,
+      "model": "mode_specific_gains",
+      "confusion": {
+        "null": {
+          "unresolved": 3832,
+          "mediated": 83,
+          "direct": 85,
+          "detected": 193
+        },
+        "mediated": {
+          "unresolved": 3749,
+          "mediated": 185,
+          "direct": 66,
+          "detected": 303
+        },
+        "direct": {
+          "unresolved": 3380,
+          "mediated": 100,
+          "direct": 520,
+          "detected": 768
+        }
+      }
+    }
+  ]
+}

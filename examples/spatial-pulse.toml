@@ -1,0 +1,58 @@
+schema = "ring-v1"
+
+[ring]
+nodes = 64
+modes = [2, 3, 4]
+
+[time]
+stop_s = 80
+sample_s = 1
+
+[parameters]
+pulse = 0
+g = 0.05
+direct = 0
+
+[[modulations]]
+parameter = "pulse"
+start_s = 15
+stop_s = 20
+operation = "set"
+value = 1
+
+[inputs.drive]
+parameter = "pulse"
+cos = { "2" = 1, "3" = 1, "4" = 1 }
+
+[fields.actin]
+decay_s_inv = 0.125
+diffusion_rad2_per_s = 0.015
+drives = { drive = 1 }
+
+[fields.shape]
+decay_s_inv = 0.05
+diffusion_rad2_per_s = 0.002
+coupling = {actin = "g"}
+drives = {drive = "direct"}
+
+[reporters.shape2]
+field = "shape"
+mode = 2
+
+[reporters.actin2]
+field = "actin"
+mode = 2
+response_s = 4
+initial = 0
+
+[observations.shape]
+unit = "um"
+mix = {shape2 = 1}
+exposure_s = 0.7
+delay_s = 0.6
+
+[observations.actin]
+unit = "au"
+mix = {actin2 = 1}
+exposure_s = 0.7
+delay_s = 0.6
