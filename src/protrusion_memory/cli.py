@@ -52,8 +52,12 @@ def reproduction(args, installed_version):
         raise ValueError("paper bundle SHA-256 manifest is missing")
     if manifest.is_file():
         entries = json.loads(manifest.read_text(encoding="utf-8"))
-        if "scripts/reproduce.py" not in entries:
-            raise ValueError("paper bundle manifest omits the reconstruction script")
+        if not isinstance(entries, dict) or "scripts/reproduce.py" not in entries:
+            raise ValueError("invalid paper bundle SHA-256 manifest")
+        for directory in ("scripts", "src", "computation", "paper", "figures"):
+            for path in (root / directory).rglob("*"):
+                if path.is_file() and path.relative_to(root).as_posix() not in entries:
+                    raise ValueError(f"unlisted file in paper bundle: {path.relative_to(root)}")
         for name, expected in entries.items():
             item = (root / name).resolve()
             if not item.is_relative_to(root) or hashlib.sha256(item.read_bytes()).hexdigest() != expected:

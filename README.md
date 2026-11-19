@@ -22,7 +22,7 @@ Extract the paper bundle and then run:
     Rscript --vanilla protrusion-memory-paper-1.1.0/scripts/install_r_dependencies.R
     protrusion-memory reproduce --target paper --bundle protrusion-memory-paper-1.1.0 --output build/paper
 
-The paper bundle includes the reading copies, vector figures, panel exports, plotting inputs, all source, and an internal SHA-256 manifest. The wheel supplies the modeling interface and entry point. The paper rebuild uses the R and document tools described below. A full source checkout of the same version can serve as `--bundle`.
+The paper bundle includes the reading copies, vector figures, panel exports, plotting inputs, all source, and a manifest checked against the listed files before reconstruction. Verify the downloaded archive against `SHA256SUMS` on the release page. The wheel supplies the modeling interface and entry point. The paper rebuild uses the R and document tools described below. A trusted Git checkout of the same version can serve as `--bundle`.
 
 ## Reproduce from a fresh clone
 
