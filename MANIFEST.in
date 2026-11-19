@@ -1,4 +1,4 @@
-include CITATION.cff PORTABLE_MODELS.md
+include CITATION.cff PORTABLE_MODELS.md CALIBRATION.md
 recursive-include examples *.toml
 recursive-include tests *.py
-recursive-include benchmarks *.py *.md *.json
+recursive-include benchmarks *.py *.md *.json *.toml *.R

@@ -11,7 +11,7 @@ import sys
 import tomllib
 
 from .model import Model, Pulse, Reporter, compare_reporter, simulate_pair
-from . import portable
+from . import calibration, portable
 
 
 def load_config(path):
@@ -77,6 +77,37 @@ def reproduction(args, installed_version):
     return subprocess.run(command, cwd=root, check=False).returncode
 
 
+def command_result(args, installed_version):
+    config = load_config(args.config)
+    result = {"software_version": installed_version}
+    if config.get("schema") == portable.SCHEMA:
+        result["configuration"] = config
+        if args.command == "simulate":
+            if args.order is not None:
+                raise ValueError("declare pulse changes as modulations in the ode-v1 configuration")
+            result.update(portable.simulate(config))
+        else:
+            if args.against is None:
+                raise ValueError("portable comparison requires --against with a second ode-v1 configuration")
+            other = load_config(args.against)
+            result["against_configuration"] = other
+            result.update(portable.compare(config, other))
+    else:
+        if args.command == "compare" and args.against is not None:
+            raise ValueError("--against requires two ode-v1 configurations")
+        model, reporter = read_exact_config(config)
+        result["model"] = asdict(model)
+        if args.command == "simulate":
+            result.update(simulation(model, args.order or "uv"))
+        else:
+            result.update(compare_reporter(model, reporter))
+            result["reporter"] = asdict(reporter)
+            result["assumptions"] = ["known unit gain", "exact common actin subtraction",
+                                     "independent Gaussian noise with fixed SD per sample",
+                                     "single-record decision without multiplicity adjustment"]
+    return result
+
+
 def main(argv=None):
     installed_version = version("protrusion-memory")
     parser = argparse.ArgumentParser(prog="protrusion-memory", description=__doc__)
@@ -97,37 +128,26 @@ def main(argv=None):
     reproduce.add_argument("--output", type=Path, default=Path("build") / "paper")
     reproduce.add_argument("--artwork-only", action="store_true")
     reproduce.add_argument("--amiri-workbook", type=Path, help="original public workbook for offline use")
+    calibrate = commands.add_parser("calibrate", help="fit candidate models with calibration preparations only")
+    score = commands.add_parser("score", help="score a frozen fit on held-out preparations")
+    for command in (calibrate, score):
+        command.add_argument("--plan", type=Path, required=True, help="calibration-v1 TOML plan")
+        command.add_argument("--data", type=Path, required=True, help="CSV for this preparation split")
+    calibrate.add_argument("--output", type=Path, required=True, help="new JSON file for the frozen fit")
+    score.add_argument("--fit", type=Path, required=True, help="frozen JSON from calibrate")
+    score.add_argument("--output", type=Path, help="new JSON report (default: stdout)")
     args = parser.parse_args(argv)
     try:
         if args.command == "reproduce":
             return reproduction(args, installed_version)
-        config = load_config(args.config)
-        result = {"software_version": installed_version}
-        if config.get("schema") == portable.SCHEMA:
-            result["configuration"] = config
-            if args.command == "simulate":
-                if args.order is not None:
-                    raise ValueError("declare pulse changes as modulations in the ode-v1 configuration")
-                result.update(portable.simulate(config))
+        if args.command in ("calibrate", "score"):
+            plan = calibration.Plan(args.plan.resolve())
+            if args.command == "calibrate":
+                result = calibration.fit(plan, args.data, installed_version)
             else:
-                if args.against is None:
-                    raise ValueError("portable comparison requires --against with a second ode-v1 configuration")
-                other = load_config(args.against)
-                result["against_configuration"] = other
-                result.update(portable.compare(config, other))
+                result = calibration.score(plan, args.data, args.fit, installed_version)
         else:
-            if args.command == "compare" and args.against is not None:
-                raise ValueError("--against requires two ode-v1 configurations")
-            model, reporter = read_exact_config(config)
-            result["model"] = asdict(model)
-            if args.command == "simulate":
-                result.update(simulation(model, args.order or "uv"))
-            else:
-                result.update(compare_reporter(model, reporter))
-                result["reporter"] = asdict(reporter)
-                result["assumptions"] = ["known unit gain", "exact common actin subtraction",
-                                         "independent Gaussian noise with fixed SD per sample",
-                                         "single-record decision without multiplicity adjustment"]
+            result = command_result(args, installed_version)
         text = json.dumps(result, indent=2, allow_nan=False) + "\n"
         if args.output is None:
             sys.stdout.write(text)

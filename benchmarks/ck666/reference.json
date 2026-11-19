@@ -1,0 +1,345 @@
+{
+  "article_doi": "10.1371/journal.pcbi.1014472",
+  "source_commit": "6161c370d7a616dde35a12f2a83fff4ee6e713aa",
+  "source_inputs": {
+    "calibration": [
+      "dataset_1.RData",
+      "489f8918e117753712d520b03ec3a855e96a76c262eaad07fb499b4e008b9d55"
+    ],
+    "heldout": [
+      "dataset_2.RData",
+      "04323ec8db163b87bb2904a34a808a651a70193b488a5832812917f4d0c7c9bc"
+    ]
+  },
+  "fit": {
+    "schema": "calibration-v1",
+    "software_version": "1.3.0",
+    "identity": {
+      "plan_sha256": "58ae87f58c91baca99e28084f83d8a685a2e175f856f26604d5ca7c3394ba36a",
+      "model_sha256": {
+        "stationary": "99162349581d35d38d6ce74cf15ed211cbb1d2b90ac4459fdf9fe2e3473cfad4",
+        "modulated": "99162349581d35d38d6ce74cf15ed211cbb1d2b90ac4459fdf9fe2e3473cfad4"
+      }
+    },
+    "calibration_sha256": "0a98418d5330309125058844a12755f2719c11de744ade44313a6fd5e4a093c1",
+    "calibration_preparations": [
+      "d1-arp",
+      "d1-statins"
+    ],
+    "heldout_preparations_reserved": [
+      "d2-g1n1",
+      "d2-g1n2",
+      "d2-g1n3",
+      "d2-g1n4",
+      "d2-g2n1",
+      "d2-g2n2",
+      "d2-g2n3",
+      "d2-g3n1",
+      "d2-g3n2",
+      "d2-g3n3",
+      "d2-g5n1",
+      "d2-g5n2",
+      "d2-g5n3",
+      "d2-g5n4"
+    ],
+    "candidates": {
+      "stationary": {
+        "parameters": {},
+        "diagnostics": {
+          "evaluations": 0,
+          "jacobian_rank": 0,
+          "active_bounds": []
+        },
+        "calibration": {
+          "scaled_mse": 0.32403097432668615,
+          "scaled_rmse": 0.569237186352654,
+          "channel_rmse": {
+            "log_speed_ratio": 0.569237186352654
+          }
+        }
+      },
+      "modulated": {
+        "parameters": {
+          "shift": -0.5539752481295642
+        },
+        "diagnostics": {
+          "evaluations": 2,
+          "jacobian_rank": 1,
+          "optimality": 9.697080811943426e-11,
+          "active_bounds": []
+        },
+        "calibration": {
+          "scaled_mse": 0.01714239885933038,
+          "scaled_rmse": 0.13092898403077288,
+          "channel_rmse": {
+            "log_speed_ratio": 0.13092898403077288
+          }
+        }
+      }
+    }
+  },
+  "score": {
+    "schema": "calibration-v1",
+    "software_version": "1.3.0",
+    "fit_sha256": "accc2861aac575521b9c2be8f38c2d34264ef2b428f78e78f55a7a664825bb00",
+    "heldout_sha256": "2b0b74e3bd51b8c5cc2d7de1f67271f9fece369612eaf7771d088193045e8067",
+    "heldout_preparations": [
+      "d2-g1n1",
+      "d2-g1n2",
+      "d2-g1n3",
+      "d2-g1n4",
+      "d2-g2n1",
+      "d2-g2n2",
+      "d2-g2n3",
+      "d2-g3n1",
+      "d2-g3n2",
+      "d2-g3n3",
+      "d2-g5n1",
+      "d2-g5n2",
+      "d2-g5n3",
+      "d2-g5n4"
+    ],
+    "channel_units": {
+      "log_speed_ratio": "log_ratio"
+    },
+    "candidates": {
+      "stationary": {
+        "scaled_mse": 0.2979862921355996,
+        "scaled_rmse": 0.5458812069815187,
+        "channel_rmse": {
+          "log_speed_ratio": 0.5458812069815187
+        }
+      },
+      "modulated": {
+        "scaled_mse": 0.0137025893446418,
+        "scaled_rmse": 0.11705805971671408,
+        "channel_rmse": {
+          "log_speed_ratio": 0.11705805971671408
+        }
+      }
+    },
+    "by_preparation": {
+      "stationary": {
+        "d2-g1n1": {
+          "scaled_mse": 0.43043182426944215,
+          "scaled_rmse": 0.656073032725353,
+          "channel_rmse": {
+            "log_speed_ratio": 0.656073032725353
+          }
+        },
+        "d2-g1n2": {
+          "scaled_mse": 0.16633365214125684,
+          "scaled_rmse": 0.4078402286941013,
+          "channel_rmse": {
+            "log_speed_ratio": 0.4078402286941013
+          }
+        },
+        "d2-g1n3": {
+          "scaled_mse": 0.5175010718881655,
+          "scaled_rmse": 0.7193754735102981,
+          "channel_rmse": {
+            "log_speed_ratio": 0.7193754735102981
+          }
+        },
+        "d2-g1n4": {
+          "scaled_mse": 0.22615366814137,
+          "scaled_rmse": 0.4755561671783576,
+          "channel_rmse": {
+            "log_speed_ratio": 0.4755561671783576
+          }
+        },
+        "d2-g2n1": {
+          "scaled_mse": 0.36367270094543164,
+          "scaled_rmse": 0.603052817707895,
+          "channel_rmse": {
+            "log_speed_ratio": 0.603052817707895
+          }
+        },
+        "d2-g2n2": {
+          "scaled_mse": 0.08310729939845388,
+          "scaled_rmse": 0.288283366496324,
+          "channel_rmse": {
+            "log_speed_ratio": 0.288283366496324
+          }
+        },
+        "d2-g2n3": {
+          "scaled_mse": 0.17424551358245957,
+          "scaled_rmse": 0.41742725543795,
+          "channel_rmse": {
+            "log_speed_ratio": 0.41742725543795
+          }
+        },
+        "d2-g3n1": {
+          "scaled_mse": 0.2647294721502549,
+          "scaled_rmse": 0.514518680079018,
+          "channel_rmse": {
+            "log_speed_ratio": 0.514518680079018
+          }
+        },
+        "d2-g3n2": {
+          "scaled_mse": 0.4046017117085356,
+          "scaled_rmse": 0.636083101259997,
+          "channel_rmse": {
+            "log_speed_ratio": 0.636083101259997
+          }
+        },
+        "d2-g3n3": {
+          "scaled_mse": 0.22923986504053792,
+          "scaled_rmse": 0.478790000982203,
+          "channel_rmse": {
+            "log_speed_ratio": 0.478790000982203
+          }
+        },
+        "d2-g5n1": {
+          "scaled_mse": 0.3359547149287665,
+          "scaled_rmse": 0.579616006446308,
+          "channel_rmse": {
+            "log_speed_ratio": 0.579616006446308
+          }
+        },
+        "d2-g5n2": {
+          "scaled_mse": 0.4238030668872726,
+          "scaled_rmse": 0.651001587469088,
+          "channel_rmse": {
+            "log_speed_ratio": 0.651001587469088
+          }
+        },
+        "d2-g5n3": {
+          "scaled_mse": 0.32280112301235353,
+          "scaled_rmse": 0.56815589675049,
+          "channel_rmse": {
+            "log_speed_ratio": 0.56815589675049
+          }
+        },
+        "d2-g5n4": {
+          "scaled_mse": 0.22923240580409354,
+          "scaled_rmse": 0.478782211244417,
+          "channel_rmse": {
+            "log_speed_ratio": 0.478782211244417
+          }
+        }
+      },
+      "modulated": {
+        "d2-g1n1": {
+          "scaled_mse": 0.011055615718119065,
+          "scaled_rmse": 0.10514568806241684,
+          "channel_rmse": {
+            "log_speed_ratio": 0.10514568806241684
+          }
+        },
+        "d2-g1n2": {
+          "scaled_mse": 0.021530122158752066,
+          "scaled_rmse": 0.14673146274317606,
+          "channel_rmse": {
+            "log_speed_ratio": 0.14673146274317606
+          }
+        },
+        "d2-g1n3": {
+          "scaled_mse": 0.030587820091247643,
+          "scaled_rmse": 0.1748937394283959,
+          "channel_rmse": {
+            "log_speed_ratio": 0.1748937394283959
+          }
+        },
+        "d2-g1n4": {
+          "scaled_mse": 0.00713857044659646,
+          "scaled_rmse": 0.08449006122968819,
+          "channel_rmse": {
+            "log_speed_ratio": 0.08449006122968819
+          }
+        },
+        "d2-g2n1": {
+          "scaled_mse": 0.0024086078357158968,
+          "scaled_rmse": 0.04907756957833076,
+          "channel_rmse": {
+            "log_speed_ratio": 0.04907756957833076
+          }
+        },
+        "d2-g2n2": {
+          "scaled_mse": 0.07059217596581172,
+          "scaled_rmse": 0.2656918816332402,
+          "channel_rmse": {
+            "log_speed_ratio": 0.2656918816332402
+          }
+        },
+        "d2-g2n3": {
+          "scaled_mse": 0.01864535430810913,
+          "scaled_rmse": 0.13654799269161422,
+          "channel_rmse": {
+            "log_speed_ratio": 0.13654799269161422
+          }
+        },
+        "d2-g3n1": {
+          "scaled_mse": 0.0015568207623273835,
+          "scaled_rmse": 0.039456568050546204,
+          "channel_rmse": {
+            "log_speed_ratio": 0.039456568050546204
+          }
+        },
+        "d2-g3n2": {
+          "scaled_mse": 0.006741699545688721,
+          "scaled_rmse": 0.08210785313043278,
+          "channel_rmse": {
+            "log_speed_ratio": 0.08210785313043278
+          }
+        },
+        "d2-g3n3": {
+          "scaled_mse": 0.0056528213886097925,
+          "scaled_rmse": 0.07518524714736124,
+          "channel_rmse": {
+            "log_speed_ratio": 0.07518524714736124
+          }
+        },
+        "d2-g5n1": {
+          "scaled_mse": 0.0006574484870576627,
+          "scaled_rmse": 0.025640758316743728,
+          "channel_rmse": {
+            "log_speed_ratio": 0.025640758316743728
+          }
+        },
+        "d2-g5n2": {
+          "scaled_mse": 0.009414110525628416,
+          "scaled_rmse": 0.09702633933952376,
+          "channel_rmse": {
+            "log_speed_ratio": 0.09702633933952376
+          }
+        },
+        "d2-g5n3": {
+          "scaled_mse": 0.0002010907953101656,
+          "scaled_rmse": 0.014180648620925829,
+          "channel_rmse": {
+            "log_speed_ratio": 0.014180648620925829
+          }
+        },
+        "d2-g5n4": {
+          "scaled_mse": 0.005653992796011111,
+          "scaled_rmse": 0.07519303688514722,
+          "channel_rmse": {
+            "log_speed_ratio": 0.07519303688514722
+          }
+        }
+      }
+    },
+    "modulated_minus_stationary_scaled_rmse": -0.4288231472648046,
+    "modulated_minus_stationary_scaled_mse_by_preparation": {
+      "d2-g1n1": -0.41937620855132307,
+      "d2-g1n2": -0.1448035299825048,
+      "d2-g1n3": -0.48691325179691786,
+      "d2-g1n4": -0.21901509769477354,
+      "d2-g2n1": -0.36126409310971574,
+      "d2-g2n2": -0.012515123432642161,
+      "d2-g2n3": -0.15560015927435045,
+      "d2-g3n1": -0.2631726513879275,
+      "d2-g3n2": -0.3978600121628469,
+      "d2-g3n3": -0.22358704365192814,
+      "d2-g5n1": -0.3352972664417088,
+      "d2-g5n2": -0.4143889563616442,
+      "d2-g5n3": -0.32260003221704336,
+      "d2-g5n4": -0.22357841300808243
+    },
+    "leave_one_preparation_out_rmse_difference_range": [
+      -0.46424312969793635,
+      -0.41848453642711203
+    ]
+  }
+}

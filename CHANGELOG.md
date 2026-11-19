@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.3.0
+
+- Added bounded calibration and separate scoring of frozen fits on held-out preparations.
+- Added a checked external-data adapter and a preparation-level CK666 migration benchmark.
+- Retained the paper's versioned reference results and original software citation.
+
 ## 1.2.0
 
 - Added declarative ODE models with piecewise parameter modulations and point or interval-rate readouts.

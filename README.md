@@ -4,9 +4,9 @@ Companion software for “Conformational and actin memory can leave identical si
 
 ## Install and run
 
-Download the wheel and paper bundle from [GitHub Release v1.2.0](https://github.com/renatosocodato/protrusion-memory-reproducibility/releases/tag/v1.2.0). Python 3.13 or 3.14 is supported by the pinned numerical dependencies. The two modeling commands need only the Python installation.
+Download the wheel and paper bundle from [GitHub Release v1.3.0](https://github.com/renatosocodato/protrusion-memory-reproducibility/releases/tag/v1.3.0). Python 3.13 or 3.14 is supported by the pinned numerical dependencies. The modeling and calibration commands need only the Python installation.
 
-    python -m pip install protrusion_memory-1.2.0-py3-none-any.whl
+    python -m pip install protrusion_memory-1.3.0-py3-none-any.whl
     protrusion-memory simulate
     protrusion-memory compare
 
@@ -18,13 +18,17 @@ To change the design, copy `examples/exact-pair.toml` or `examples/reporter-cali
 
 The [ode-v1 specification](PORTABLE_MODELS.md) describes state equations, parameter modulations and observation laws. Start from the [external Rac1 edge-velocity benchmark](benchmarks/rac1/README.md), with a configurable example, a stationary comparator and separate calibration and held-out cells.
 
+## Calibrate and test on independent preparations
+
+[Calibrate from a laboratory CSV and score a frozen fit](CALIBRATION.md). The [CK666 benchmark](benchmarks/ck666/README.md) uses two external calibration experiments and an independently acquired screen to test the transfer of a treatment effect relative to same-plate controls.
+
 ## Rebuild the paper
 
 Extract the paper bundle and then run:
 
-    python -m pip install -r protrusion-memory-paper-1.2.0/requirements.txt
-    Rscript --vanilla protrusion-memory-paper-1.2.0/scripts/install_r_dependencies.R
-    protrusion-memory reproduce --target paper --bundle protrusion-memory-paper-1.2.0 --output build/paper
+    python -m pip install -r protrusion-memory-paper-1.3.0/requirements.txt
+    Rscript --vanilla protrusion-memory-paper-1.3.0/scripts/install_r_dependencies.R
+    protrusion-memory reproduce --target paper --bundle protrusion-memory-paper-1.3.0 --output build/paper
 
 The paper bundle includes the reading copies, vector figures, panel exports, plotting inputs, all source, and a manifest checked against the listed files before reconstruction. Verify the downloaded archive against `SHA256SUMS` on the release page. The wheel supplies the modeling interface and entry point. The paper rebuild uses the R and document tools described below. A trusted Git checkout of the same version can serve as `--bundle`.
 
@@ -32,7 +36,7 @@ The paper bundle includes the reading copies, vector figures, panel exports, plo
 
 The reference run used Python 3.14.7 and R 4.5.2. For figure and document generation install R with Cairo support, Pandoc, XeLaTeX, Poppler and the Arial font or a compatible substitute. The PDF template also supports Liberation Sans, Liberation Serif and Latin Modern Math. On Debian or Ubuntu, the system packages commonly needed include fontconfig, fonts-liberation, texlive-xetex, texlive-latex-extra, poppler-utils, libcairo2-dev, libfreetype6-dev, libharfbuzz-dev, libfribidi-dev, libpng-dev, libjpeg-dev and libtiff-dev.
 
-    git clone --branch v1.2.0 https://github.com/renatosocodato/protrusion-memory-reproducibility.git
+    git clone --branch v1.3.0 https://github.com/renatosocodato/protrusion-memory-reproducibility.git
     cd protrusion-memory-reproducibility
     python3 -m venv .venv
     . .venv/bin/activate
