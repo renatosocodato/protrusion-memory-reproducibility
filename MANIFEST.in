@@ -1,4 +1,4 @@
-include CITATION.cff PORTABLE_MODELS.md CALIBRATION.md FORECAST.md
+include CITATION.cff PORTABLE_MODELS.md CALIBRATION.md FORECAST.md MODE_INTERVENTION.md
 recursive-include examples *.toml
 recursive-include tests *.py
 recursive-include benchmarks *.py *.md *.json *.toml *.R

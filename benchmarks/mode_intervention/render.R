@@ -1,0 +1,25 @@
+args <- commandArgs(trailingOnly = TRUE)
+if (length(args) != 2L) stop("Supply results JSON and output PDF")
+cases <- jsonlite::read_json(args[1])$cases
+labels <- c("Actin-mediated", "Direct only", "Bounded delivery effect", "Drive mismatch",
+            "Weak actin response", "Hidden delivery effect")
+point <- vapply(cases, function(x) x$shape_odd_mean, 0)
+narrow <- t(vapply(cases, function(x) unlist(x$shape_odd_interval), numeric(2)))
+wide <- t(vapply(cases, function(x) unlist(x$shape_interval_with_leakage), numeric(2)))
+row <- rev(seq_along(labels))
+ink <- c("#2d6857","#644972","#644972","#644972","#644972","#9a4e66")
+pastel <- c("#c8e2d5","#e0d6ed","#f2cedb")
+grDevices::cairo_pdf(args[2], width = 7.1, height = 3.9, family = "Arial")
+par(mar = c(4.1, 10.2, 1.05, .9), mgp = c(2.5, .65, 0), las = 1, bty = "n", family = "Arial")
+plot(NULL, xlim = range(wide)+c(-.03,.03), ylim = c(.45,7.05), xlab = expression("Signed mode-2 deformation ("*mu*m*")"),
+     ylab = "", yaxt = "n")
+usr <- par("usr")
+rect(-.08, usr[3], .08, usr[4], border = NA, col = pastel[1])
+abline(v=0, col = "#6d6d78", lty = 2)
+axis(2, at = row, labels = labels, tick = FALSE, cex.axis = .9)
+segments(wide[,1], row, wide[,2], row, col = pastel[2], lwd = 7)
+segments(narrow[,1], row, narrow[,2], row, col = ink, lwd = 2)
+points(point, row, pch = 21, bg = c(pastel[1],rep(pastel[2],4),pastel[3]), col = ink, cex = 1.3)
+legend("topright", c("Observed contrast interval","With drive and delivery allowance"),
+       lwd = c(2,5), col = c("#644972",pastel[2]), bty = "n", cex = .68, inset = c(0,-.01))
+invisible(dev.off())

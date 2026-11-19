@@ -1,0 +1,60 @@
+{
+  "data_kind": "synthetic cohorts",
+  "cohorts_per_case": 100,
+  "cases": {
+    "mediated": {
+      "decisions": {
+        "deformation_beyond_leakage": 100
+      },
+      "beyond_leakage_95pct_mc_interval": [
+        0.9630065017930143,
+        1.0
+      ]
+    },
+    "direct_only": {
+      "decisions": {
+        "deformation_bounded_small": 100
+      },
+      "beyond_leakage_95pct_mc_interval": [
+        0.0,
+        0.03699349820698568
+      ]
+    },
+    "bounded_delivery": {
+      "decisions": {
+        "deformation_unresolved": 100
+      },
+      "beyond_leakage_95pct_mc_interval": [
+        0.0,
+        0.03699349820698568
+      ]
+    },
+    "drive_mismatch": {
+      "decisions": {
+        "drive_not_matched": 100
+      },
+      "beyond_leakage_95pct_mc_interval": [
+        0.0,
+        0.03699349820698568
+      ]
+    },
+    "weak_actin": {
+      "decisions": {
+        "actin_unresolved": 100
+      },
+      "beyond_leakage_95pct_mc_interval": [
+        0.0,
+        0.03699349820698568
+      ]
+    },
+    "hidden_odd_leakage": {
+      "decisions": {
+        "deformation_beyond_leakage": 100
+      },
+      "beyond_leakage_95pct_mc_interval": [
+        0.9630065017930143,
+        1.0
+      ]
+    }
+  }
+}

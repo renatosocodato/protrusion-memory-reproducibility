@@ -1,0 +1,1229 @@
+{
+  "data_kind": "synthetic calibration and independently generated reserved cohorts",
+  "cases": {
+    "mediated": {
+      "latent_response_to_actin": [
+        0.40252150023189115,
+        0.25598346168361985
+      ],
+      "assumed_delivery_bound": 0.025,
+      "schema": "mode-test-v1",
+      "software_version": "1.9.0",
+      "mode": 2,
+      "window_s": [
+        10.0,
+        30.0
+      ],
+      "axis": [
+        1.0,
+        0.0
+      ],
+      "decision": "deformation_beyond_leakage",
+      "limits": {
+        "actin_min": 0.15,
+        "shape_min": 0.08,
+        "drive_max": 0.075,
+        "drive_gain": 0.55,
+        "delivery_bound": 0.025,
+        "drive_error": 0.0
+      },
+      "calibration_sha256": "dac21e4c23779cbbf5a888c6794e6da3e71b3eceb283cf11e65ea16d2c133f31",
+      "reserved_sha256": "01c8309746a77c573f868a09ce42cbeb63879a09374fc401f370a93ce6503876",
+      "reserved_preparations": [
+        "reserved-0",
+        "reserved-1",
+        "reserved-10",
+        "reserved-11",
+        "reserved-2",
+        "reserved-3",
+        "reserved-4",
+        "reserved-5",
+        "reserved-6",
+        "reserved-7",
+        "reserved-8",
+        "reserved-9"
+      ],
+      "drive_upper": 0.020345639820807546,
+      "actin_both_signs_interval": [
+        0.35446319481101196,
+        0.4101277977561775
+      ],
+      "shape_odd_mean": 0.2511098843057325,
+      "shape_odd_interval": [
+        0.23003047832833212,
+        0.2712491356401575
+      ],
+      "shape_interval_with_leakage": [
+        0.19854217610353422,
+        0.30247018276829646
+      ],
+      "mean_leakage_allowance": 0.031549835712368246,
+      "by_preparation": {
+        "reserved-0": {
+          "actin_signed_by_arm": [
+            0.28828143186069666,
+            0.29211475354982175
+          ],
+          "shape_odd": 0.18504087756902227,
+          "shape_perpendicular_odd": 0.019904392422865277,
+          "residual_drive_norms": [
+            0.009271951445507489,
+            0.017549365843926076
+          ]
+        },
+        "reserved-1": {
+          "actin_signed_by_arm": [
+            0.3750154630491636,
+            0.342015260613276
+          ],
+          "shape_odd": 0.26130528045719437,
+          "shape_perpendicular_odd": 0.019529001709481807,
+          "residual_drive_norms": [
+            0.014042275158648065,
+            0.008112770420919936
+          ]
+        },
+        "reserved-10": {
+          "actin_signed_by_arm": [
+            0.3995058840679642,
+            0.3965597125641632
+          ],
+          "shape_odd": 0.2412533637552177,
+          "shape_perpendicular_odd": -0.028548345447293837,
+          "residual_drive_norms": [
+            0.008842829455259747,
+            0.01693494376500837
+          ]
+        },
+        "reserved-11": {
+          "actin_signed_by_arm": [
+            0.3878796417654656,
+            0.43846424883366064
+          ],
+          "shape_odd": 0.3053469889688951,
+          "shape_perpendicular_odd": -0.000552742836291936,
+          "residual_drive_norms": [
+            0.004421212794018436,
+            0.010323238481232825
+          ]
+        },
+        "reserved-2": {
+          "actin_signed_by_arm": [
+            0.4403296182108765,
+            0.4458891724952234
+          ],
+          "shape_odd": 0.30041826764552193,
+          "shape_perpendicular_odd": 0.0266065749466997,
+          "residual_drive_norms": [
+            0.007837111898679017,
+            0.018184482905960073
+          ]
+        },
+        "reserved-3": {
+          "actin_signed_by_arm": [
+            0.416827715508511,
+            0.36474718375977605
+          ],
+          "shape_odd": 0.27955072368392736,
+          "shape_perpendicular_odd": 0.01299871644026866,
+          "residual_drive_norms": [
+            0.014052908969928115,
+            0.009539820776330156
+          ]
+        },
+        "reserved-4": {
+          "actin_signed_by_arm": [
+            0.3736883851288618,
+            0.32363516952327026
+          ],
+          "shape_odd": 0.19228847530661997,
+          "shape_perpendicular_odd": -0.04888303166512785,
+          "residual_drive_norms": [
+            0.010113694130966747,
+            0.01622155162903566
+          ]
+        },
+        "reserved-5": {
+          "actin_signed_by_arm": [
+            0.516961873121013,
+            0.44711823312993026
+          ],
+          "shape_odd": 0.2709273346475603,
+          "shape_perpendicular_odd": 0.02157172068132882,
+          "residual_drive_norms": [
+            0.009395219387242372,
+            0.019393116090380004
+          ]
+        },
+        "reserved-6": {
+          "actin_signed_by_arm": [
+            0.34803822122526795,
+            0.33557419266401245
+          ],
+          "shape_odd": 0.2408592722990012,
+          "shape_perpendicular_odd": -0.010977620371906242,
+          "residual_drive_norms": [
+            0.008224986232659786,
+            0.006058685207132051
+          ]
+        },
+        "reserved-7": {
+          "actin_signed_by_arm": [
+            0.430557139086649,
+            0.444707964818911
+          ],
+          "shape_odd": 0.2358223941516655,
+          "shape_perpendicular_odd": 0.028224000837947696,
+          "residual_drive_norms": [
+            0.007601575209153524,
+            0.014093278710669477
+          ]
+        },
+        "reserved-8": {
+          "actin_signed_by_arm": [
+            0.35848894183766217,
+            0.39531984631658706
+          ],
+          "shape_odd": 0.2576039867207795,
+          "shape_perpendicular_odd": -0.0059178305132406095,
+          "residual_drive_norms": [
+            0.012855976537244282,
+            0.012065747373067056
+          ]
+        },
+        "reserved-9": {
+          "actin_signed_by_arm": [
+            0.366563153835478,
+            0.37934575344491844
+          ],
+          "shape_odd": 0.24290164646338538,
+          "shape_perpendicular_odd": -0.005872156164030815,
+          "residual_drive_norms": [
+            0.01058885872427949,
+            0.020085411756092717
+          ]
+        }
+      }
+    },
+    "direct_only": {
+      "latent_response_to_actin": [
+        0.40252149946573246,
+        1.8859358519307534e-12
+      ],
+      "assumed_delivery_bound": 0.025,
+      "schema": "mode-test-v1",
+      "software_version": "1.9.0",
+      "mode": 2,
+      "window_s": [
+        10.0,
+        30.0
+      ],
+      "axis": [
+        1.0,
+        0.0
+      ],
+      "decision": "deformation_bounded_small",
+      "limits": {
+        "actin_min": 0.15,
+        "shape_min": 0.08,
+        "drive_max": 0.075,
+        "drive_gain": 0.55,
+        "delivery_bound": 0.025,
+        "drive_error": 0.0
+      },
+      "calibration_sha256": "08a163921b68100b6ee3b67865f009e95a8953d2ededfe3e58b11a9fadf7ea0d",
+      "reserved_sha256": "5b178a668595184ad5963ac4cc03b3c98595840b5ed283c6e113642272b48a52",
+      "reserved_preparations": [
+        "reserved-0",
+        "reserved-1",
+        "reserved-10",
+        "reserved-11",
+        "reserved-2",
+        "reserved-3",
+        "reserved-4",
+        "reserved-5",
+        "reserved-6",
+        "reserved-7",
+        "reserved-8",
+        "reserved-9"
+      ],
+      "drive_upper": 0.02473384400644085,
+      "actin_both_signs_interval": [
+        0.3523292213394026,
+        0.40460960142875996
+      ],
+      "shape_odd_mean": 0.006014472989017086,
+      "shape_odd_interval": [
+        -0.012928107343577707,
+        0.025986681834031005
+      ],
+      "shape_interval_with_leakage": [
+        -0.04545126033444551,
+        0.05772119917701759
+      ],
+      "mean_leakage_allowance": 0.03232267035661817,
+      "by_preparation": {
+        "reserved-0": {
+          "actin_signed_by_arm": [
+            0.39106825132090417,
+            0.35456988273309825
+          ],
+          "shape_odd": 0.0169916686312104,
+          "shape_perpendicular_odd": -0.022914375300802706,
+          "residual_drive_norms": [
+            0.011010384310436227,
+            0.020288482519016455
+          ]
+        },
+        "reserved-1": {
+          "actin_signed_by_arm": [
+            0.37269806846126985,
+            0.3276878732509966
+          ],
+          "shape_odd": 0.0876131013331124,
+          "shape_perpendicular_odd": -0.024435838104870017,
+          "residual_drive_norms": [
+            0.00795737694404357,
+            0.013948203991991426
+          ]
+        },
+        "reserved-10": {
+          "actin_signed_by_arm": [
+            0.4238304475157364,
+            0.31789649875626935
+          ],
+          "shape_odd": 0.013601272156826157,
+          "shape_perpendicular_odd": -0.015156106832561925,
+          "residual_drive_norms": [
+            0.01124634486687587,
+            0.010284201168425685
+          ]
+        },
+        "reserved-11": {
+          "actin_signed_by_arm": [
+            0.33418525173920915,
+            0.3400113995867909
+          ],
+          "shape_odd": -0.0169825160479965,
+          "shape_perpendicular_odd": -0.023309200347205614,
+          "residual_drive_norms": [
+            0.011023942196583106,
+            0.023909200367728024
+          ]
+        },
+        "reserved-2": {
+          "actin_signed_by_arm": [
+            0.47523689743537345,
+            0.38770499778994066
+          ],
+          "shape_odd": 0.0647165806226654,
+          "shape_perpendicular_odd": -0.005757972666988352,
+          "residual_drive_norms": [
+            0.011866473406318679,
+            0.009917789175555584
+          ]
+        },
+        "reserved-3": {
+          "actin_signed_by_arm": [
+            0.39100638555744593,
+            0.3592356087190361
+          ],
+          "shape_odd": -0.0010752992379154918,
+          "shape_perpendicular_odd": -0.006004116154391152,
+          "residual_drive_norms": [
+            0.016791268760702485,
+            0.016684756599380925
+          ]
+        },
+        "reserved-4": {
+          "actin_signed_by_arm": [
+            0.3831803550532438,
+            0.3979209038127271
+          ],
+          "shape_odd": -0.0072493784500790946,
+          "shape_perpendicular_odd": -0.018164911538860715,
+          "residual_drive_norms": [
+            0.012037303225282901,
+            0.011526780240138848
+          ]
+        },
+        "reserved-5": {
+          "actin_signed_by_arm": [
+            0.4586757070505272,
+            0.38230803096329635
+          ],
+          "shape_odd": -0.01948257756472564,
+          "shape_perpendicular_odd": 0.038963087482669634,
+          "residual_drive_norms": [
+            0.00664570477798825,
+            0.021335856544362444
+          ]
+        },
+        "reserved-6": {
+          "actin_signed_by_arm": [
+            0.37234950825481167,
+            0.4155560990710684
+          ],
+          "shape_odd": -0.04982252672025463,
+          "shape_perpendicular_odd": -0.01975237199399343,
+          "residual_drive_norms": [
+            0.021375588423002738,
+            0.008775784919867101
+          ]
+        },
+        "reserved-7": {
+          "actin_signed_by_arm": [
+            0.3759894897003645,
+            0.4721798604879581
+          ],
+          "shape_odd": 0.008502863821086396,
+          "shape_perpendicular_odd": -0.0005191784664468225,
+          "residual_drive_norms": [
+            0.017069305859471313,
+            0.015004603828019056
+          ]
+        },
+        "reserved-8": {
+          "actin_signed_by_arm": [
+            0.37682331418631865,
+            0.334250607802312
+          ],
+          "shape_odd": -0.021871425472556147,
+          "shape_perpendicular_odd": 0.013930593560069024,
+          "residual_drive_norms": [
+            0.008868534629988654,
+            0.011917408462742524
+          ]
+        },
+        "reserved-9": {
+          "actin_signed_by_arm": [
+            0.4580949112135984,
+            0.4602204673053063
+          ],
+          "shape_odd": -0.0027680872031682225,
+          "shape_perpendicular_odd": -0.023424639710669288,
+          "residual_drive_norms": [
+            0.002335985621371162,
+            0.017713425631317975
+          ]
+        }
+      }
+    },
+    "bounded_delivery": {
+      "latent_response_to_actin": [
+        0.40252149946573246,
+        1.8859358519307534e-12
+      ],
+      "assumed_delivery_bound": 0.16,
+      "schema": "mode-test-v1",
+      "software_version": "1.9.0",
+      "mode": 2,
+      "window_s": [
+        10.0,
+        30.0
+      ],
+      "axis": [
+        1.0,
+        0.0
+      ],
+      "decision": "deformation_unresolved",
+      "limits": {
+        "actin_min": 0.15,
+        "shape_min": 0.08,
+        "drive_max": 0.075,
+        "drive_gain": 0.55,
+        "delivery_bound": 0.16,
+        "drive_error": 0.0
+      },
+      "calibration_sha256": "81505450cf85d363b316319a94134baca3b4f8b2b93875805c06ddccff84a19b",
+      "reserved_sha256": "b5c326b51de2f106125597ef0a489ee9f97339e205415871dfea193614fe951d",
+      "reserved_preparations": [
+        "reserved-0",
+        "reserved-1",
+        "reserved-10",
+        "reserved-11",
+        "reserved-2",
+        "reserved-3",
+        "reserved-4",
+        "reserved-5",
+        "reserved-6",
+        "reserved-7",
+        "reserved-8",
+        "reserved-9"
+      ],
+      "drive_upper": 0.02305269642527382,
+      "actin_both_signs_interval": [
+        0.3698728204068546,
+        0.41948224643310844
+      ],
+      "shape_odd_mean": 0.13169998581358155,
+      "shape_odd_interval": [
+        0.11894695061347663,
+        0.143371223421433
+      ],
+      "shape_interval_with_leakage": [
+        -0.0487405452780115,
+        0.3109622054598531
+      ],
+      "mean_leakage_allowance": 0.16728189428608278,
+      "by_preparation": {
+        "reserved-0": {
+          "actin_signed_by_arm": [
+            0.3497169642914968,
+            0.40959511902212586
+          ],
+          "shape_odd": 0.11020286296718274,
+          "shape_perpendicular_odd": -0.037904102367063625,
+          "residual_drive_norms": [
+            0.00995347348105006,
+            0.014022981207861112
+          ]
+        },
+        "reserved-1": {
+          "actin_signed_by_arm": [
+            0.35780280682026633,
+            0.3611462389909938
+          ],
+          "shape_odd": 0.09682072058882885,
+          "shape_perpendicular_odd": -0.0019887440788093347,
+          "residual_drive_norms": [
+            0.01693059580870938,
+            0.008463025044908331
+          ]
+        },
+        "reserved-10": {
+          "actin_signed_by_arm": [
+            0.38341270406754874,
+            0.43533766510718447
+          ],
+          "shape_odd": 0.14658844340578686,
+          "shape_perpendicular_odd": -0.017495348391011696,
+          "residual_drive_norms": [
+            0.01432964660624123,
+            0.0032458398405125002
+          ]
+        },
+        "reserved-11": {
+          "actin_signed_by_arm": [
+            0.3769850193925855,
+            0.40140229037402947
+          ],
+          "shape_odd": 0.1287926480908518,
+          "shape_perpendicular_odd": 0.0008259541563881596,
+          "residual_drive_norms": [
+            0.014282699225191667,
+            0.011599115234327578
+          ]
+        },
+        "reserved-2": {
+          "actin_signed_by_arm": [
+            0.4628357175948664,
+            0.437337674334877
+          ],
+          "shape_odd": 0.1332793461986826,
+          "shape_perpendicular_odd": -0.0063227242547061555,
+          "residual_drive_norms": [
+            0.007049772504283516,
+            0.01614277751629458
+          ]
+        },
+        "reserved-3": {
+          "actin_signed_by_arm": [
+            0.4610856439121617,
+            0.4979150811978833
+          ],
+          "shape_odd": 0.14926073079389518,
+          "shape_perpendicular_odd": -0.0076655517994265645,
+          "residual_drive_norms": [
+            0.009732082236747474,
+            0.008433897866697179
+          ]
+        },
+        "reserved-4": {
+          "actin_signed_by_arm": [
+            0.41282191621172437,
+            0.45535317232529154
+          ],
+          "shape_odd": 0.1701522925694739,
+          "shape_perpendicular_odd": 0.009530791817930548,
+          "residual_drive_norms": [
+            0.01816983471487494,
+            0.013038727225086949
+          ]
+        },
+        "reserved-5": {
+          "actin_signed_by_arm": [
+            0.32847217649187505,
+            0.34959041933565116
+          ],
+          "shape_odd": 0.09863480681629874,
+          "shape_perpendicular_odd": 0.035245324605697556,
+          "residual_drive_norms": [
+            0.01814333150317495,
+            0.01758657558991139
+          ]
+        },
+        "reserved-6": {
+          "actin_signed_by_arm": [
+            0.3975241047387611,
+            0.4379036971926245
+          ],
+          "shape_odd": 0.1230747805583655,
+          "shape_perpendicular_odd": 0.012145529174023176,
+          "residual_drive_norms": [
+            0.0077447417203219925,
+            0.022787110621265014
+          ]
+        },
+        "reserved-7": {
+          "actin_signed_by_arm": [
+            0.3770983008220023,
+            0.4260054056298048
+          ],
+          "shape_odd": 0.132511761155288,
+          "shape_perpendicular_odd": -0.04286666733916568,
+          "residual_drive_norms": [
+            0.010705540038733873,
+            0.015405698316470292
+          ]
+        },
+        "reserved-8": {
+          "actin_signed_by_arm": [
+            0.458784239067934,
+            0.3873869156497832
+          ],
+          "shape_odd": 0.15660331578410044,
+          "shape_perpendicular_odd": -0.03384036678866653,
+          "residual_drive_norms": [
+            0.012255787105077553,
+            0.019174709304776424
+          ]
+        },
+        "reserved-9": {
+          "actin_signed_by_arm": [
+            0.36873164650922885,
+            0.42082315057524905
+          ],
+          "shape_odd": 0.134478120834224,
+          "shape_perpendicular_odd": 0.023154616910903723,
+          "residual_drive_norms": [
+            0.017792943841357396,
+            0.010764480475191546
+          ]
+        }
+      }
+    },
+    "drive_mismatch": {
+      "latent_response_to_actin": [
+        0.40252149946573246,
+        1.8859358519307534e-12
+      ],
+      "assumed_delivery_bound": 0.025,
+      "schema": "mode-test-v1",
+      "software_version": "1.9.0",
+      "mode": 2,
+      "window_s": [
+        10.0,
+        30.0
+      ],
+      "axis": [
+        1.0,
+        0.0
+      ],
+      "decision": "drive_not_matched",
+      "limits": {
+        "actin_min": 0.15,
+        "shape_min": 0.08,
+        "drive_max": 0.075,
+        "drive_gain": 0.55,
+        "delivery_bound": 0.025,
+        "drive_error": 0.0
+      },
+      "calibration_sha256": "95dbb758932193ccc4026a6c1a2b42c3f42959bdb4542943072ee8135840df06",
+      "reserved_sha256": "6b1958e9c21ebadf31d6379ca540db3b7d30e26fe73bdf9dfd99028d7c7b5a0f",
+      "reserved_preparations": [
+        "reserved-0",
+        "reserved-1",
+        "reserved-10",
+        "reserved-11",
+        "reserved-2",
+        "reserved-3",
+        "reserved-4",
+        "reserved-5",
+        "reserved-6",
+        "reserved-7",
+        "reserved-8",
+        "reserved-9"
+      ],
+      "drive_upper": 0.14308741998238922,
+      "actin_both_signs_interval": [
+        0.3865612607717007,
+        0.4441250394929278
+      ],
+      "shape_odd_mean": 0.047440939859790254,
+      "shape_odd_interval": [
+        0.033289478125412046,
+        0.05855322077618224
+      ],
+      "shape_interval_with_leakage": [
+        -0.06318782450220468,
+        0.1560261942010258
+      ],
+      "mean_leakage_allowance": 0.09725127713698553,
+      "by_preparation": {
+        "reserved-0": {
+          "actin_signed_by_arm": [
+            0.4687627653342679,
+            0.5128463101694402
+          ],
+          "shape_odd": 0.05404052267111927,
+          "shape_perpendicular_odd": 0.013394850560185583,
+          "residual_drive_norms": [
+            0.12463710400206371,
+            0.13278828954258054
+          ]
+        },
+        "reserved-1": {
+          "actin_signed_by_arm": [
+            0.3633187808001409,
+            0.4068643674871265
+          ],
+          "shape_odd": -0.0106912585848506,
+          "shape_perpendicular_odd": -0.000997976417645261,
+          "residual_drive_norms": [
+            0.12551273419566927,
+            0.11692808219675126
+          ]
+        },
+        "reserved-10": {
+          "actin_signed_by_arm": [
+            0.4072043504040043,
+            0.4439407227311545
+          ],
+          "shape_odd": 0.05732600659147766,
+          "shape_perpendicular_odd": -0.011604834026840202,
+          "residual_drive_norms": [
+            0.11793839187354668,
+            0.12357515615261286
+          ]
+        },
+        "reserved-11": {
+          "actin_signed_by_arm": [
+            0.4857514221225055,
+            0.5409619021730072
+          ],
+          "shape_odd": 0.07495007317694599,
+          "shape_perpendicular_odd": -0.0028844868545730698,
+          "residual_drive_norms": [
+            0.12673019737737126,
+            0.12820982154101268
+          ]
+        },
+        "reserved-2": {
+          "actin_signed_by_arm": [
+            0.4941378171652026,
+            0.3659120053462998
+          ],
+          "shape_odd": 0.065144725926259,
+          "shape_perpendicular_odd": -0.005493829211784294,
+          "residual_drive_norms": [
+            0.138878126265817,
+            0.12841675402330371
+          ]
+        },
+        "reserved-3": {
+          "actin_signed_by_arm": [
+            0.390072104262491,
+            0.3459828021867609
+          ],
+          "shape_odd": 0.06173643195348723,
+          "shape_perpendicular_odd": -0.003933067638208035,
+          "residual_drive_norms": [
+            0.12875612705022912,
+            0.1246582015447252
+          ]
+        },
+        "reserved-4": {
+          "actin_signed_by_arm": [
+            0.38098400971249335,
+            0.43445365962120347
+          ],
+          "shape_odd": 0.044338959790099476,
+          "shape_perpendicular_odd": 0.00920066682485433,
+          "residual_drive_norms": [
+            0.12907526313923265,
+            0.12642587813284648
+          ]
+        },
+        "reserved-5": {
+          "actin_signed_by_arm": [
+            0.4095824220121,
+            0.48639556799827016
+          ],
+          "shape_odd": 0.06857677004064566,
+          "shape_perpendicular_odd": 0.001036828470045657,
+          "residual_drive_norms": [
+            0.13942247938475266,
+            0.1339636061250029
+          ]
+        },
+        "reserved-6": {
+          "actin_signed_by_arm": [
+            0.398898696244255,
+            0.4251325070641558
+          ],
+          "shape_odd": 0.02274442811692459,
+          "shape_perpendicular_odd": 0.01562737025819916,
+          "residual_drive_norms": [
+            0.1358563355105905,
+            0.14049422730223715
+          ]
+        },
+        "reserved-7": {
+          "actin_signed_by_arm": [
+            0.44909135289224744,
+            0.4825414208548111
+          ],
+          "shape_odd": 0.03793517340568175,
+          "shape_perpendicular_odd": 0.0005986574354772053,
+          "residual_drive_norms": [
+            0.13721331885505716,
+            0.14047084839285814
+          ]
+        },
+        "reserved-8": {
+          "actin_signed_by_arm": [
+            0.3078676599869721,
+            0.37962944011539834
+          ],
+          "shape_odd": 0.04228329862618039,
+          "shape_perpendicular_odd": 0.031630929682548,
+          "residual_drive_norms": [
+            0.13214134895730767,
+            0.14142436644438836
+          ]
+        },
+        "reserved-9": {
+          "actin_signed_by_arm": [
+            0.44825677198783515,
+            0.4593311052838201
+          ],
+          "shape_odd": 0.050906146603512656,
+          "shape_perpendicular_odd": 0.020754997887473918,
+          "residual_drive_norms": [
+            0.14100705660076457,
+            0.13825928773046514
+          ]
+        }
+      }
+    },
+    "weak_actin": {
+      "latent_response_to_actin": [
+        0.016100859125705025,
+        0.010239338918192953
+      ],
+      "assumed_delivery_bound": 0.025,
+      "schema": "mode-test-v1",
+      "software_version": "1.9.0",
+      "mode": 2,
+      "window_s": [
+        10.0,
+        30.0
+      ],
+      "axis": [
+        1.0,
+        0.0
+      ],
+      "decision": "actin_unresolved",
+      "limits": {
+        "actin_min": 0.15,
+        "shape_min": 0.08,
+        "drive_max": 0.075,
+        "drive_gain": 0.55,
+        "delivery_bound": 0.025,
+        "drive_error": 0.0
+      },
+      "calibration_sha256": "d2cf3b7f6a218eed7f9503fcb90daedef9256ce4423dbbf240e8e957e4d4f6ba",
+      "reserved_sha256": "a037931e4b40a82c138e1de7a6b27a941b94e11604d24672331472c7ef6dcea5",
+      "reserved_preparations": [
+        "reserved-0",
+        "reserved-1",
+        "reserved-10",
+        "reserved-11",
+        "reserved-2",
+        "reserved-3",
+        "reserved-4",
+        "reserved-5",
+        "reserved-6",
+        "reserved-7",
+        "reserved-8",
+        "reserved-9"
+      ],
+      "drive_upper": 0.02190423482163953,
+      "actin_both_signs_interval": [
+        -0.02305294258288787,
+        0.019107936264566052
+      ],
+      "shape_odd_mean": 0.012165488515011778,
+      "shape_odd_interval": [
+        0.001204382796218452,
+        0.02259289496398897
+      ],
+      "shape_interval_with_leakage": [
+        -0.031563085819154006,
+        0.05518985567649147
+      ],
+      "mean_leakage_allowance": 0.032514744397768885,
+      "by_preparation": {
+        "reserved-0": {
+          "actin_signed_by_arm": [
+            0.0008299682634509035,
+            0.0403357946442315
+          ],
+          "shape_odd": 0.010771728182256414,
+          "shape_perpendicular_odd": 0.016948666399726916,
+          "residual_drive_norms": [
+            0.017877099786877126,
+            0.010087983737221902
+          ]
+        },
+        "reserved-1": {
+          "actin_signed_by_arm": [
+            0.0647404939980732,
+            0.0798045241753426
+          ],
+          "shape_odd": 0.04658163446232708,
+          "shape_perpendicular_odd": -0.025949975456938678,
+          "residual_drive_norms": [
+            0.014675473334971649,
+            0.01395076850170825
+          ]
+        },
+        "reserved-10": {
+          "actin_signed_by_arm": [
+            -0.06438130515708021,
+            0.028028179618141462
+          ],
+          "shape_odd": -0.006733051309420996,
+          "shape_perpendicular_odd": 0.009406537719271992,
+          "residual_drive_norms": [
+            0.01901554061357704,
+            0.008378388581117075
+          ]
+        },
+        "reserved-11": {
+          "actin_signed_by_arm": [
+            -0.03008040760611431,
+            0.06502234791460677
+          ],
+          "shape_odd": 0.019657753301151153,
+          "shape_perpendicular_odd": 0.011106488907110655,
+          "residual_drive_norms": [
+            0.008153594408730208,
+            0.017131733145964417
+          ]
+        },
+        "reserved-2": {
+          "actin_signed_by_arm": [
+            -0.06500638491944644,
+            -0.0025699350253700556
+          ],
+          "shape_odd": 0.022129937858946677,
+          "shape_perpendicular_odd": 0.029383163098957783,
+          "residual_drive_norms": [
+            0.017059073671625402,
+            0.020327298045513188
+          ]
+        },
+        "reserved-3": {
+          "actin_signed_by_arm": [
+            0.006701375153404203,
+            -0.0014617955988381827
+          ],
+          "shape_odd": -0.021683849522302144,
+          "shape_perpendicular_odd": 0.010524879652263185,
+          "residual_drive_norms": [
+            0.0157835113195686,
+            0.019559899659246396
+          ]
+        },
+        "reserved-4": {
+          "actin_signed_by_arm": [
+            -0.004944894215989796,
+            -0.00908010870273932
+          ],
+          "shape_odd": 0.01990788321892702,
+          "shape_perpendicular_odd": -0.03895487563692541,
+          "residual_drive_norms": [
+            0.0020579180513511843,
+            0.008537074192125247
+          ]
+        },
+        "reserved-5": {
+          "actin_signed_by_arm": [
+            -0.017402058079089122,
+            -0.001602977648309164
+          ],
+          "shape_odd": 0.02805870648153974,
+          "shape_perpendicular_odd": 0.026243324259194085,
+          "residual_drive_norms": [
+            0.021634179304933044,
+            0.01375459514083516
+          ]
+        },
+        "reserved-6": {
+          "actin_signed_by_arm": [
+            0.05239759399314738,
+            0.02297037265207997
+          ],
+          "shape_odd": -0.004880004868397476,
+          "shape_perpendicular_odd": -0.004121343573064001,
+          "residual_drive_norms": [
+            0.010084008611877955,
+            0.0053285742023776285
+          ]
+        },
+        "reserved-7": {
+          "actin_signed_by_arm": [
+            -0.03229293694337681,
+            0.00691494524756335
+          ],
+          "shape_odd": 0.017010403641042476,
+          "shape_perpendicular_odd": -0.006558039888905812,
+          "residual_drive_norms": [
+            0.010746105736746175,
+            0.016536202102062775
+          ]
+        },
+        "reserved-8": {
+          "actin_signed_by_arm": [
+            0.022826422118841137,
+            0.04240991480170001
+          ],
+          "shape_odd": -0.01518474447444883,
+          "shape_perpendicular_odd": -0.031063838596379456,
+          "residual_drive_norms": [
+            0.011929388739275269,
+            0.02115097488612947
+          ]
+        },
+        "reserved-9": {
+          "actin_signed_by_arm": [
+            0.054617519917661686,
+            -0.03350059160578253
+          ],
+          "shape_odd": 0.03034946520852024,
+          "shape_perpendicular_odd": -0.011591152234770512,
+          "residual_drive_norms": [
+            0.007316737035435396,
+            0.01683999636609888
+          ]
+        }
+      }
+    },
+    "hidden_odd_leakage": {
+      "latent_response_to_actin": [
+        0.40252149946573246,
+        1.8859358519307534e-12
+      ],
+      "assumed_delivery_bound": 0.025,
+      "schema": "mode-test-v1",
+      "software_version": "1.9.0",
+      "mode": 2,
+      "window_s": [
+        10.0,
+        30.0
+      ],
+      "axis": [
+        1.0,
+        0.0
+      ],
+      "decision": "deformation_beyond_leakage",
+      "limits": {
+        "actin_min": 0.15,
+        "shape_min": 0.08,
+        "drive_max": 0.075,
+        "drive_gain": 0.55,
+        "delivery_bound": 0.025,
+        "drive_error": 0.0
+      },
+      "calibration_sha256": "fdcb049593a16ce92675286ae0425df18f20b39913f16fc5bcf887621dc24285",
+      "reserved_sha256": "e743d1994bd3fb05fc86a42c3cdaa7a4d11faf3ba91743ae8d9e4c1cfd6b3bd3",
+      "reserved_preparations": [
+        "reserved-0",
+        "reserved-1",
+        "reserved-10",
+        "reserved-11",
+        "reserved-2",
+        "reserved-3",
+        "reserved-4",
+        "reserved-5",
+        "reserved-6",
+        "reserved-7",
+        "reserved-8",
+        "reserved-9"
+      ],
+      "drive_upper": 0.022505678970623187,
+      "actin_both_signs_interval": [
+        0.34789460465178346,
+        0.39560930164470126
+      ],
+      "shape_odd_mean": 0.2549801686567825,
+      "shape_odd_interval": [
+        0.2394363858604367,
+        0.2693054285632264
+      ],
+      "shape_interval_with_leakage": [
+        0.20674618865218872,
+        0.30181440137553184
+      ],
+      "mean_leakage_allowance": 0.032252822602160135,
+      "by_preparation": {
+        "reserved-0": {
+          "actin_signed_by_arm": [
+            0.373407713897666,
+            0.38891672714855624
+          ],
+          "shape_odd": 0.2025926979431796,
+          "shape_perpendicular_odd": 0.021149261328820793,
+          "residual_drive_norms": [
+            0.02220957891914856,
+            0.016470278680920408
+          ]
+        },
+        "reserved-1": {
+          "actin_signed_by_arm": [
+            0.2766470518840905,
+            0.3415428410399706
+          ],
+          "shape_odd": 0.24378652243510296,
+          "shape_perpendicular_odd": 0.01561810788591742,
+          "residual_drive_norms": [
+            0.011146780339745749,
+            0.008436906688913358
+          ]
+        },
+        "reserved-10": {
+          "actin_signed_by_arm": [
+            0.3217260757495547,
+            0.3462729355719693
+          ],
+          "shape_odd": 0.2848273439631427,
+          "shape_perpendicular_odd": -0.010801392719889337,
+          "residual_drive_norms": [
+            0.009354889080441285,
+            0.017613966987372456
+          ]
+        },
+        "reserved-11": {
+          "actin_signed_by_arm": [
+            0.3858887714354568,
+            0.38901533933125104
+          ],
+          "shape_odd": 0.24726700735749163,
+          "shape_perpendicular_odd": -0.009110731094098639,
+          "residual_drive_norms": [
+            0.015141772282987128,
+            0.017380869227229555
+          ]
+        },
+        "reserved-2": {
+          "actin_signed_by_arm": [
+            0.43575875183290613,
+            0.37353884780547447
+          ],
+          "shape_odd": 0.27632490753930183,
+          "shape_perpendicular_odd": -0.030235672394931808,
+          "residual_drive_norms": [
+            0.016482072622140357,
+            0.0037502697928251554
+          ]
+        },
+        "reserved-3": {
+          "actin_signed_by_arm": [
+            0.3280617493576177,
+            0.37070024243746547
+          ],
+          "shape_odd": 0.2638217972559807,
+          "shape_perpendicular_odd": -0.005936036407980285,
+          "residual_drive_norms": [
+            0.014765039954874071,
+            0.01581955564232134
+          ]
+        },
+        "reserved-4": {
+          "actin_signed_by_arm": [
+            0.34993707053503836,
+            0.34833921240536814
+          ],
+          "shape_odd": 0.276251421764438,
+          "shape_perpendicular_odd": -0.009879897031635712,
+          "residual_drive_norms": [
+            0.006502339725401798,
+            0.012374745304414177
+          ]
+        },
+        "reserved-5": {
+          "actin_signed_by_arm": [
+            0.49153256356465425,
+            0.41526108942232215
+          ],
+          "shape_odd": 0.24261283246316667,
+          "shape_perpendicular_odd": 0.0006969123954315617,
+          "residual_drive_norms": [
+            0.01419771642923563,
+            0.0035011262544817545
+          ]
+        },
+        "reserved-6": {
+          "actin_signed_by_arm": [
+            0.38084582146445467,
+            0.3047251051984599
+          ],
+          "shape_odd": 0.2354527756249294,
+          "shape_perpendicular_odd": 0.037864310672410834,
+          "residual_drive_norms": [
+            0.0007826679323112646,
+            0.009942562516638987
+          ]
+        },
+        "reserved-7": {
+          "actin_signed_by_arm": [
+            0.5176183758033616,
+            0.44645860658870057
+          ],
+          "shape_odd": 0.2889354820695067,
+          "shape_perpendicular_odd": 0.0069193362173481454,
+          "residual_drive_norms": [
+            0.016713650243589527,
+            0.02060090136192011
+          ]
+        },
+        "reserved-8": {
+          "actin_signed_by_arm": [
+            0.3891997867371754,
+            0.3883012276470853
+          ],
+          "shape_odd": 0.27228656781563604,
+          "shape_perpendicular_odd": 0.014066085540758689,
+          "residual_drive_norms": [
+            0.017705070026339326,
+            0.011656139693198921
+          ]
+        },
+        "reserved-9": {
+          "actin_signed_by_arm": [
+            0.35717028522890426,
+            0.3861343645518531
+          ],
+          "shape_odd": 0.22560266764951406,
+          "shape_perpendicular_odd": -0.004915155187393619,
+          "residual_drive_norms": [
+            0.0200835374340562,
+            0.013854367317389494
+          ]
+        }
+      }
+    }
+  }
+}

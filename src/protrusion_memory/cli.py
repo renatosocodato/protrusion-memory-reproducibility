@@ -11,7 +11,7 @@ import sys
 import tomllib
 
 from .model import Model, Pulse, Reporter, compare_reporter, simulate_pair
-from . import calibration, forecast, portable, spatial
+from . import calibration, forecast, mode_test, portable, spatial
 
 
 def load_config(path):
@@ -159,11 +159,24 @@ def main(argv=None):
         command.add_argument("--data", type=Path, required=True, help="paired time series CSV for this split")
         command.add_argument("--output", type=Path, required=True, help="new JSON file")
     forecast_score.add_argument("--fit", type=Path, required=True, help="frozen JSON from forecast-fit")
+    gain = commands.add_parser("mode-calibrate", help="calibrate angular channels on separate preparations")
+    intervention = commands.add_parser("mode-test", help="test a signed mode in reserved preparations")
+    for command in (gain, intervention):
+        command.add_argument("--plan", type=Path, required=True)
+        command.add_argument("--data", type=Path, required=True)
+        command.add_argument("--output", type=Path, required=True)
+    intervention.add_argument("--calibration", type=Path, required=True)
     args = parser.parse_args(argv)
     try:
         if args.command == "reproduce":
             return reproduction(args, installed_version)
-        if args.command == "ensemble":
+        if args.command in ("mode-calibrate", "mode-test"):
+            plan = mode_test.Plan.load(args.plan)
+            if args.command == "mode-calibrate":
+                result = mode_test.calibrate(plan, args.data, installed_version)
+            else:
+                result = mode_test.score(plan, args.data, args.calibration, installed_version)
+        elif args.command == "ensemble":
             result = {"software_version": installed_version,
                       **portable.ensemble(load_config(args.config), args.replicates)}
         elif args.command in ("calibrate", "score"):

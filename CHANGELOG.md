@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.9.0
+
+- Added independent angular gain calibration and a signed active-versus-delivery mode test on reserved preparations.
+- Added a fixed-drive benchmark with synthetic recovery, bounded delivery and hidden-leakage controls.
+
 ## 1.8.0
 
 - Added a periodic, linear reaction–diffusion ring with modal projections and the existing detector acquisition laws.
