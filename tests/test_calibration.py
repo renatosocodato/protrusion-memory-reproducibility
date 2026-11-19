@@ -106,6 +106,11 @@ class CalibrationTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "overlap"):
             Plan(self.plan_file)
 
+    def test_scenario_cannot_override_a_fitted_parameter(self):
+        self.plan_file.write_text(PLAN.replace("treatment = 1", "treatment = 1\nshift = 1"))
+        with self.assertRaisesRegex(ValueError, "overrides a fitted parameter"):
+            Plan(self.plan_file)
+
     def test_operator_mismatch_is_rejected(self):
         (self.root / "other.toml").write_text(ENDPOINT + 'operator = "interval_rate"\n')
         self.plan_file.write_text(PLAN.replace('[models.modulated]\npath = "endpoint.toml"',

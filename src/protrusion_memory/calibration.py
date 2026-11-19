@@ -177,12 +177,14 @@ def predict(plan, candidate, rows, fitted):
 def metrics(rows, error, scales):
     weighted = weights(rows)
     normalized_mse = float(weighted @ (error / scales) ** 2)
-    by_channel = {}
+    by_channel, signed = {}, {}
     for channel in sorted({r.channel for r in rows}):
         idx = [i for i, r in enumerate(rows) if r.channel == channel]
-        by_channel[channel] = math.sqrt(float(weights([rows[i] for i in idx]) @ error[idx] ** 2))
+        channel_weights = weights([rows[i] for i in idx])
+        by_channel[channel] = math.sqrt(float(channel_weights @ error[idx] ** 2))
+        signed[channel] = float(channel_weights @ error[idx])
     return {"scaled_mse": normalized_mse, "scaled_rmse": math.sqrt(normalized_mse),
-            "channel_rmse": by_channel}
+            "channel_rmse": by_channel, "channel_mean_signed_error": signed}
 
 
 def fit(plan, data, version):

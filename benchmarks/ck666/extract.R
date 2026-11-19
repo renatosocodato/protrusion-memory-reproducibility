@@ -28,6 +28,6 @@ rows <- lapply(plates, function(plate_id) {
     }
     data.frame(preparation=preparation, unit=plate_id, scenario="ck666_40",
                channel="log_speed_ratio", time_s=0,
-               value=mean(log(ck666)) - mean(log(vehicle)), measurement_unit="log_ratio")
+               value=mean(log(ck666)) - mean(log(vehicle)), measurement_unit="ln_ratio")
 })
 write.csv(do.call(rbind, rows), stdout(), row.names=FALSE)

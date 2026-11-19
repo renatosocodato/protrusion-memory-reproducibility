@@ -8,7 +8,7 @@ heldout = ["d2-g1n1", "d2-g1n2", "d2-g1n3", "d2-g1n4", "d2-g2n1", "d2-g2n2", "d2
 exposed = 1
 
 [channels.log_speed_ratio]
-unit = "log_ratio"
+unit = "ln_ratio"
 scale = 1
 
 [models.stationary]

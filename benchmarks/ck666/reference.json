@@ -15,13 +15,13 @@
     "schema": "calibration-v1",
     "software_version": "1.3.0",
     "identity": {
-      "plan_sha256": "58ae87f58c91baca99e28084f83d8a685a2e175f856f26604d5ca7c3394ba36a",
+      "plan_sha256": "51fb16b98729c4a9f0eb55530f33d6df645db071222d647217c00a32ec1feb7d",
       "model_sha256": {
-        "stationary": "99162349581d35d38d6ce74cf15ed211cbb1d2b90ac4459fdf9fe2e3473cfad4",
-        "modulated": "99162349581d35d38d6ce74cf15ed211cbb1d2b90ac4459fdf9fe2e3473cfad4"
+        "stationary": "c6bcdf4370cf59df3bbb19f85d58ab0ec4b5f1d66901b181b62fef202e581d6b",
+        "modulated": "c6bcdf4370cf59df3bbb19f85d58ab0ec4b5f1d66901b181b62fef202e581d6b"
       }
     },
-    "calibration_sha256": "0a98418d5330309125058844a12755f2719c11de744ade44313a6fd5e4a093c1",
+    "calibration_sha256": "51a61ae4cbc15ab412bbb0d20da01d84df787b82f50a8eb3ca7859402e10ae54",
     "calibration_preparations": [
       "d1-arp",
       "d1-statins"
@@ -55,6 +55,9 @@
           "scaled_rmse": 0.569237186352654,
           "channel_rmse": {
             "log_speed_ratio": 0.569237186352654
+          },
+          "channel_mean_signed_error": {
+            "log_speed_ratio": 0.5539752480638063
           }
         }
       },
@@ -73,6 +76,9 @@
           "scaled_rmse": 0.13092898403077288,
           "channel_rmse": {
             "log_speed_ratio": 0.13092898403077288
+          },
+          "channel_mean_signed_error": {
+            "log_speed_ratio": -6.575787310503234e-11
           }
         }
       }
@@ -81,8 +87,8 @@
   "score": {
     "schema": "calibration-v1",
     "software_version": "1.3.0",
-    "fit_sha256": "accc2861aac575521b9c2be8f38c2d34264ef2b428f78e78f55a7a664825bb00",
-    "heldout_sha256": "2b0b74e3bd51b8c5cc2d7de1f67271f9fece369612eaf7771d088193045e8067",
+    "fit_sha256": "809a8cbf195d6fce1e8a67bfb14a74135d5d800e9cf609fbf12cc7198b28379f",
+    "heldout_sha256": "7e38669487758ed931341c2640b2ad76b8d7a8594b4a974ced63fe87fc9896df",
     "heldout_preparations": [
       "d2-g1n1",
       "d2-g1n2",
@@ -100,7 +106,7 @@
       "d2-g5n4"
     ],
     "channel_units": {
-      "log_speed_ratio": "log_ratio"
+      "log_speed_ratio": "ln_ratio"
     },
     "candidates": {
       "stationary": {
@@ -108,6 +114,9 @@
         "scaled_rmse": 0.5458812069815187,
         "channel_rmse": {
           "log_speed_ratio": 0.5458812069815187
+        },
+        "channel_mean_signed_error": {
+          "log_speed_ratio": 0.5335728268791768
         }
       },
       "modulated": {
@@ -115,6 +124,9 @@
         "scaled_rmse": 0.11705805971671408,
         "channel_rmse": {
           "log_speed_ratio": 0.11705805971671408
+        },
+        "channel_mean_signed_error": {
+          "log_speed_ratio": -0.020402421250387364
         }
       }
     },
@@ -125,6 +137,9 @@
           "scaled_rmse": 0.656073032725353,
           "channel_rmse": {
             "log_speed_ratio": 0.656073032725353
+          },
+          "channel_mean_signed_error": {
+            "log_speed_ratio": 0.6555029187167545
           }
         },
         "d2-g1n2": {
@@ -132,6 +147,9 @@
           "scaled_rmse": 0.4078402286941013,
           "channel_rmse": {
             "log_speed_ratio": 0.4078402286941013
+          },
+          "channel_mean_signed_error": {
+            "log_speed_ratio": 0.4076825697969405
           }
         },
         "d2-g1n3": {
@@ -139,6 +157,9 @@
           "scaled_rmse": 0.7193754735102981,
           "channel_rmse": {
             "log_speed_ratio": 0.7193754735102981
+          },
+          "channel_mean_signed_error": {
+            "log_speed_ratio": 0.716459652319588
           }
         },
         "d2-g1n4": {
@@ -146,12 +167,18 @@
           "scaled_rmse": 0.4755561671783576,
           "channel_rmse": {
             "log_speed_ratio": 0.4755561671783576
+          },
+          "channel_mean_signed_error": {
+            "log_speed_ratio": 0.474663511601503
           }
         },
         "d2-g2n1": {
           "scaled_mse": 0.36367270094543164,
           "scaled_rmse": 0.603052817707895,
           "channel_rmse": {
+            "log_speed_ratio": 0.603052817707895
+          },
+          "channel_mean_signed_error": {
             "log_speed_ratio": 0.603052817707895
           }
         },
@@ -160,12 +187,18 @@
           "scaled_rmse": 0.288283366496324,
           "channel_rmse": {
             "log_speed_ratio": 0.288283366496324
+          },
+          "channel_mean_signed_error": {
+            "log_speed_ratio": 0.288283366496324
           }
         },
         "d2-g2n3": {
           "scaled_mse": 0.17424551358245957,
           "scaled_rmse": 0.41742725543795,
           "channel_rmse": {
+            "log_speed_ratio": 0.41742725543795
+          },
+          "channel_mean_signed_error": {
             "log_speed_ratio": 0.41742725543795
           }
         },
@@ -174,12 +207,18 @@
           "scaled_rmse": 0.514518680079018,
           "channel_rmse": {
             "log_speed_ratio": 0.514518680079018
+          },
+          "channel_mean_signed_error": {
+            "log_speed_ratio": 0.514518680079018
           }
         },
         "d2-g3n2": {
           "scaled_mse": 0.4046017117085356,
           "scaled_rmse": 0.636083101259997,
           "channel_rmse": {
+            "log_speed_ratio": 0.636083101259997
+          },
+          "channel_mean_signed_error": {
             "log_speed_ratio": 0.636083101259997
           }
         },
@@ -188,12 +227,18 @@
           "scaled_rmse": 0.478790000982203,
           "channel_rmse": {
             "log_speed_ratio": 0.478790000982203
+          },
+          "channel_mean_signed_error": {
+            "log_speed_ratio": 0.478790000982203
           }
         },
         "d2-g5n1": {
           "scaled_mse": 0.3359547149287665,
           "scaled_rmse": 0.579616006446308,
           "channel_rmse": {
+            "log_speed_ratio": 0.579616006446308
+          },
+          "channel_mean_signed_error": {
             "log_speed_ratio": 0.579616006446308
           }
         },
@@ -202,6 +247,9 @@
           "scaled_rmse": 0.651001587469088,
           "channel_rmse": {
             "log_speed_ratio": 0.651001587469088
+          },
+          "channel_mean_signed_error": {
+            "log_speed_ratio": 0.651001587469088
           }
         },
         "d2-g5n3": {
@@ -209,12 +257,18 @@
           "scaled_rmse": 0.56815589675049,
           "channel_rmse": {
             "log_speed_ratio": 0.56815589675049
+          },
+          "channel_mean_signed_error": {
+            "log_speed_ratio": 0.56815589675049
           }
         },
         "d2-g5n4": {
           "scaled_mse": 0.22923240580409354,
           "scaled_rmse": 0.478782211244417,
           "channel_rmse": {
+            "log_speed_ratio": 0.478782211244417
+          },
+          "channel_mean_signed_error": {
             "log_speed_ratio": 0.478782211244417
           }
         }
@@ -225,6 +279,9 @@
           "scaled_rmse": 0.10514568806241684,
           "channel_rmse": {
             "log_speed_ratio": 0.10514568806241684
+          },
+          "channel_mean_signed_error": {
+            "log_speed_ratio": 0.10152767058719031
           }
         },
         "d2-g1n2": {
@@ -232,6 +289,9 @@
           "scaled_rmse": 0.14673146274317606,
           "channel_rmse": {
             "log_speed_ratio": 0.14673146274317606
+          },
+          "channel_mean_signed_error": {
+            "log_speed_ratio": -0.14629267833262372
           }
         },
         "d2-g1n3": {
@@ -239,6 +299,9 @@
           "scaled_rmse": 0.1748937394283959,
           "channel_rmse": {
             "log_speed_ratio": 0.1748937394283959
+          },
+          "channel_mean_signed_error": {
+            "log_speed_ratio": 0.16248440419002375
           }
         },
         "d2-g1n4": {
@@ -246,12 +309,18 @@
           "scaled_rmse": 0.08449006122968819,
           "channel_rmse": {
             "log_speed_ratio": 0.08449006122968819
+          },
+          "channel_mean_signed_error": {
+            "log_speed_ratio": -0.07931173652806123
           }
         },
         "d2-g2n1": {
           "scaled_mse": 0.0024086078357158968,
           "scaled_rmse": 0.04907756957833076,
           "channel_rmse": {
+            "log_speed_ratio": 0.04907756957833076
+          },
+          "channel_mean_signed_error": {
             "log_speed_ratio": 0.04907756957833076
           }
         },
@@ -260,6 +329,9 @@
           "scaled_rmse": 0.2656918816332402,
           "channel_rmse": {
             "log_speed_ratio": 0.2656918816332402
+          },
+          "channel_mean_signed_error": {
+            "log_speed_ratio": -0.2656918816332402
           }
         },
         "d2-g2n3": {
@@ -267,6 +339,9 @@
           "scaled_rmse": 0.13654799269161422,
           "channel_rmse": {
             "log_speed_ratio": 0.13654799269161422
+          },
+          "channel_mean_signed_error": {
+            "log_speed_ratio": -0.13654799269161422
           }
         },
         "d2-g3n1": {
@@ -274,12 +349,18 @@
           "scaled_rmse": 0.039456568050546204,
           "channel_rmse": {
             "log_speed_ratio": 0.039456568050546204
+          },
+          "channel_mean_signed_error": {
+            "log_speed_ratio": -0.039456568050546204
           }
         },
         "d2-g3n2": {
           "scaled_mse": 0.006741699545688721,
           "scaled_rmse": 0.08210785313043278,
           "channel_rmse": {
+            "log_speed_ratio": 0.08210785313043278
+          },
+          "channel_mean_signed_error": {
             "log_speed_ratio": 0.08210785313043278
           }
         },
@@ -288,12 +369,18 @@
           "scaled_rmse": 0.07518524714736124,
           "channel_rmse": {
             "log_speed_ratio": 0.07518524714736124
+          },
+          "channel_mean_signed_error": {
+            "log_speed_ratio": -0.07518524714736124
           }
         },
         "d2-g5n1": {
           "scaled_mse": 0.0006574484870576627,
           "scaled_rmse": 0.025640758316743728,
           "channel_rmse": {
+            "log_speed_ratio": 0.025640758316743728
+          },
+          "channel_mean_signed_error": {
             "log_speed_ratio": 0.025640758316743728
           }
         },
@@ -302,12 +389,18 @@
           "scaled_rmse": 0.09702633933952376,
           "channel_rmse": {
             "log_speed_ratio": 0.09702633933952376
+          },
+          "channel_mean_signed_error": {
+            "log_speed_ratio": 0.09702633933952376
           }
         },
         "d2-g5n3": {
           "scaled_mse": 0.0002010907953101656,
           "scaled_rmse": 0.014180648620925829,
           "channel_rmse": {
+            "log_speed_ratio": 0.014180648620925829
+          },
+          "channel_mean_signed_error": {
             "log_speed_ratio": 0.014180648620925829
           }
         },
@@ -316,6 +409,9 @@
           "scaled_rmse": 0.07519303688514722,
           "channel_rmse": {
             "log_speed_ratio": 0.07519303688514722
+          },
+          "channel_mean_signed_error": {
+            "log_speed_ratio": -0.07519303688514722
           }
         }
       }

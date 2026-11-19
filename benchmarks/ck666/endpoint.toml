@@ -17,4 +17,4 @@ offset = "0"
 
 [observations.log_speed_ratio]
 expression = "offset + exposed * shift"
-unit = "log_ratio"
+unit = "ln_ratio"
