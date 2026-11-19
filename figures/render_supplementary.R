@@ -1,7 +1,9 @@
 #!/usr/bin/env Rscript
 # Draw the seven supplementary figures from frozen source outputs.
-file_arg <- grep("^--file=", commandArgs(FALSE), value = TRUE)[1]
-here <- dirname(normalizePath(sub("^--file=", "", file_arg)))
+script <- sub("^--file=", "", grep("^--file=", commandArgs(FALSE), value = TRUE)[1])
+# Rscript escapes spaces in an absolute script path in commandArgs().
+if (!file.exists(script)) script <- gsub("~+~", " ", script, fixed = TRUE)
+here <- dirname(normalizePath(script, mustWork = TRUE))
 source(file.path(here, "bj_style.R"))
 
 read_data <- function(name) {

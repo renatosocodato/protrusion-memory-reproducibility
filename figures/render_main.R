@@ -1,6 +1,9 @@
 #!/usr/bin/env Rscript
 # Figure coordinates from saved results and the exact frozen step response.
-here <- dirname(normalizePath(sub("^--file=", "", grep("^--file=", commandArgs(FALSE), value=TRUE)[1])))
+script <- sub("^--file=", "", grep("^--file=", commandArgs(FALSE), value = TRUE)[1])
+# Rscript escapes spaces in an absolute script path in commandArgs().
+if (!file.exists(script)) script <- gsub("~+~", " ", script, fixed = TRUE)
+here <- dirname(normalizePath(script, mustWork = TRUE))
 source(file.path(here, "bj_style.R"))
 load_json <- function(name) jsonlite::fromJSON(file.path(data_dir, paste0(name, ".json")))
 joint <- load_json("classification")

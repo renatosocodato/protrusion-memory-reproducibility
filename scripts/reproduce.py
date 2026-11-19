@@ -54,7 +54,7 @@ def main():
         environment["REPRO_DATA_DIR"] = str(data)
 
     for name in ("render_main.R", "render_supplementary.R"):
-        run("Rscript", "--vanilla", ROOT / "figures" / name, figures, env=environment)
+        run("Rscript", "--vanilla", Path("figures") / name, figures, env=environment)
     run(sys.executable, ROOT / "scripts/check_figures.py", figures)
     for name in PAPER_FILES:
         shutil.copyfile(ROOT / "paper" / name, submission / name)
