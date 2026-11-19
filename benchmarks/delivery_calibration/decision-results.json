@@ -1,0 +1,93 @@
+{
+  "data_kind": "synthetic contrast-level surrogate",
+  "cost_per_mechanical_control": 1,
+  "development_families": 2400,
+  "test_families_per_domain": 2400,
+  "minimum_effect_um": 0.08,
+  "domains": {
+    "transfer": {
+      "passive_prevalence": {
+        "measurements_per_case": 0.0,
+        "coverage": 1.0,
+        "error_among_calls": 0.3333333333333333,
+        "false_mediation_among_direct_twins": 1.0,
+        "coverage_direct_twins": 1.0,
+        "coverage_mediated_twins": 1.0
+      },
+      "analytic_no_witness": {
+        "measurements_per_case": 0.7086111111111111,
+        "coverage": 1.0,
+        "error_among_calls": 0.0,
+        "false_mediation_among_direct_twins": 0.0,
+        "coverage_direct_twins": 1.0,
+        "coverage_mediated_twins": 1.0
+      },
+      "analytic": {
+        "measurements_per_case": 0.7086111111111111,
+        "coverage": 1.0,
+        "error_among_calls": 0.0,
+        "false_mediation_among_direct_twins": 0.0,
+        "coverage_direct_twins": 1.0,
+        "coverage_mediated_twins": 1.0
+      },
+      "learned": {
+        "measurements_per_case": 0.6666666666666666,
+        "coverage": 0.9580555555555555,
+        "error_among_calls": 0.0,
+        "false_mediation_among_direct_twins": 0.0,
+        "coverage_direct_twins": 1.0,
+        "coverage_mediated_twins": 1.0
+      },
+      "always_calibrate": {
+        "measurements_per_case": 1.0,
+        "coverage": 1.0,
+        "error_among_calls": 0.0,
+        "false_mediation_among_direct_twins": 0.0,
+        "coverage_direct_twins": 1.0,
+        "coverage_mediated_twins": 1.0
+      }
+    },
+    "nontransfer": {
+      "passive_prevalence": {
+        "measurements_per_case": 0.0,
+        "coverage": 1.0,
+        "error_among_calls": 0.3333333333333333,
+        "false_mediation_among_direct_twins": 1.0,
+        "coverage_direct_twins": 1.0,
+        "coverage_mediated_twins": 1.0
+      },
+      "analytic_no_witness": {
+        "measurements_per_case": 0.7083333333333334,
+        "coverage": 1.0,
+        "error_among_calls": 0.3333333333333333,
+        "false_mediation_among_direct_twins": 1.0,
+        "coverage_direct_twins": 1.0,
+        "coverage_mediated_twins": 1.0
+      },
+      "analytic": {
+        "measurements_per_case": 0.041666666666666664,
+        "coverage": 0.3333333333333333,
+        "error_among_calls": 0.0,
+        "false_mediation_among_direct_twins": 0.0,
+        "coverage_direct_twins": 0.0,
+        "coverage_mediated_twins": 0.0
+      },
+      "learned": {
+        "measurements_per_case": 0.0,
+        "coverage": 0.2916666666666667,
+        "error_among_calls": 0.0,
+        "false_mediation_among_direct_twins": 0.0,
+        "coverage_direct_twins": 0.0,
+        "coverage_mediated_twins": 0.0
+      },
+      "always_calibrate": {
+        "measurements_per_case": 0.3333333333333333,
+        "coverage": 0.3333333333333333,
+        "error_among_calls": 0.0,
+        "false_mediation_among_direct_twins": 0.0,
+        "coverage_direct_twins": 0.0,
+        "coverage_mediated_twins": 0.0
+      }
+    }
+  }
+}

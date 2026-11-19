@@ -161,21 +161,26 @@ def main(argv=None):
     forecast_score.add_argument("--fit", type=Path, required=True, help="frozen JSON from forecast-fit")
     gain = commands.add_parser("mode-calibrate", help="calibrate angular channels on separate preparations")
     intervention = commands.add_parser("mode-test", help="test a signed mode in reserved preparations")
-    for command in (gain, intervention):
+    delivery = commands.add_parser("mode-delivery-calibrate", help="measure active mechanical leakage in an independent control")
+    for command in (gain, delivery, intervention):
         command.add_argument("--plan", type=Path, required=True)
         command.add_argument("--data", type=Path, required=True)
         command.add_argument("--output", type=Path, required=True)
-    intervention.add_argument("--calibration", type=Path, required=True)
+    for command in (delivery, intervention):
+        command.add_argument("--calibration", type=Path, required=True)
+    intervention.add_argument("--delivery-calibration", type=Path)
     args = parser.parse_args(argv)
     try:
         if args.command == "reproduce":
             return reproduction(args, installed_version)
-        if args.command in ("mode-calibrate", "mode-test"):
+        if args.command in ("mode-calibrate", "mode-delivery-calibrate", "mode-test"):
             plan = mode_test.Plan.load(args.plan)
             if args.command == "mode-calibrate":
                 result = mode_test.calibrate(plan, args.data, installed_version)
+            elif args.command == "mode-delivery-calibrate":
+                result = mode_test.calibrate_delivery(plan, args.data, args.calibration, installed_version)
             else:
-                result = mode_test.score(plan, args.data, args.calibration, installed_version)
+                result = mode_test.score(plan, args.data, args.calibration, installed_version, args.delivery_calibration)
         elif args.command == "ensemble":
             result = {"software_version": installed_version,
                       **portable.ensemble(load_config(args.config), args.replicates)}

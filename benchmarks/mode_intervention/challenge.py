@@ -81,12 +81,12 @@ def write_gains(path, rng):
                     writer.writerow([prep,2,channel,*basis,*measured])
 
 
-def write_responses(path, rng, response, mismatch, leakage):
+def write_responses(path, rng, response, mismatch, leakage, preparations=RESERVED):
     with path.open("w", newline="") as stream:
         writer = csv.writer(stream)
         writer.writerow(["preparation","mode","arm",*(f"{c}_{a}" for c in mode_test.CHANNELS
                                                        for a in ("cos","sin"))])
-        for prep in RESERVED:
+        for prep in preparations:
             individual_gain = GAINS + rng.normal(0,.025,GAINS.shape)
             base = rng.normal(0,.1,(3,2))
             base[2,0] += .8

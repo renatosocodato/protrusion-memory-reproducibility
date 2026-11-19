@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.0.0
+
+- Added an independent mechanical-control calibration to the reserved signed mode test. Angular standards, actin-disabled controls and reserved tests use disjoint preparations.
+- Added synthetic controls for transferred delivery leakage, incomplete actin block and failure of mechanical transfer, plus a decision benchmark on observationally matched pathways.
+- The v1 signed-mode plan and the Biophysical Journal analysis citation remain available.
+
 ## 1.9.0
 
 - Added independent angular gain calibration and a signed active-versus-delivery mode test on reserved preparations.

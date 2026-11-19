@@ -1,0 +1,1186 @@
+{
+  "data_kind": "synthetic",
+  "cohorts_per_case": 60,
+  "preparations_per_cohort": {
+    "angular": 8,
+    "mechanical": 10,
+    "reserved": 12
+  },
+  "cases": {
+    "mediated": {
+      "planted_actin_deformation_um": 0.25598346168361985,
+      "mechanical_odd_control_um": 0.004,
+      "mechanical_odd_reserved_um": 0.004,
+      "counts": {
+        "deformation_beyond_leakage": 60
+      },
+      "interval_covers_latent": 60,
+      "qualified_intervals": 60,
+      "representative": {
+        "schema": "mode-test-v2",
+        "software_version": "2.0.0",
+        "mode": 2,
+        "window_s": [
+          10.0,
+          30.0
+        ],
+        "axis": [
+          1.0,
+          0.0
+        ],
+        "decision": "deformation_beyond_leakage",
+        "limits": {
+          "actin_min": 0.15,
+          "shape_min": 0.08,
+          "drive_max": 0.075,
+          "drive_gain": 0.55,
+          "drive_error": 0.0,
+          "blocked_actin_max": 0.15,
+          "blocked_actin_gain": 0.45,
+          "transfer_margin": 0.02,
+          "control_shape_error": 0.0
+        },
+        "mechanical_calibration": {
+          "status": "qualified",
+          "control_actin_upper": 0.09175800331712877,
+          "control_drive_upper": 0.025214250524744998,
+          "control_odd_mean": -0.0033443371498799402,
+          "control_even_mean": -0.0054069565625875105,
+          "mechanical_allowance": 0.051229527632465084,
+          "mechanical_allowance_upper": 0.0702141197009867,
+          "calibration_sha256": "8e6499f8d6e3dc10375bf9ae8a0851d829455b9ab8282685fff407f136303723",
+          "preparations": [
+            "blocked-0",
+            "blocked-1",
+            "blocked-2",
+            "blocked-3",
+            "blocked-4",
+            "blocked-5",
+            "blocked-6",
+            "blocked-7",
+            "blocked-8",
+            "blocked-9"
+          ],
+          "transfer_margin_limit_for_signed_effect": 0.11710790254803292
+        },
+        "calibration_sha256": "6b34ac0bf472ec8bb524b6e4c8e04cf8a64287207784093a089e4112b76596d9",
+        "reserved_sha256": "16d70f1ec63afec71868150ad245a0852b660ccc834a8043d3f69d8e47572d8f",
+        "reserved_preparations": [
+          "reserved-0",
+          "reserved-1",
+          "reserved-10",
+          "reserved-11",
+          "reserved-2",
+          "reserved-3",
+          "reserved-4",
+          "reserved-5",
+          "reserved-6",
+          "reserved-7",
+          "reserved-8",
+          "reserved-9"
+        ],
+        "drive_upper": 0.022727621972488427,
+        "actin_both_signs_interval": [
+          0.35361941714689604,
+          0.4070850354084692
+        ],
+        "shape_odd_mean": 0.25913705105805035,
+        "shape_odd_interval": [
+          0.24397866719211636,
+          0.2736330394839722
+        ],
+        "shape_interval_with_leakage": [
+          0.17710790254803294,
+          0.34181002706710445
+        ],
+        "mean_leakage_allowance": 0.057982093809263974,
+        "by_preparation": {
+          "reserved-0": {
+            "actin_signed_by_arm": [
+              0.3930650624743507,
+              0.42743832550286653
+            ],
+            "shape_odd": 0.274042790754603,
+            "shape_perpendicular_odd": 0.0023822873934514583,
+            "residual_drive_norms": [
+              0.015421116023166283,
+              0.022405986791015433
+            ]
+          },
+          "reserved-1": {
+            "actin_signed_by_arm": [
+              0.30253683843637375,
+              0.32118045222962666
+            ],
+            "shape_odd": 0.21898849919576496,
+            "shape_perpendicular_odd": 0.07003514820363485,
+            "residual_drive_norms": [
+              0.013578682759939991,
+              0.0072058319884950265
+            ]
+          },
+          "reserved-10": {
+            "actin_signed_by_arm": [
+              0.4253865203532422,
+              0.409569361300719
+            ],
+            "shape_odd": 0.28637846031578207,
+            "shape_perpendicular_odd": -0.02054177628256597,
+            "residual_drive_norms": [
+              0.016857549688436585,
+              0.010458245259585792
+            ]
+          },
+          "reserved-11": {
+            "actin_signed_by_arm": [
+              0.32885510032031723,
+              0.3416689406418506
+            ],
+            "shape_odd": 0.24814742803899653,
+            "shape_perpendicular_odd": 0.031657335714744765,
+            "residual_drive_norms": [
+              0.01472506946416994,
+              0.0161595074611718
+            ]
+          },
+          "reserved-2": {
+            "actin_signed_by_arm": [
+              0.40115253753453733,
+              0.4541682231032472
+            ],
+            "shape_odd": 0.21952806622502524,
+            "shape_perpendicular_odd": -0.007208904749677425,
+            "residual_drive_norms": [
+              0.011928215214901887,
+              0.00781721687147191
+            ]
+          },
+          "reserved-3": {
+            "actin_signed_by_arm": [
+              0.3961776084792399,
+              0.43670933820943136
+            ],
+            "shape_odd": 0.2562755486675698,
+            "shape_perpendicular_odd": -0.009504161726708565,
+            "residual_drive_norms": [
+              0.010275202380681449,
+              0.005741858229982111
+            ]
+          },
+          "reserved-4": {
+            "actin_signed_by_arm": [
+              0.41183804753110137,
+              0.3113255379954084
+            ],
+            "shape_odd": 0.2641418475287896,
+            "shape_perpendicular_odd": -0.027387786451898606,
+            "residual_drive_norms": [
+              0.0031524411782270383,
+              0.002380394099840193
+            ]
+          },
+          "reserved-5": {
+            "actin_signed_by_arm": [
+              0.2902519966446456,
+              0.3655147076132263
+            ],
+            "shape_odd": 0.23364438123996306,
+            "shape_perpendicular_odd": -0.01812286141509653,
+            "residual_drive_norms": [
+              0.014516344551798706,
+              0.007299737044791082
+            ]
+          },
+          "reserved-6": {
+            "actin_signed_by_arm": [
+              0.4526638929468578,
+              0.4197743511726374
+            ],
+            "shape_odd": 0.2945372308523615,
+            "shape_perpendicular_odd": 0.0038125599660147683,
+            "residual_drive_norms": [
+              0.01795524141896915,
+              0.01701035199957139
+            ]
+          },
+          "reserved-7": {
+            "actin_signed_by_arm": [
+              0.39747591534540827,
+              0.4654380869365219
+            ],
+            "shape_odd": 0.2960034195705718,
+            "shape_perpendicular_odd": -0.016922889014112364,
+            "residual_drive_norms": [
+              0.02053637040676646,
+              0.011719205975228105
+            ]
+          },
+          "reserved-8": {
+            "actin_signed_by_arm": [
+              0.400822770466055,
+              0.3883798390944721
+            ],
+            "shape_odd": 0.25536919919650686,
+            "shape_perpendicular_odd": -0.009630745983567411,
+            "residual_drive_norms": [
+              0.013843329012331594,
+              0.007813448802802462
+            ]
+          },
+          "reserved-9": {
+            "actin_signed_by_arm": [
+              0.3974815307497186,
+              0.4003119959761758
+            ],
+            "shape_odd": 0.26258774111067024,
+            "shape_perpendicular_odd": 0.01053042345961367,
+            "residual_drive_norms": [
+              0.014950915934991916,
+              0.010905170611069786
+            ]
+          }
+        }
+      }
+    },
+    "direct_only": {
+      "planted_actin_deformation_um": 1.8859358519307534e-12,
+      "mechanical_odd_control_um": 0.004,
+      "mechanical_odd_reserved_um": 0.004,
+      "counts": {
+        "deformation_unresolved": 57,
+        "mechanical_control_unqualified": 2,
+        "deformation_bounded_small": 1
+      },
+      "interval_covers_latent": 58,
+      "qualified_intervals": 58,
+      "representative": {
+        "schema": "mode-test-v2",
+        "software_version": "2.0.0",
+        "mode": 2,
+        "window_s": [
+          10.0,
+          30.0
+        ],
+        "axis": [
+          1.0,
+          0.0
+        ],
+        "decision": "deformation_unresolved",
+        "limits": {
+          "actin_min": 0.15,
+          "shape_min": 0.08,
+          "drive_max": 0.075,
+          "drive_gain": 0.55,
+          "drive_error": 0.0,
+          "blocked_actin_max": 0.15,
+          "blocked_actin_gain": 0.45,
+          "transfer_margin": 0.02,
+          "control_shape_error": 0.0
+        },
+        "mechanical_calibration": {
+          "status": "qualified",
+          "control_actin_upper": 0.10425639075011475,
+          "control_drive_upper": 0.023950204818107435,
+          "control_odd_mean": 0.026897613619707956,
+          "control_even_mean": 0.01345186979607248,
+          "mechanical_allowance": 0.0784581866725773,
+          "mechanical_allowance_upper": 0.09508023484877626,
+          "calibration_sha256": "0421fa5f294962873e927d92d27ca4fe40d14700c8c0d24b3205a2bf5967ff00",
+          "preparations": [
+            "blocked-0",
+            "blocked-1",
+            "blocked-2",
+            "blocked-3",
+            "blocked-4",
+            "blocked-5",
+            "blocked-6",
+            "blocked-7",
+            "blocked-8",
+            "blocked-9"
+          ],
+          "transfer_margin_limit_for_signed_effect": 0.0
+        },
+        "calibration_sha256": "8e0b00c7cabdab250a2a71e78407f1c1adc44f9c474ca2bcc92f452f07136a97",
+        "reserved_sha256": "27f549dd2981283967264ce1167817e681cdc16ca4739afb3d87f07170c40b9e",
+        "reserved_preparations": [
+          "reserved-0",
+          "reserved-1",
+          "reserved-10",
+          "reserved-11",
+          "reserved-2",
+          "reserved-3",
+          "reserved-4",
+          "reserved-5",
+          "reserved-6",
+          "reserved-7",
+          "reserved-8",
+          "reserved-9"
+        ],
+        "drive_upper": 0.022441768898503307,
+        "actin_both_signs_interval": [
+          0.3978217795391104,
+          0.43745000548655916
+        ],
+        "shape_odd_mean": 0.012560799897837828,
+        "shape_odd_interval": [
+          0.00183709827320505,
+          0.023214205995653273
+        ],
+        "shape_interval_with_leakage": [
+          -0.0948808003942461,
+          0.1192211626939696
+        ],
+        "mean_leakage_allowance": 0.08542886027572548,
+        "by_preparation": {
+          "reserved-0": {
+            "actin_signed_by_arm": [
+              0.3401105130910651,
+              0.42224209218600267
+            ],
+            "shape_odd": 0.05102166371998841,
+            "shape_perpendicular_odd": -0.03983883999690416,
+            "residual_drive_norms": [
+              0.009907573266044285,
+              0.014125362648941306
+            ]
+          },
+          "reserved-1": {
+            "actin_signed_by_arm": [
+              0.43228604758361444,
+              0.4168121778082741
+            ],
+            "shape_odd": 0.033097912584214,
+            "shape_perpendicular_odd": -0.026253863545604147,
+            "residual_drive_norms": [
+              0.00874187456412933,
+              0.020137519014866347
+            ]
+          },
+          "reserved-10": {
+            "actin_signed_by_arm": [
+              0.4644448494973379,
+              0.46494208401046105
+            ],
+            "shape_odd": -0.0055372866502761305,
+            "shape_perpendicular_odd": 0.022961824636980432,
+            "residual_drive_norms": [
+              0.010817440166215234,
+              0.01905801103517205
+            ]
+          },
+          "reserved-11": {
+            "actin_signed_by_arm": [
+              0.4365018030590104,
+              0.42779069140360965
+            ],
+            "shape_odd": 0.009237856446257403,
+            "shape_perpendicular_odd": -0.019366732407493367,
+            "residual_drive_norms": [
+              0.013216828200375827,
+              0.013510484120622659
+            ]
+          },
+          "reserved-2": {
+            "actin_signed_by_arm": [
+              0.4284656661981093,
+              0.4544721766859475
+            ],
+            "shape_odd": 0.010956632815717007,
+            "shape_perpendicular_odd": 0.013242507631744074,
+            "residual_drive_norms": [
+              0.015865648922712586,
+              0.0027133857137551175
+            ]
+          },
+          "reserved-3": {
+            "actin_signed_by_arm": [
+              0.44937731376585127,
+              0.46347744456578804
+            ],
+            "shape_odd": -0.024442496217144352,
+            "shape_perpendicular_odd": -0.018429878865736264,
+            "residual_drive_norms": [
+              0.008680999414916781,
+              0.021323860616580828
+            ]
+          },
+          "reserved-4": {
+            "actin_signed_by_arm": [
+              0.4140983133267839,
+              0.42690201727215843
+            ],
+            "shape_odd": -1.2223080834913858e-06,
+            "shape_perpendicular_odd": 0.005270917950355701,
+            "residual_drive_norms": [
+              0.0036738533311767166,
+              0.016798206018913128
+            ]
+          },
+          "reserved-5": {
+            "actin_signed_by_arm": [
+              0.43132114959965406,
+              0.4669551001100118
+            ],
+            "shape_odd": 0.0007508780947927222,
+            "shape_perpendicular_odd": 0.006529681022855787,
+            "residual_drive_norms": [
+              0.012332310567488349,
+              0.0027289719833806843
+            ]
+          },
+          "reserved-6": {
+            "actin_signed_by_arm": [
+              0.44900162370100266,
+              0.44670570164508727
+            ],
+            "shape_odd": 0.028811429787449622,
+            "shape_perpendicular_odd": 0.03202702429848462,
+            "residual_drive_norms": [
+              0.022264828543293633,
+              0.016005196805164452
+            ]
+          },
+          "reserved-7": {
+            "actin_signed_by_arm": [
+              0.3592907643686797,
+              0.41869675728711553
+            ],
+            "shape_odd": 0.012844361301072055,
+            "shape_perpendicular_odd": -0.0028833061660370274,
+            "residual_drive_norms": [
+              0.012320899956401399,
+              0.01199407361272364
+            ]
+          },
+          "reserved-8": {
+            "actin_signed_by_arm": [
+              0.4271334909217181,
+              0.3860003183238035
+            ],
+            "shape_odd": 0.030172549462859362,
+            "shape_perpendicular_odd": -0.0074066208068498725,
+            "residual_drive_norms": [
+              0.012718475627783287,
+              0.005143869126086637
+            ]
+          },
+          "reserved-9": {
+            "actin_signed_by_arm": [
+              0.39397374906915067,
+              0.37563831764624583
+            ],
+            "shape_odd": 0.0038173197372073035,
+            "shape_perpendicular_odd": 0.012250340523302074,
+            "residual_drive_norms": [
+              0.014916316955531498,
+              0.015178857925099511
+            ]
+          }
+        }
+      }
+    },
+    "transferred_leakage": {
+      "planted_actin_deformation_um": 1.8859358519307534e-12,
+      "mechanical_odd_control_um": 0.24,
+      "mechanical_odd_reserved_um": 0.24,
+      "counts": {
+        "deformation_unresolved": 59,
+        "mechanical_control_unqualified": 1
+      },
+      "interval_covers_latent": 59,
+      "qualified_intervals": 59,
+      "representative": {
+        "schema": "mode-test-v2",
+        "software_version": "2.0.0",
+        "mode": 2,
+        "window_s": [
+          10.0,
+          30.0
+        ],
+        "axis": [
+          1.0,
+          0.0
+        ],
+        "decision": "deformation_unresolved",
+        "limits": {
+          "actin_min": 0.15,
+          "shape_min": 0.08,
+          "drive_max": 0.075,
+          "drive_gain": 0.55,
+          "drive_error": 0.0,
+          "blocked_actin_max": 0.15,
+          "blocked_actin_gain": 0.45,
+          "transfer_margin": 0.02,
+          "control_shape_error": 0.0
+        },
+        "mechanical_calibration": {
+          "status": "qualified",
+          "control_actin_upper": 0.0867636617959402,
+          "control_drive_upper": 0.020341614573639855,
+          "control_odd_mean": 0.23909614774587307,
+          "control_even_mean": -0.007840485944543832,
+          "mechanical_allowance": 0.2851304228013293,
+          "mechanical_allowance_upper": 0.29938507219865623,
+          "calibration_sha256": "7554d9c6675aa475f1e7fdef0edc93defc700a021dce734fa8e96121b579eed0",
+          "preparations": [
+            "blocked-0",
+            "blocked-1",
+            "blocked-2",
+            "blocked-3",
+            "blocked-4",
+            "blocked-5",
+            "blocked-6",
+            "blocked-7",
+            "blocked-8",
+            "blocked-9"
+          ],
+          "transfer_margin_limit_for_signed_effect": 0.0
+        },
+        "calibration_sha256": "0392dbf5e393086caea2ea4cb6a90bfe1933f0bbad195f9cc1f9fbc4c3eaa065",
+        "reserved_sha256": "91898e029bc4afb7ebd5f9cd3742a12b665a79a391f2567f7982f3efad6a6652",
+        "reserved_preparations": [
+          "reserved-0",
+          "reserved-1",
+          "reserved-10",
+          "reserved-11",
+          "reserved-2",
+          "reserved-3",
+          "reserved-4",
+          "reserved-5",
+          "reserved-6",
+          "reserved-7",
+          "reserved-8",
+          "reserved-9"
+        ],
+        "drive_upper": 0.023880742851016983,
+        "actin_both_signs_interval": [
+          0.37640352564890267,
+          0.42069955722458274
+        ],
+        "shape_odd_mean": 0.2516087388311342,
+        "shape_odd_interval": [
+          0.2359681865651121,
+          0.26612981315188666
+        ],
+        "shape_interval_with_leakage": [
+          -0.060245514010220304,
+          0.5663337479915244
+        ],
+        "mean_leakage_allowance": 0.2930081367351317,
+        "by_preparation": {
+          "reserved-0": {
+            "actin_signed_by_arm": [
+              0.45387135798761596,
+              0.43948534620651103
+            ],
+            "shape_odd": 0.2751989197691746,
+            "shape_perpendicular_odd": 0.03930544106061615,
+            "residual_drive_norms": [
+              0.009501406559260564,
+              0.019323216044725876
+            ]
+          },
+          "reserved-1": {
+            "actin_signed_by_arm": [
+              0.40936249244671014,
+              0.3711596517959576
+            ],
+            "shape_odd": 0.23692761033114962,
+            "shape_perpendicular_odd": -0.019307506284072025,
+            "residual_drive_norms": [
+              0.01074396173421011,
+              0.010998579319947199
+            ]
+          },
+          "reserved-10": {
+            "actin_signed_by_arm": [
+              0.3372037279029678,
+              0.35812390191286564
+            ],
+            "shape_odd": 0.23762994163521384,
+            "shape_perpendicular_odd": -0.061403172037720964,
+            "residual_drive_norms": [
+              0.012207409535835236,
+              0.01251920845746931
+            ]
+          },
+          "reserved-11": {
+            "actin_signed_by_arm": [
+              0.37522152058998837,
+              0.38978843862521134
+            ],
+            "shape_odd": 0.2298131334274789,
+            "shape_perpendicular_odd": 0.016010024700905387,
+            "residual_drive_norms": [
+              0.00908581718446447,
+              0.011741126121805242
+            ]
+          },
+          "reserved-2": {
+            "actin_signed_by_arm": [
+              0.4194491904184792,
+              0.4739099650811927
+            ],
+            "shape_odd": 0.2780185275296162,
+            "shape_perpendicular_odd": -0.02158993302721266,
+            "residual_drive_norms": [
+              0.021113645950880354,
+              0.014515285808215577
+            ]
+          },
+          "reserved-3": {
+            "actin_signed_by_arm": [
+              0.34195052215258936,
+              0.3720207984410485
+            ],
+            "shape_odd": 0.2218605631028412,
+            "shape_perpendicular_odd": -0.025137903228591787,
+            "residual_drive_norms": [
+              0.01652234568091044,
+              0.01865768885355879
+            ]
+          },
+          "reserved-4": {
+            "actin_signed_by_arm": [
+              0.4698528554470913,
+              0.417524936949455
+            ],
+            "shape_odd": 0.22187064716818167,
+            "shape_perpendicular_odd": 0.01684536017361179,
+            "residual_drive_norms": [
+              0.014468638778537527,
+              0.023596573989380858
+            ]
+          },
+          "reserved-5": {
+            "actin_signed_by_arm": [
+              0.4369753647075893,
+              0.41868077163233164
+            ],
+            "shape_odd": 0.30031395867733934,
+            "shape_perpendicular_odd": -0.02474359458879586,
+            "residual_drive_norms": [
+              0.008405069014385789,
+              0.017431055939064945
+            ]
+          },
+          "reserved-6": {
+            "actin_signed_by_arm": [
+              0.45672979761291804,
+              0.4325868693509707
+            ],
+            "shape_odd": 0.2521800685675814,
+            "shape_perpendicular_odd": -0.001924372628977468,
+            "residual_drive_norms": [
+              0.015871959794370217,
+              0.015773090799330213
+            ]
+          },
+          "reserved-7": {
+            "actin_signed_by_arm": [
+              0.35271803241033406,
+              0.3421167369730319
+            ],
+            "shape_odd": 0.27559930722084264,
+            "shape_perpendicular_odd": 0.015150059444040579,
+            "residual_drive_norms": [
+              0.011357926670682111,
+              0.00791484461137396
+            ]
+          },
+          "reserved-8": {
+            "actin_signed_by_arm": [
+              0.4018041831555644,
+              0.43195565608730174
+            ],
+            "shape_odd": 0.22480735128004303,
+            "shape_perpendicular_odd": -0.024274068151453877,
+            "residual_drive_norms": [
+              0.01742651430268424,
+              0.016140108795134892
+            ]
+          },
+          "reserved-9": {
+            "actin_signed_by_arm": [
+              0.3998730385190733,
+              0.35686574886697614
+            ],
+            "shape_odd": 0.26508483726414783,
+            "shape_perpendicular_odd": -0.010266908982452354,
+            "residual_drive_norms": [
+              0.009916587930971457,
+              0.018522727961451584
+            ]
+          }
+        }
+      }
+    },
+    "incomplete_block": {
+      "planted_actin_deformation_um": 0.25598346168361985,
+      "mechanical_odd_control_um": 0.004,
+      "mechanical_odd_reserved_um": 0.004,
+      "counts": {
+        "mechanical_control_unqualified": 60
+      },
+      "interval_covers_latent": 0,
+      "qualified_intervals": 0,
+      "representative": {
+        "schema": "mode-test-v2",
+        "software_version": "2.0.0",
+        "mode": 2,
+        "window_s": [
+          10.0,
+          30.0
+        ],
+        "axis": [
+          1.0,
+          0.0
+        ],
+        "decision": "mechanical_control_unqualified",
+        "limits": {
+          "actin_min": 0.15,
+          "shape_min": 0.08,
+          "drive_max": 0.075,
+          "drive_gain": 0.55,
+          "drive_error": 0.0,
+          "blocked_actin_max": 0.15,
+          "blocked_actin_gain": 0.45,
+          "transfer_margin": 0.02,
+          "control_shape_error": 0.0
+        },
+        "mechanical_calibration": {
+          "status": "control_unqualified",
+          "control_actin_upper": 0.3225420770687002,
+          "control_drive_upper": 0.023195904826805332,
+          "control_odd_mean": 0.1287190035380447,
+          "control_even_mean": -0.014878891802085178,
+          "mechanical_allowance": 0.25197829679906464,
+          "mechanical_allowance_upper": 0.2747741700769853,
+          "calibration_sha256": "445a5b8da642985631525a2cd99c81c0ef3a07b07ed47842feda9c1904523b16",
+          "preparations": [
+            "blocked-0",
+            "blocked-1",
+            "blocked-2",
+            "blocked-3",
+            "blocked-4",
+            "blocked-5",
+            "blocked-6",
+            "blocked-7",
+            "blocked-8",
+            "blocked-9"
+          ]
+        },
+        "calibration_sha256": "b2b12cccb4d84e02b79aa3e0a1513d7617fd29a0957ca007278b966e17dca234",
+        "reserved_sha256": "21093e66f25ee44648fa4fa0122b3535cdf85c787c05925278dafa3f0c510c2f",
+        "reserved_preparations": [
+          "reserved-0",
+          "reserved-1",
+          "reserved-10",
+          "reserved-11",
+          "reserved-2",
+          "reserved-3",
+          "reserved-4",
+          "reserved-5",
+          "reserved-6",
+          "reserved-7",
+          "reserved-8",
+          "reserved-9"
+        ],
+        "drive_upper": 0.025336827199276362,
+        "actin_both_signs_interval": [
+          0.3620636511145223,
+          0.42296004866767367
+        ],
+        "shape_odd_mean": 0.26073166205196724,
+        "shape_odd_interval": [
+          0.24350914929159254,
+          0.27870477398038984
+        ],
+        "shape_interval_with_leakage": null,
+        "mean_leakage_allowance": null,
+        "by_preparation": {
+          "reserved-0": {
+            "actin_signed_by_arm": [
+              0.31481721571427973,
+              0.3468100505243276
+            ],
+            "shape_odd": 0.2602945802370256,
+            "shape_perpendicular_odd": -0.03481382709170809,
+            "residual_drive_norms": [
+              0.024805457035914698,
+              0.015592317114117024
+            ]
+          },
+          "reserved-1": {
+            "actin_signed_by_arm": [
+              0.42464508240179794,
+              0.38171699382382857
+            ],
+            "shape_odd": 0.30638754340618723,
+            "shape_perpendicular_odd": 0.029492357673454015,
+            "residual_drive_norms": [
+              0.011262870414103867,
+              0.009870120384885722
+            ]
+          },
+          "reserved-10": {
+            "actin_signed_by_arm": [
+              0.3439804589474325,
+              0.4177415044696267
+            ],
+            "shape_odd": 0.2300039386897063,
+            "shape_perpendicular_odd": -0.018148250480959374,
+            "residual_drive_norms": [
+              0.015606640646844501,
+              0.01032543212029146
+            ]
+          },
+          "reserved-11": {
+            "actin_signed_by_arm": [
+              0.34814016720409413,
+              0.30112256405116794
+            ],
+            "shape_odd": 0.203930764660771,
+            "shape_perpendicular_odd": 0.014613259103525,
+            "residual_drive_norms": [
+              0.011034077031680191,
+              0.01788406067999283
+            ]
+          },
+          "reserved-2": {
+            "actin_signed_by_arm": [
+              0.4039719739441341,
+              0.489641847646693
+            ],
+            "shape_odd": 0.27854446343813466,
+            "shape_perpendicular_odd": 0.04405282675345831,
+            "residual_drive_norms": [
+              0.01856626814410995,
+              0.00840572463641206
+            ]
+          },
+          "reserved-3": {
+            "actin_signed_by_arm": [
+              0.48696548080117785,
+              0.3856452983040144
+            ],
+            "shape_odd": 0.28161942284370256,
+            "shape_perpendicular_odd": -0.06438603917467348,
+            "residual_drive_norms": [
+              0.01712687601410552,
+              0.01818303378257189
+            ]
+          },
+          "reserved-4": {
+            "actin_signed_by_arm": [
+              0.42164227977413116,
+              0.3632667637776005
+            ],
+            "shape_odd": 0.23130425173964353,
+            "shape_perpendicular_odd": -0.02073423051443253,
+            "residual_drive_norms": [
+              0.010172304148945757,
+              0.019933676413867233
+            ]
+          },
+          "reserved-5": {
+            "actin_signed_by_arm": [
+              0.48926087083925424,
+              0.5010515316763646
+            ],
+            "shape_odd": 0.3112784800522316,
+            "shape_perpendicular_odd": -0.007243216413373674,
+            "residual_drive_norms": [
+              0.015075474183325586,
+              0.012385015734609366
+            ]
+          },
+          "reserved-6": {
+            "actin_signed_by_arm": [
+              0.30471548987887087,
+              0.36669796661415033
+            ],
+            "shape_odd": 0.25010079566867155,
+            "shape_perpendicular_odd": -0.02098592064972499,
+            "residual_drive_norms": [
+              0.015117775846675442,
+              0.006562923669792884
+            ]
+          },
+          "reserved-7": {
+            "actin_signed_by_arm": [
+              0.4224808602655184,
+              0.4560439679620693
+            ],
+            "shape_odd": 0.2560860944526626,
+            "shape_perpendicular_odd": -0.010791554032138658,
+            "residual_drive_norms": [
+              0.009067665928352533,
+              0.0097092806653662
+            ]
+          },
+          "reserved-8": {
+            "actin_signed_by_arm": [
+              0.3631727804034988,
+              0.41661242910175217
+            ],
+            "shape_odd": 0.2697904973137815,
+            "shape_perpendicular_odd": 0.007147251413760592,
+            "residual_drive_norms": [
+              0.008111216478708362,
+              0.015253083317372218
+            ]
+          },
+          "reserved-9": {
+            "actin_signed_by_arm": [
+              0.43030195964485485,
+              0.38940884696478856
+            ],
+            "shape_odd": 0.2494391121210882,
+            "shape_perpendicular_odd": -0.03604772030171097,
+            "residual_drive_norms": [
+              0.006747022717072573,
+              0.007684893247855052
+            ]
+          }
+        }
+      }
+    },
+    "nontransfer": {
+      "planted_actin_deformation_um": 1.8859358519307534e-12,
+      "mechanical_odd_control_um": 0.004,
+      "mechanical_odd_reserved_um": 0.24,
+      "counts": {
+        "deformation_beyond_leakage": 58,
+        "mechanical_control_unqualified": 2
+      },
+      "interval_covers_latent": 0,
+      "qualified_intervals": 58,
+      "representative": {
+        "schema": "mode-test-v2",
+        "software_version": "2.0.0",
+        "mode": 2,
+        "window_s": [
+          10.0,
+          30.0
+        ],
+        "axis": [
+          1.0,
+          0.0
+        ],
+        "decision": "deformation_beyond_leakage",
+        "limits": {
+          "actin_min": 0.15,
+          "shape_min": 0.08,
+          "drive_max": 0.075,
+          "drive_gain": 0.55,
+          "drive_error": 0.0,
+          "blocked_actin_max": 0.15,
+          "blocked_actin_gain": 0.45,
+          "transfer_margin": 0.02,
+          "control_shape_error": 0.0
+        },
+        "mechanical_calibration": {
+          "status": "qualified",
+          "control_actin_upper": 0.11136010946129545,
+          "control_drive_upper": 0.019289863327911935,
+          "control_odd_mean": 0.021450496846409105,
+          "control_even_mean": 0.014069830612626589,
+          "mechanical_allowance": 0.07038599027144586,
+          "mechanical_allowance_upper": 0.08040072362118938,
+          "calibration_sha256": "efcf4faf6f746bf8b137e569cd48fa917c422330316bad0fa592c65b0e369d9b",
+          "preparations": [
+            "blocked-0",
+            "blocked-1",
+            "blocked-2",
+            "blocked-3",
+            "blocked-4",
+            "blocked-5",
+            "blocked-6",
+            "blocked-7",
+            "blocked-8",
+            "blocked-9"
+          ],
+          "transfer_margin_limit_for_signed_effect": 0.08939278618754436
+        },
+        "calibration_sha256": "23549158c3108b46191d09fe8621716a0f3434e7f2608c275f582a8dce793359",
+        "reserved_sha256": "0f25d47ed90e1e116059cac62c853e83b9ca66a7468e18c9d6d220157bbab542",
+        "reserved_preparations": [
+          "reserved-0",
+          "reserved-1",
+          "reserved-10",
+          "reserved-11",
+          "reserved-2",
+          "reserved-3",
+          "reserved-4",
+          "reserved-5",
+          "reserved-6",
+          "reserved-7",
+          "reserved-8",
+          "reserved-9"
+        ],
+        "drive_upper": 0.028770716113457332,
+        "actin_both_signs_interval": [
+          0.37819289511859344,
+          0.4387889710923497
+        ],
+        "shape_odd_mean": 0.24810676267973755,
+        "shape_odd_interval": [
+          0.23042317211357347,
+          0.2680334546767928
+        ],
+        "shape_interval_with_leakage": [
+          0.14939278618754437,
+          0.34825561364969476
+        ],
+        "mean_leakage_allowance": 0.07744457554525122,
+        "by_preparation": {
+          "reserved-0": {
+            "actin_signed_by_arm": [
+              0.44206763410387645,
+              0.45028051517163237
+            ],
+            "shape_odd": 0.23519870548681673,
+            "shape_perpendicular_odd": -0.0010721221658344555,
+            "residual_drive_norms": [
+              0.009997564563669377,
+              0.012717518956397066
+            ]
+          },
+          "reserved-1": {
+            "actin_signed_by_arm": [
+              0.44138246840576295,
+              0.45495563341080253
+            ],
+            "shape_odd": 0.21282772760632573,
+            "shape_perpendicular_odd": -0.02684635251668631,
+            "residual_drive_norms": [
+              0.00911767584879522,
+              0.024054103687569776
+            ]
+          },
+          "reserved-10": {
+            "actin_signed_by_arm": [
+              0.3707947677588544,
+              0.39087751530032344
+            ],
+            "shape_odd": 0.26981524585493427,
+            "shape_perpendicular_odd": -0.011249606436907575,
+            "residual_drive_norms": [
+              0.009444999949346637,
+              0.008166165116390048
+            ]
+          },
+          "reserved-11": {
+            "actin_signed_by_arm": [
+              0.3575114651222153,
+              0.3320481119556282
+            ],
+            "shape_odd": 0.27356592224085274,
+            "shape_perpendicular_odd": 0.025684571934057564,
+            "residual_drive_norms": [
+              0.008877401951836924,
+              0.016055903564906302
+            ]
+          },
+          "reserved-2": {
+            "actin_signed_by_arm": [
+              0.4396870779155386,
+              0.41398293400301567
+            ],
+            "shape_odd": 0.23509317540057456,
+            "shape_perpendicular_odd": -0.0009259287307091272,
+            "residual_drive_norms": [
+              0.016891931777085808,
+              0.009902344508144941
+            ]
+          },
+          "reserved-3": {
+            "actin_signed_by_arm": [
+              0.36327687216150245,
+              0.3954293296444884
+            ],
+            "shape_odd": 0.2560999518133131,
+            "shape_perpendicular_odd": 0.001874349784909685,
+            "residual_drive_norms": [
+              0.011490657129685526,
+              0.014952916981579344
+            ]
+          },
+          "reserved-4": {
+            "actin_signed_by_arm": [
+              0.4204798299226777,
+              0.44639578004311387
+            ],
+            "shape_odd": 0.21056143653764703,
+            "shape_perpendicular_odd": 0.03158390966526976,
+            "residual_drive_norms": [
+              0.028485138311472466,
+              0.008561191990963734
+            ]
+          },
+          "reserved-5": {
+            "actin_signed_by_arm": [
+              0.4591148808489508,
+              0.39107535349126116
+            ],
+            "shape_odd": 0.24311383823768468,
+            "shape_perpendicular_odd": 0.00722800601432776,
+            "residual_drive_norms": [
+              0.014614005528823673,
+              0.0073320386754709786
+            ]
+          },
+          "reserved-6": {
+            "actin_signed_by_arm": [
+              0.4836914176967155,
+              0.4447018811681461
+            ],
+            "shape_odd": 0.21722545083341024,
+            "shape_perpendicular_odd": 0.02820788107416597,
+            "residual_drive_norms": [
+              0.011297002140707805,
+              0.01131772783520722
+            ]
+          },
+          "reserved-7": {
+            "actin_signed_by_arm": [
+              0.4789529376586478,
+              0.4653940797778993
+            ],
+            "shape_odd": 0.21057565435394343,
+            "shape_perpendicular_odd": -0.0495111002477666,
+            "residual_drive_norms": [
+              0.01814500416735678,
+              0.011416524227089855
+            ]
+          },
+          "reserved-8": {
+            "actin_signed_by_arm": [
+              0.49264388167532286,
+              0.4707780042693832
+            ],
+            "shape_odd": 0.29348822765390087,
+            "shape_perpendicular_odd": -0.032090434555186634,
+            "residual_drive_norms": [
+              0.009760891052196742,
+              0.0016822204073351386
+            ]
+          },
+          "reserved-9": {
+            "actin_signed_by_arm": [
+              0.28633434387712253,
+              0.28154841440639644
+            ],
+            "shape_odd": 0.3197158161374475,
+            "shape_perpendicular_odd": 0.025030826209213264,
+            "residual_drive_norms": [
+              0.018325168522048074,
+              0.01540489687197246
+            ]
+          }
+        }
+      }
+    }
+  }
+}
