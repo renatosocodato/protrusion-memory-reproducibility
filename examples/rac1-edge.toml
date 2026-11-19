@@ -1,0 +1,30 @@
+schema = "ode-v1"
+
+[time]
+stop_s = 445
+sample_s = 5
+
+[states]
+velocity_nm_s = 0
+position_nm = 0
+
+[parameters]
+drive = 0
+gain_nm_s = 1
+relaxation_s = 30
+
+[equations]
+velocity_nm_s = "(gain_nm_s * drive - velocity_nm_s) / relaxation_s"
+position_nm = "velocity_nm_s"
+
+[[modulations]]
+parameter = "drive"
+start_s = 0
+stop_s = 445
+operation = "set"
+value = 1
+
+[observations.edge_velocity]
+expression = "position_nm"
+operator = "interval_rate"
+unit = "nm/s"
