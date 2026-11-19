@@ -33,7 +33,7 @@ $if(onecolumn)$$else$\usepackage{multicol}$endif$
 \setlength{\@dblfptop}{0pt}
 \def\ps@paper{%
  \def\@oddhead{\sffamily\color{black!62}\fontsize{8}{9}\selectfont
-  $if(onecolumn)$Supporting information$else$Conformational and actin memory$endif$\hfil}%
+  $if(onecolumn)$Supporting information$else$Where protrusion memory resides$endif$\hfil}%
  \let\@evenhead\@oddhead
  \def\@oddfoot{\hfil\sffamily\fontsize{8.5}{10}\selectfont\thepage\hfil}%
  \let\@evenfoot\@oddfoot}

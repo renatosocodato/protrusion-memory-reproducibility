@@ -1,6 +1,6 @@
 cff-version: 1.2.0
 message: "Please cite the companion manuscript when using this repository."
-title: "Distinguishing conformational memory from actin memory in protrusion dynamics"
+title: "Conformational and actin memory can leave identical signatures in protrusion models"
 type: software
 authors:
   - family-names: Socodato

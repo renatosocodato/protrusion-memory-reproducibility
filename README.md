@@ -1,4 +1,4 @@
-# Distinguishing conformational memory from actin memory in protrusion dynamics
+# Conformational and actin memory can leave identical signatures in protrusion models
 
 This repository rebuilds the numerical tests, the three main figures, the seven supporting figures and the manuscript and supporting-information reading copies. The biological application motivates a prospective test. The quantitative checks compare synthetic or analytical results and previously published source data.
 
