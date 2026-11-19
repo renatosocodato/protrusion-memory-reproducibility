@@ -13,7 +13,7 @@ import tomllib
 import numpy as np
 from scipy.optimize import least_squares
 
-from .portable import SCHEMAS as ODE_SCHEMAS, number, simulate, table
+from .portable import ODE_SCHEMAS, number, simulate, table
 
 SCHEMA = "calibration-v1"
 MODELS = ("stationary", "modulated")

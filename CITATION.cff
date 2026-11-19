@@ -2,8 +2,8 @@ cff-version: 1.2.0
 message: "Please cite this software version when using Protrusion Memory."
 title: "Protrusion Memory"
 type: software
-version: "1.6.0"
-url: "https://github.com/renatosocodato/protrusion-memory-reproducibility/releases/tag/v1.6.0"
+version: "1.7.0"
+url: "https://github.com/renatosocodato/protrusion-memory-reproducibility/releases/tag/v1.7.0"
 repository-code: "https://github.com/renatosocodato/protrusion-memory-reproducibility"
 authors:
   - family-names: Socodato
@@ -22,4 +22,4 @@ references:
         given-names: Inês
       - family-names: Relvas
         given-names: João
-    url: "https://github.com/renatosocodato/protrusion-memory-reproducibility/blob/v1.6.0/paper/MANUSCRIPT_WORKING_DRAFT_EN.md"
+    url: "https://github.com/renatosocodato/protrusion-memory-reproducibility/blob/v1.7.0/paper/MANUSCRIPT_WORKING_DRAFT_EN.md"

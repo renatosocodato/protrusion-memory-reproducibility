@@ -1,0 +1,56 @@
+schema = "sde-v1"
+
+[time]
+stop_s = 70
+sample_s = 1
+
+[stochastic]
+seed = 8024
+max_step_s = 0.10
+measurement_noise = true
+
+[states]
+actin = 0
+shape = 0
+
+[parameters]
+pulse = 0
+
+[equations]
+actin = "pulse - actin/8"
+shape = "0.05*actin - shape/20"
+
+[diffusion.actin_noise]
+actin = "0.12"
+
+[diffusion.shape_noise]
+shape = "0.05"
+
+[[modulations]]
+parameter = "pulse"
+start_s = 12
+stop_s = 17
+operation = "set"
+value = 1
+
+[reporters.actin_reporter]
+expression = "actin"
+response_s = 4
+initial = 0
+
+[reporters.membrane]
+expression = "shape"
+
+[observations.actin]
+unit = "au"
+mix = {actin_reporter = 1}
+exposure_s = 0.7
+delay_s = 0.6
+noise_sd = 0.05
+
+[observations.shape]
+unit = "um"
+mix = {membrane = 1}
+exposure_s = 0.7
+delay_s = 0.6
+noise_sd = 0.025

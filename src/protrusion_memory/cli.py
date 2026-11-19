@@ -113,14 +113,18 @@ def main(argv=None):
     parser = argparse.ArgumentParser(prog="protrusion-memory", description=__doc__)
     parser.add_argument("--version", action="version", version=f"%(prog)s {installed_version}")
     commands = parser.add_subparsers(dest="command", required=True)
-    sim = commands.add_parser("simulate", help="simulate the exact pair or a declarative ode-v1 model")
+    sim = commands.add_parser("simulate", help="simulate the exact pair, deterministic ODEs or a seeded Itô SDE")
     compare = commands.add_parser("compare", help="compare the exact-pair reporter or two declarative models")
     for command in (sim, compare):
-        command.add_argument("--config", type=Path, help="optional exact-pair or ode-v1 TOML configuration")
+        command.add_argument("--config", type=Path, help="optional exact-pair, ode-v1, ode-v2 or sde-v1 TOML")
         command.add_argument("--output", type=Path, help="new JSON file (default: standard output)")
     sim.add_argument("--order", choices=("uv", "vu"),
                      help="use configured windows (uv) or swap them (vu)")
     compare.add_argument("--against", type=Path, help="second model in the ode-v1 or ode-v2 schema")
+    ensemble = commands.add_parser("ensemble", help="summarize independent stochastic trajectories")
+    ensemble.add_argument("--config", type=Path, required=True)
+    ensemble.add_argument("--replicates", type=int, required=True)
+    ensemble.add_argument("--output", type=Path)
     reproduce = commands.add_parser("reproduce", help="rebuild the frozen paper workflow")
     reproduce.add_argument("--target", choices=("paper",), default="paper")
     reproduce.add_argument("--bundle", type=Path, default=Path.cwd(),
@@ -147,7 +151,10 @@ def main(argv=None):
     try:
         if args.command == "reproduce":
             return reproduction(args, installed_version)
-        if args.command in ("calibrate", "score"):
+        if args.command == "ensemble":
+            result = {"software_version": installed_version,
+                      **portable.ensemble(load_config(args.config), args.replicates)}
+        elif args.command in ("calibrate", "score"):
             plan = calibration.Plan(args.plan.resolve())
             if args.command == "calibrate":
                 result = calibration.fit(plan, args.data, installed_version)

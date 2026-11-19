@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.7.0
+
+- Added seeded finite-dimensional Itô dynamics with event-aligned Euler–Maruyama, shared or independent Wiener drivers and optional detector noise.
+- Added a stochastic ensemble command and a direct-versus-mediated pulse challenge under white and temporally correlated noise.
+- Retained the deterministic schemas and the original Biophysical Journal analysis reference.
+
 ## 1.6.0
 
 - Added causal reporter response, exposure, delay and linear channel mixing through `ode-v2`.

@@ -2,6 +2,7 @@
 
 import ast
 from bisect import bisect_right
+from copy import deepcopy
 from dataclasses import dataclass
 from decimal import Decimal
 import keyword
@@ -13,9 +14,13 @@ import numpy as np
 from scipy import __version__ as scipy_version
 from scipy.integrate import quad, solve_ivp
 
+from .stochastic import integrate as integrate_stochastic
+
 SCHEMA = "ode-v1"
 ACQUISITION_SCHEMA = "ode-v2"
-SCHEMAS = (SCHEMA, ACQUISITION_SCHEMA)
+STOCHASTIC_SCHEMA = "sde-v1"
+ODE_SCHEMAS = (SCHEMA, ACQUISITION_SCHEMA)
+SCHEMAS = (*ODE_SCHEMAS, STOCHASTIC_SCHEMA)
 RTOL, ATOL = 1e-9, 1e-11
 BINARY = {ast.Add: operator.add, ast.Sub: operator.sub, ast.Mult: operator.mul,
           ast.Div: operator.truediv, ast.Pow: operator.pow}
@@ -134,7 +139,7 @@ class Acquisition:
         sources = table(config["reporters"], "reporters")
         channels = table(config["observations"], "observations")
         if len(sources) > 128 or len(channels) > 128:
-            raise ValueError("ode-v2 supports at most 128 reporters and 128 detectors")
+            raise ValueError("at most 128 reporters and 128 detectors are supported")
         for name, spec in sources.items():
             table(spec, name, fields={"expression", "response_s", "initial"})
             tau = number(spec.get("response_s", 0), f"{name} response_s")
@@ -175,7 +180,19 @@ class Acquisition:
                     for reporter in self.reporters.values() if reporter.tau]
         return response + [self.signal(d, context, values) for d in self.exposures.values()]
 
-    def observe(self, times, edges, solutions, at_time):
+    @staticmethod
+    def windows(times, detector):
+        for t in times:
+            end = Decimal(str(t)) - detector.delay
+            start = end - detector.exposure
+            if start >= 0:
+                yield t, float(start), float(end)
+
+    def support(self, times):
+        return {bound for detector in self.detectors.values()
+                for _, left, right in self.windows(times, detector) for bound in (left, right)}
+
+    def observe(self, times, edges, solutions, at_time, stochastic=False):
         def segment(time):
             return min(bisect_right(edges, time) - 1, len(solutions) - 1)
 
@@ -191,7 +208,7 @@ class Acquisition:
                 solve = solutions[i]
                 before, after = solve(l)[detector.index], solve(r)[detector.index]
                 area = after - before
-                if abs(area) <= 1e-7 * max(abs(before), abs(after)):
+                if not stochastic and abs(area) <= 1e-7 * max(abs(before), abs(after)):
                     # Avoid cancellation when shutter times nearly coincide on a long trajectory.
                     def integrand(t):
                         values = solve(t)
@@ -203,17 +220,12 @@ class Acquisition:
         observed = {}
         for name, detector in self.detectors.items():
             complete_times, readings = [], []
-            for time in times:
-                end = Decimal(str(time)) - detector.delay
-                start = end - detector.exposure
-                if start < 0:
-                    continue
-                endpoint = float(end)
+            for time, start, endpoint in self.windows(times, detector):
                 if detector.index is None:
                     last = solutions[segment(endpoint)](endpoint)
                     value = self.signal(detector, at_time(endpoint, last), last)
                 else:
-                    value = average(detector, float(start), endpoint, float(detector.exposure))
+                    value = average(detector, start, endpoint, float(detector.exposure))
                 readings.append(value)
                 complete_times.append(time)
             if len(complete_times) <= int(detector.operator == "interval_rate"):
@@ -243,16 +255,41 @@ def observation(name, unit, kind, sd, times, values):
             "time_s": times[int(rate):].tolist(), "values": series}
 
 
+def stochastic_settings(config, states, symbols, end):
+    settings = table(config["stochastic"], "stochastic",
+                     fields={"seed", "max_step_s", "measurement_noise"})
+    seed = settings["seed"]
+    if type(seed) is not int or seed < 0:
+        raise ValueError("stochastic seed must be a nonnegative integer")
+    step = number(settings["max_step_s"], "max_step_s")
+    if not 0 < step <= end or end / step > 199_999:
+        raise ValueError("stochastic step must be positive and fit the integration budget")
+    noise = settings.get("measurement_noise", False)
+    if type(noise) is not bool:
+        raise ValueError("measurement_noise must be a boolean")
+    mapping = table(config["diffusion"], "diffusion")
+    if len(mapping) > 32:
+        raise ValueError("at most 32 independent Wiener drivers are supported")
+    drivers = [{name: expression(expr, symbols) for name, expr in
+                table(spec, driver, fields=states.keys()).items()}
+               for driver, spec in mapping.items()]
+    process_seed, detector_seed = np.random.SeedSequence(seed).spawn(2)
+    return step, noise, drivers, np.random.default_rng(process_seed), np.random.default_rng(detector_seed)
+
+
 def simulate(config):
     """Solve a portable TOML system and return observed channels in declared units."""
     table(config, "configuration")
     schema = config.get("schema")
     fields = {"schema", "time", "states", "parameters", "equations", "observations", "modulations"}
-    if schema == ACQUISITION_SCHEMA:
+    is_stochastic = schema == STOCHASTIC_SCHEMA
+    if schema in (ACQUISITION_SCHEMA, STOCHASTIC_SCHEMA):
         fields.add("reporters")
+    if is_stochastic:
+        fields.update(("stochastic", "diffusion"))
     table(config, "configuration", fields=fields)
     if schema not in SCHEMAS:
-        raise ValueError(f"expected schema {SCHEMA} or {ACQUISITION_SCHEMA}")
+        raise ValueError(f"expected one of {', '.join(SCHEMAS)}")
     clock = table(config["time"], "time", fields={"stop_s", "sample_s"})
     end = number(clock["stop_s"], "stop_s")
     step = number(clock["sample_s"], "sample_s")
@@ -285,7 +322,12 @@ def simulate(config):
     derivatives = [expression(eq[name], symbols) for name in states]
     modulations = read_modulations(config.get("modulations", []), parameters, end)
     channels = {}
-    acquisition = Acquisition(config, symbols, y) if schema == ACQUISITION_SCHEMA else None
+    acquisition = Acquisition(config, symbols, y) if schema != SCHEMA else None
+    if is_stochastic:
+        max_step, noisy, drivers, process_rng, camera_rng = stochastic_settings(config, states, symbols, end)
+        anchors = np.asarray(sorted(set(times) | acquisition.support(times)))
+        if len(anchors) + end / max_step + 2*len(modulations) > 200_000:
+            raise ValueError("stochastic observation clock exceeds the mesh budget")
     if acquisition is None:
         for name, channel in table(config["observations"], "observations").items():
             table(channel, name, fields={"expression", "unit", "operator", "noise_sd"})
@@ -315,18 +357,32 @@ def simulate(config):
                 rates.extend(acquisition.derivatives(current, values))
             return rates
 
-        solution = solve_ivp(rhs, (left, right), y, dense_output=True,
-                             method="DOP853", rtol=RTOL, atol=ATOL)
-        if not solution.success:
-            raise ValueError(f"ODE integration failed: {solution.message}")
+        if is_stochastic:
+            def diffusion(time, values):
+                current = context(time, values, active)
+                coefficients = np.zeros((len(values), len(drivers)))
+                for col, driver in enumerate(drivers):
+                    for row, state in enumerate(states):
+                        if state in driver:
+                            coefficients[row, col] = driver[state](current)
+                return coefficients
+
+            lo, hi = np.searchsorted(anchors, (left, right))
+            span = [left, *(t for t in anchors[lo:hi] if t > left), right]
+            sample = integrate_stochastic(rhs, diffusion, y, np.asarray(span), max_step, process_rng)
+            y = sample.path[-1].copy()
+        else:
+            solution = solve_ivp(rhs, (left, right), y, dense_output=True,
+                                 method="DOP853", rtol=RTOL, atol=ATOL)
+            if not solution.success:
+                raise ValueError(f"ODE integration failed: {solution.message}")
+            sample = solution.sol
+            y = solution.y[:, -1].copy()
         selected = (times >= left) & ((times < right) if right < end else (times <= right))
         if np.any(selected):
-            traces[selected] = solution.sol(times[selected])[:len(states)].T
+            traces[selected] = sample(times[selected])[:len(states)].T
         if acquisition is not None:
-            solutions.append(solution.sol)
-        y = solution.y[:, -1]
-        if acquisition is not None:
-            y = y.copy()
+            solutions.append(sample)
             for detector in acquisition.exposures.values():
                 y[detector.index] = 0.0
     if not np.isfinite(traces).all():
@@ -334,7 +390,15 @@ def simulate(config):
 
     if acquisition is not None:
         observed = acquisition.observe(times, edges, solutions,
-                                       lambda t, y: context(t, y, parameters_at(t)))
+                                       lambda t, y: context(t, y, parameters_at(t)), is_stochastic)
+        if is_stochastic and noisy:
+            for channel in observed.values():
+                if channel["noise_sd"] is not None:
+                    jitter = camera_rng.normal(0, channel["noise_sd"], len(channel["values"]))
+                    reading = np.asarray(channel["values"]) + jitter
+                    if not np.isfinite(reading).all():
+                        raise ValueError("nonfinite detector observation")
+                    channel["values"] = reading.tolist()
     else:
         values = {name: [] for name in channels}
         for time, state in zip(times, traces):
@@ -343,13 +407,17 @@ def simulate(config):
                 values[name].append(measure(current))
         observed = {name: observation(name, unit, kind, sd, times, values[name])
                     for name, (unit, kind, sd, _) in channels.items()}
+    solver = ({"method": "Ito Euler–Maruyama", "max_step_s": max_step,
+               "seed": config["stochastic"]["seed"], "measurement_noise": noisy}
+              if is_stochastic else {"method": "DOP853", "rtol": RTOL, "atol": ATOL, "scipy": scipy_version})
     return {"schema": schema, "time_s": times.tolist(), "states": dict(zip(states, traces.T.tolist())),
-            "observations": observed,
-            "solver": {"method": "DOP853", "rtol": RTOL, "atol": ATOL, "scipy": scipy_version}}
+            "observations": observed, "solver": solver}
 
 
 def compare(left, right):
     """Compare aligned expected observations without assigning mechanism probabilities."""
+    if any(cfg.get("schema") == STOCHASTIC_SCHEMA for cfg in (left, right)):
+        raise ValueError("compare expects deterministic models; use ensemble for stochastic readouts")
     a, b = simulate(left)["observations"], simulate(right)["observations"]
     if a.keys() != b.keys():
         raise ValueError("portable comparison requires the same observed channel names")
@@ -368,3 +436,39 @@ def compare(left, right):
                          "rmse_in_noise_sd": number(rmse / sd, "scaled RMSE") if sd is not None else None}
     schema = ACQUISITION_SCHEMA if ACQUISITION_SCHEMA in (left["schema"], right["schema"]) else SCHEMA
     return {"schema": schema, "comparison": "deterministic expected observations", "channels": results}
+
+
+def ensemble(config, replicates):
+    """Summarize independent paths from one declared stochastic model."""
+    if config.get("schema") != STOCHASTIC_SCHEMA:
+        raise ValueError("ensemble requires an sde-v1 configuration")
+    if type(replicates) is not int or not 2 <= replicates <= 256:
+        raise ValueError("ensemble requires 2–256 replicates")
+    stop = number(config["time"]["stop_s"], "stop_s")
+    cadence = number(config["time"]["sample_s"], "sample_s")
+    if not 0 < cadence <= stop:
+        raise ValueError("require 0 < sample_s <= stop_s")
+    count = stop / cadence
+    if (count+2)*len(config["observations"])*replicates > 2_000_000:
+        raise ValueError("ensemble exceeds the observation budget")
+    root = config["stochastic"]["seed"]
+    if type(root) is not int or root < 0:
+        raise ValueError("stochastic seed must be a nonnegative integer")
+    model = deepcopy(config)
+    observations = {}
+    seeds = [int(seed.generate_state(1, dtype=np.uint64)[0])
+             for seed in np.random.SeedSequence(root).spawn(replicates)]
+    draws = {name: [] for name in config["observations"]}
+    for seed in seeds:
+        model["stochastic"]["seed"] = seed
+        observations = simulate(model)["observations"]
+        for name, channel in observations.items():
+            draws[name].append(channel["values"])
+    return {"schema": STOCHASTIC_SCHEMA, "replicates": replicates, "path_seeds": seeds,
+            "observations": {name: {
+                **{k: v for k, v in channel.items() if k != "values"},
+                "mean": np.mean(draws[name], axis=0).tolist(),
+                "sd": np.std(draws[name], axis=0, ddof=1).tolist(),
+                "quantiles": dict(zip(("0.05", "0.50", "0.95"),
+                                      np.quantile(draws[name], [.05, .5, .95], axis=0).tolist()))}
+                for name, channel in observations.items()}}

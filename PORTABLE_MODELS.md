@@ -32,3 +32,16 @@ At reported time t, a detector with `delay_s = d` and `exposure_s = e` averages 
 `compare` checks matching channel names and acquisition clocks before comparing outputs. `calibrate` and `score` accept v2 models using fixed acquisition parameters in their configurations. Supply only measurement times supported by both rivals. A fitted optical or timing parameter needs a fixed common target set across values and an independent calibration design. `noise_sd` describes the final channel's scale. Filtered, averaged or differenced measurements can have correlated noise. DOP853 is explicit, so very fast reporter times or very stiff state kinetics may need a different solver.
 
 See the [pulse and imaging benchmarks](benchmarks/acquisition/README.md).
+
+## Seeded stochastic trajectories with `sde-v1`
+
+Use the `ode-v2` reporters, detector mixing and causal shutter with an Itô SDE. The existing `[equations]` give the drift for each state. Each `[diffusion.driver_name]` maps affected states to expressions giving the coefficient of that independent Wiener driver. Listing several states under the same driver gives them a common increment. Unlisted coefficients are zero. State and parameter names and expression operations follow the deterministic schema.
+
+In `[stochastic]`, supply a nonnegative integer `seed` and positive `max_step_s`. Euler–Maruyama scales each increment by the square root of its actual duration and aligns the mesh with stimulus changes, the output grid and the shutter endpoints. The shutter accumulates the left-endpoint detector signal on that mesh. Check convergence by reducing the step. The explicit method is intended for resolved, nonstiff trajectories. It does not enforce positivity or a reflecting boundary.
+
+The optional `measurement_noise = true` draws independent Gaussian error of each output's declared `noise_sd` after acquisition and any interval-rate operation. Thus the declared noise describes the final output units. Process and detector noise use independent streams. Enabled detector noise does not change the latent trajectory for the same seed and mesh.
+
+    protrusion-memory simulate --config examples/stochastic-pulse.toml
+    protrusion-memory ensemble --config examples/stochastic-pulse.toml --replicates 64
+
+The ensemble command returns independent path seeds, detector means, sample standard deviations and pointwise quantiles. The deterministic comparison and calibration commands retain their existing contracts. The [stochastic pulse challenge](benchmarks/stochastic/README.md) supplies a mechanism-specific discrimination test with atomic conditions and stated noise assumptions.

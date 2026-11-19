@@ -1,0 +1,4247 @@
+{
+  "data_kind": "synthetic, anchored to one-vesicle baseline fluctuation",
+  "empirical_scale": {
+    "sectors": 8,
+    "vesicles": 1,
+    "baseline_frames": 6,
+    "sector_sd_um": {
+      "0": 0.4134823462397242,
+      "1": 0.4905656340546401,
+      "2": 0.4606871210363076,
+      "3": 0.2563638552737881,
+      "4": 0.1373404244365284,
+      "5": 0.17572401930037224,
+      "6": 0.10946705172688223,
+      "7": 0.1929017007918993
+    },
+    "median_sector_sd_um": 0.2246327780328437
+  },
+  "calibration_nulls_per_setting": 6000,
+  "test_paths_per_class": 4000,
+  "results": [
+    {
+      "clock": "1s",
+      "sample_s": 1.0,
+      "phase": 0.0,
+      "pulse_start_s": 130.0,
+      "noise": "white",
+      "scale_multiplier": 0.5,
+      "dprime_known_amplitudes": 26.112262240402146,
+      "ideal_balanced_accuracy": 1.0,
+      "confusion": {
+        "null": {
+          "unresolved": 3984,
+          "mediated": 6,
+          "direct": 10,
+          "detected_before_margin": 192
+        },
+        "mediated": {
+          "unresolved": 0,
+          "mediated": 4000,
+          "direct": 0,
+          "detected_before_margin": 4000
+        },
+        "direct": {
+          "unresolved": 0,
+          "mediated": 0,
+          "direct": 4000,
+          "detected_before_margin": 4000
+        }
+      },
+      "null_detection_interval": [
+        0.04179809839755376,
+        0.055069238336336396
+      ],
+      "correct_interval": {
+        "mediated": [
+          0.9990405567102987,
+          1
+        ],
+        "direct": [
+          0.9990405567102987,
+          1
+        ]
+      }
+    },
+    {
+      "clock": "1s",
+      "sample_s": 1.0,
+      "phase": 0.0,
+      "pulse_start_s": 130.0,
+      "noise": "white",
+      "scale_multiplier": 1.0,
+      "dprime_known_amplitudes": 13.056131120201073,
+      "ideal_balanced_accuracy": 0.9999999999666878,
+      "confusion": {
+        "null": {
+          "unresolved": 3981,
+          "mediated": 7,
+          "direct": 12,
+          "detected_before_margin": 206
+        },
+        "mediated": {
+          "unresolved": 0,
+          "mediated": 4000,
+          "direct": 0,
+          "detected_before_margin": 4000
+        },
+        "direct": {
+          "unresolved": 0,
+          "mediated": 0,
+          "direct": 4000,
+          "detected_before_margin": 4000
+        }
+      },
+      "null_detection_interval": [
+        0.04507087791018925,
+        0.058789742720672986
+      ],
+      "correct_interval": {
+        "mediated": [
+          0.9990405567102987,
+          1
+        ],
+        "direct": [
+          0.9990405567102987,
+          1
+        ]
+      }
+    },
+    {
+      "clock": "1s",
+      "sample_s": 1.0,
+      "phase": 0.0,
+      "pulse_start_s": 130.0,
+      "noise": "white",
+      "scale_multiplier": 2.0,
+      "dprime_known_amplitudes": 6.528065560100536,
+      "ideal_balanced_accuracy": 0.9994508077169546,
+      "confusion": {
+        "null": {
+          "unresolved": 3985,
+          "mediated": 8,
+          "direct": 7,
+          "detected_before_margin": 208
+        },
+        "mediated": {
+          "unresolved": 23,
+          "mediated": 3976,
+          "direct": 1,
+          "detected_before_margin": 4000
+        },
+        "direct": {
+          "unresolved": 4,
+          "mediated": 0,
+          "direct": 3996,
+          "detected_before_margin": 4000
+        }
+      },
+      "null_detection_interval": [
+        0.04553915060205257,
+        0.059320510585519966
+      ],
+      "correct_interval": {
+        "mediated": [
+          0.991087436526638,
+          0.9959646335031369
+        ],
+        "direct": [
+          0.9974314226342689,
+          0.9996110529626092
+        ]
+      }
+    },
+    {
+      "clock": "1s",
+      "sample_s": 1.0,
+      "phase": 0.0,
+      "pulse_start_s": 130.0,
+      "noise": "OU",
+      "scale_multiplier": 0.5,
+      "dprime_known_amplitudes": 21.227342125207503,
+      "ideal_balanced_accuracy": 1.0,
+      "confusion": {
+        "null": {
+          "unresolved": 3908,
+          "mediated": 49,
+          "direct": 43,
+          "detected_before_margin": 200
+        },
+        "mediated": {
+          "unresolved": 0,
+          "mediated": 4000,
+          "direct": 0,
+          "detected_before_margin": 4000
+        },
+        "direct": {
+          "unresolved": 0,
+          "mediated": 0,
+          "direct": 4000,
+          "detected_before_margin": 4000
+        }
+      },
+      "null_detection_interval": [
+        0.043667138340424475,
+        0.05719636062030688
+      ],
+      "correct_interval": {
+        "mediated": [
+          0.9990405567102987,
+          1
+        ],
+        "direct": [
+          0.9990405567102987,
+          1
+        ]
+      }
+    },
+    {
+      "clock": "1s",
+      "sample_s": 1.0,
+      "phase": 0.0,
+      "pulse_start_s": 130.0,
+      "noise": "OU",
+      "scale_multiplier": 1.0,
+      "dprime_known_amplitudes": 10.613671062603752,
+      "ideal_balanced_accuracy": 0.9999999442276312,
+      "confusion": {
+        "null": {
+          "unresolved": 3912,
+          "mediated": 44,
+          "direct": 44,
+          "detected_before_margin": 186
+        },
+        "mediated": {
+          "unresolved": 16,
+          "mediated": 3983,
+          "direct": 1,
+          "detected_before_margin": 4000
+        },
+        "direct": {
+          "unresolved": 0,
+          "mediated": 0,
+          "direct": 4000,
+          "detected_before_margin": 4000
+        }
+      },
+      "null_detection_interval": [
+        0.04039837476372546,
+        0.053471840300033796
+      ],
+      "correct_interval": {
+        "mediated": [
+          0.9932039595870163,
+          0.9973447523912446
+        ],
+        "direct": [
+          0.9990405567102987,
+          1
+        ]
+      }
+    },
+    {
+      "clock": "1s",
+      "sample_s": 1.0,
+      "phase": 0.0,
+      "pulse_start_s": 130.0,
+      "noise": "OU",
+      "scale_multiplier": 2.0,
+      "dprime_known_amplitudes": 5.306835531301876,
+      "ideal_balanced_accuracy": 0.9960159408193158,
+      "confusion": {
+        "null": {
+          "unresolved": 3912,
+          "mediated": 46,
+          "direct": 42,
+          "detected_before_margin": 219
+        },
+        "mediated": {
+          "unresolved": 1184,
+          "mediated": 2781,
+          "direct": 35,
+          "detected_before_margin": 3597
+        },
+        "direct": {
+          "unresolved": 18,
+          "mediated": 2,
+          "direct": 3980,
+          "detected_before_margin": 4000
+        }
+      },
+      "null_detection_interval": [
+        0.04811772883093955,
+        0.062236655418539635
+      ],
+      "correct_interval": {
+        "mediated": [
+          0.6808036547533295,
+          0.7093216826420422
+        ],
+        "direct": [
+          0.9922892796106572,
+          0.9967608715325383
+        ]
+      }
+    },
+    {
+      "clock": "1s",
+      "sample_s": 1.0,
+      "phase": 0.25,
+      "pulse_start_s": 130.25,
+      "noise": "white",
+      "scale_multiplier": 0.5,
+      "dprime_known_amplitudes": 26.103998388341918,
+      "ideal_balanced_accuracy": 1.0,
+      "confusion": {
+        "null": {
+          "unresolved": 3988,
+          "mediated": 6,
+          "direct": 6,
+          "detected_before_margin": 199
+        },
+        "mediated": {
+          "unresolved": 0,
+          "mediated": 4000,
+          "direct": 0,
+          "detected_before_margin": 4000
+        },
+        "direct": {
+          "unresolved": 0,
+          "mediated": 0,
+          "direct": 4000,
+          "detected_before_margin": 4000
+        }
+      },
+      "null_detection_interval": [
+        0.04343334234002318,
+        0.05693063634235302
+      ],
+      "correct_interval": {
+        "mediated": [
+          0.9990405567102987,
+          1
+        ],
+        "direct": [
+          0.9990405567102987,
+          1
+        ]
+      }
+    },
+    {
+      "clock": "1s",
+      "sample_s": 1.0,
+      "phase": 0.25,
+      "pulse_start_s": 130.25,
+      "noise": "white",
+      "scale_multiplier": 1.0,
+      "dprime_known_amplitudes": 13.051999194170959,
+      "ideal_balanced_accuracy": 0.9999999999662252,
+      "confusion": {
+        "null": {
+          "unresolved": 3990,
+          "mediated": 7,
+          "direct": 3,
+          "detected_before_margin": 184
+        },
+        "mediated": {
+          "unresolved": 0,
+          "mediated": 4000,
+          "direct": 0,
+          "detected_before_margin": 4000
+        },
+        "direct": {
+          "unresolved": 0,
+          "mediated": 0,
+          "direct": 4000,
+          "detected_before_margin": 4000
+        }
+      },
+      "null_detection_interval": [
+        0.03993220770280679,
+        0.05293896680424217
+      ],
+      "correct_interval": {
+        "mediated": [
+          0.9990405567102987,
+          1
+        ],
+        "direct": [
+          0.9990405567102987,
+          1
+        ]
+      }
+    },
+    {
+      "clock": "1s",
+      "sample_s": 1.0,
+      "phase": 0.25,
+      "pulse_start_s": 130.25,
+      "noise": "white",
+      "scale_multiplier": 2.0,
+      "dprime_known_amplitudes": 6.525999597085479,
+      "ideal_balanced_accuracy": 0.9994488020088298,
+      "confusion": {
+        "null": {
+          "unresolved": 3982,
+          "mediated": 11,
+          "direct": 7,
+          "detected_before_margin": 188
+        },
+        "mediated": {
+          "unresolved": 22,
+          "mediated": 3974,
+          "direct": 4,
+          "detected_before_margin": 4000
+        },
+        "direct": {
+          "unresolved": 3,
+          "mediated": 0,
+          "direct": 3997,
+          "detected_before_margin": 4000
+        }
+      },
+      "null_detection_interval": [
+        0.04086474761936001,
+        0.05400450800110956
+      ],
+      "correct_interval": {
+        "mediated": [
+          0.990492736293418,
+          0.9955602931796467
+        ],
+        "direct": [
+          0.997797095603605,
+          0.9997449002716282
+        ]
+      }
+    },
+    {
+      "clock": "1s",
+      "sample_s": 1.0,
+      "phase": 0.25,
+      "pulse_start_s": 130.25,
+      "noise": "OU",
+      "scale_multiplier": 0.5,
+      "dprime_known_amplitudes": 21.087989456470396,
+      "ideal_balanced_accuracy": 1.0,
+      "confusion": {
+        "null": {
+          "unresolved": 3918,
+          "mediated": 42,
+          "direct": 40,
+          "detected_before_margin": 175
+        },
+        "mediated": {
+          "unresolved": 0,
+          "mediated": 4000,
+          "direct": 0,
+          "detected_before_margin": 4000
+        },
+        "direct": {
+          "unresolved": 0,
+          "mediated": 0,
+          "direct": 4000,
+          "detected_before_margin": 4000
+        }
+      },
+      "null_detection_interval": [
+        0.03783709004550936,
+        0.05053840195634326
+      ],
+      "correct_interval": {
+        "mediated": [
+          0.9990405567102987,
+          1
+        ],
+        "direct": [
+          0.9990405567102987,
+          1
+        ]
+      }
+    },
+    {
+      "clock": "1s",
+      "sample_s": 1.0,
+      "phase": 0.25,
+      "pulse_start_s": 130.25,
+      "noise": "OU",
+      "scale_multiplier": 1.0,
+      "dprime_known_amplitudes": 10.543994728235198,
+      "ideal_balanced_accuracy": 0.9999999325264917,
+      "confusion": {
+        "null": {
+          "unresolved": 3897,
+          "mediated": 52,
+          "direct": 51,
+          "detected_before_margin": 220
+        },
+        "mediated": {
+          "unresolved": 21,
+          "mediated": 3978,
+          "direct": 1,
+          "detected_before_margin": 4000
+        },
+        "direct": {
+          "unresolved": 0,
+          "mediated": 0,
+          "direct": 4000,
+          "detected_before_margin": 4000
+        }
+      },
+      "null_detection_interval": [
+        0.04835239551328616,
+        0.06250150901454818
+      ],
+      "correct_interval": {
+        "mediated": [
+          0.991686108197535,
+          0.9963650023889503
+        ],
+        "direct": [
+          0.9990405567102987,
+          1
+        ]
+      }
+    },
+    {
+      "clock": "1s",
+      "sample_s": 1.0,
+      "phase": 0.25,
+      "pulse_start_s": 130.25,
+      "noise": "OU",
+      "scale_multiplier": 2.0,
+      "dprime_known_amplitudes": 5.271997364117599,
+      "ideal_balanced_accuracy": 0.9958054971320384,
+      "confusion": {
+        "null": {
+          "unresolved": 3913,
+          "mediated": 32,
+          "direct": 55,
+          "detected_before_margin": 227
+        },
+        "mediated": {
+          "unresolved": 1245,
+          "mediated": 2723,
+          "direct": 32,
+          "detected_before_margin": 3610
+        },
+        "direct": {
+          "unresolved": 17,
+          "mediated": 1,
+          "direct": 3982,
+          "detected_before_margin": 4000
+        }
+      },
+      "null_detection_interval": [
+        0.04999618437271457,
+        0.06435436210360582
+      ],
+      "correct_interval": {
+        "mediated": [
+          0.6661354814725011,
+          0.6950176797782717
+        ],
+        "direct": [
+          0.9928976085009257,
+          0.9971515831989802
+        ]
+      }
+    },
+    {
+      "clock": "1s",
+      "sample_s": 1.0,
+      "phase": 0.5,
+      "pulse_start_s": 130.5,
+      "noise": "white",
+      "scale_multiplier": 0.5,
+      "dprime_known_amplitudes": 26.055863888618973,
+      "ideal_balanced_accuracy": 1.0,
+      "confusion": {
+        "null": {
+          "unresolved": 3977,
+          "mediated": 12,
+          "direct": 11,
+          "detected_before_margin": 200
+        },
+        "mediated": {
+          "unresolved": 0,
+          "mediated": 4000,
+          "direct": 0,
+          "detected_before_margin": 4000
+        },
+        "direct": {
+          "unresolved": 0,
+          "mediated": 0,
+          "direct": 4000,
+          "detected_before_margin": 4000
+        }
+      },
+      "null_detection_interval": [
+        0.043667138340424475,
+        0.05719636062030688
+      ],
+      "correct_interval": {
+        "mediated": [
+          0.9990405567102987,
+          1
+        ],
+        "direct": [
+          0.9990405567102987,
+          1
+        ]
+      }
+    },
+    {
+      "clock": "1s",
+      "sample_s": 1.0,
+      "phase": 0.5,
+      "pulse_start_s": 130.5,
+      "noise": "white",
+      "scale_multiplier": 1.0,
+      "dprime_known_amplitudes": 13.027931944309486,
+      "ideal_balanced_accuracy": 0.9999999999634039,
+      "confusion": {
+        "null": {
+          "unresolved": 3984,
+          "mediated": 11,
+          "direct": 5,
+          "detected_before_margin": 186
+        },
+        "mediated": {
+          "unresolved": 0,
+          "mediated": 4000,
+          "direct": 0,
+          "detected_before_margin": 4000
+        },
+        "direct": {
+          "unresolved": 0,
+          "mediated": 0,
+          "direct": 4000,
+          "detected_before_margin": 4000
+        }
+      },
+      "null_detection_interval": [
+        0.04039837476372546,
+        0.053471840300033796
+      ],
+      "correct_interval": {
+        "mediated": [
+          0.9990405567102987,
+          1
+        ],
+        "direct": [
+          0.9990405567102987,
+          1
+        ]
+      }
+    },
+    {
+      "clock": "1s",
+      "sample_s": 1.0,
+      "phase": 0.5,
+      "pulse_start_s": 130.5,
+      "noise": "white",
+      "scale_multiplier": 2.0,
+      "dprime_known_amplitudes": 6.513965972154743,
+      "ideal_balanced_accuracy": 0.9994369840896118,
+      "confusion": {
+        "null": {
+          "unresolved": 3984,
+          "mediated": 8,
+          "direct": 8,
+          "detected_before_margin": 207
+        },
+        "mediated": {
+          "unresolved": 21,
+          "mediated": 3976,
+          "direct": 3,
+          "detected_before_margin": 4000
+        },
+        "direct": {
+          "unresolved": 6,
+          "mediated": 1,
+          "direct": 3993,
+          "detected_before_margin": 4000
+        }
+      },
+      "null_detection_interval": [
+        0.045304992146476264,
+        0.05905514876274112
+      ],
+      "correct_interval": {
+        "mediated": [
+          0.991087436526638,
+          0.9959646335031369
+        ],
+        "direct": [
+          0.9963918804962462,
+          0.9991520342655662
+        ]
+      }
+    },
+    {
+      "clock": "1s",
+      "sample_s": 1.0,
+      "phase": 0.5,
+      "pulse_start_s": 130.5,
+      "noise": "OU",
+      "scale_multiplier": 0.5,
+      "dprime_known_amplitudes": 20.5512625435077,
+      "ideal_balanced_accuracy": 1.0,
+      "confusion": {
+        "null": {
+          "unresolved": 3902,
+          "mediated": 39,
+          "direct": 59,
+          "detected_before_margin": 193
+        },
+        "mediated": {
+          "unresolved": 0,
+          "mediated": 4000,
+          "direct": 0,
+          "detected_before_margin": 4000
+        },
+        "direct": {
+          "unresolved": 0,
+          "mediated": 0,
+          "direct": 4000,
+          "detected_before_margin": 4000
+        }
+      },
+      "null_detection_interval": [
+        0.04203155996755503,
+        0.05533529704469027
+      ],
+      "correct_interval": {
+        "mediated": [
+          0.9990405567102987,
+          1
+        ],
+        "direct": [
+          0.9990405567102987,
+          1
+        ]
+      }
+    },
+    {
+      "clock": "1s",
+      "sample_s": 1.0,
+      "phase": 0.5,
+      "pulse_start_s": 130.5,
+      "noise": "OU",
+      "scale_multiplier": 1.0,
+      "dprime_known_amplitudes": 10.27563127175385,
+      "ideal_balanced_accuracy": 0.9999998610248163,
+      "confusion": {
+        "null": {
+          "unresolved": 3937,
+          "mediated": 27,
+          "direct": 36,
+          "detected_before_margin": 180
+        },
+        "mediated": {
+          "unresolved": 17,
+          "mediated": 3983,
+          "direct": 0,
+          "detected_before_margin": 4000
+        },
+        "direct": {
+          "unresolved": 0,
+          "mediated": 0,
+          "direct": 4000,
+          "detected_before_margin": 4000
+        }
+      },
+      "null_detection_interval": [
+        0.03900050378261443,
+        0.051872589611013924
+      ],
+      "correct_interval": {
+        "mediated": [
+          0.9932039595870163,
+          0.9973447523912446
+        ],
+        "direct": [
+          0.9990405567102987,
+          1
+        ]
+      }
+    },
+    {
+      "clock": "1s",
+      "sample_s": 1.0,
+      "phase": 0.5,
+      "pulse_start_s": 130.5,
+      "noise": "OU",
+      "scale_multiplier": 2.0,
+      "dprime_known_amplitudes": 5.137815635876925,
+      "ideal_balanced_accuracy": 0.9948990204135422,
+      "confusion": {
+        "null": {
+          "unresolved": 3913,
+          "mediated": 42,
+          "direct": 45,
+          "detected_before_margin": 180
+        },
+        "mediated": {
+          "unresolved": 1249,
+          "mediated": 2707,
+          "direct": 44,
+          "detected_before_margin": 3526
+        },
+        "direct": {
+          "unresolved": 25,
+          "mediated": 2,
+          "direct": 3973,
+          "detected_before_margin": 4000
+        }
+      },
+      "null_detection_interval": [
+        0.03900050378261443,
+        0.051872589611013924
+      ],
+      "correct_interval": {
+        "mediated": [
+          0.6620919391033327,
+          0.6910688976937577
+        ],
+        "direct": [
+          0.9901967373916518,
+          0.9953567718030576
+        ]
+      }
+    },
+    {
+      "clock": "1s",
+      "sample_s": 1.0,
+      "phase": 0.75,
+      "pulse_start_s": 130.75,
+      "noise": "white",
+      "scale_multiplier": 0.5,
+      "dprime_known_amplitudes": 26.07628186847795,
+      "ideal_balanced_accuracy": 1.0,
+      "confusion": {
+        "null": {
+          "unresolved": 3982,
+          "mediated": 8,
+          "direct": 10,
+          "detected_before_margin": 190
+        },
+        "mediated": {
+          "unresolved": 0,
+          "mediated": 4000,
+          "direct": 0,
+          "detected_before_margin": 4000
+        },
+        "direct": {
+          "unresolved": 0,
+          "mediated": 0,
+          "direct": 4000,
+          "detected_before_margin": 4000
+        }
+      },
+      "null_detection_interval": [
+        0.04133132317032518,
+        0.05453697300685468
+      ],
+      "correct_interval": {
+        "mediated": [
+          0.9990405567102987,
+          1
+        ],
+        "direct": [
+          0.9990405567102987,
+          1
+        ]
+      }
+    },
+    {
+      "clock": "1s",
+      "sample_s": 1.0,
+      "phase": 0.75,
+      "pulse_start_s": 130.75,
+      "noise": "white",
+      "scale_multiplier": 1.0,
+      "dprime_known_amplitudes": 13.038140934238974,
+      "ideal_balanced_accuracy": 0.9999999999646277,
+      "confusion": {
+        "null": {
+          "unresolved": 3985,
+          "mediated": 8,
+          "direct": 7,
+          "detected_before_margin": 195
+        },
+        "mediated": {
+          "unresolved": 0,
+          "mediated": 4000,
+          "direct": 0,
+          "detected_before_margin": 4000
+        },
+        "direct": {
+          "unresolved": 0,
+          "mediated": 0,
+          "direct": 4000,
+          "detected_before_margin": 4000
+        }
+      },
+      "null_detection_interval": [
+        0.04249862921703139,
+        0.055867268351924224
+      ],
+      "correct_interval": {
+        "mediated": [
+          0.9990405567102987,
+          1
+        ],
+        "direct": [
+          0.9990405567102987,
+          1
+        ]
+      }
+    },
+    {
+      "clock": "1s",
+      "sample_s": 1.0,
+      "phase": 0.75,
+      "pulse_start_s": 130.75,
+      "noise": "white",
+      "scale_multiplier": 2.0,
+      "dprime_known_amplitudes": 6.519070467119487,
+      "ideal_balanced_accuracy": 0.9994420254072247,
+      "confusion": {
+        "null": {
+          "unresolved": 3980,
+          "mediated": 9,
+          "direct": 11,
+          "detected_before_margin": 191
+        },
+        "mediated": {
+          "unresolved": 18,
+          "mediated": 3980,
+          "direct": 2,
+          "detected_before_margin": 4000
+        },
+        "direct": {
+          "unresolved": 4,
+          "mediated": 0,
+          "direct": 3996,
+          "detected_before_margin": 4000
+        }
+      },
+      "null_detection_interval": [
+        0.041564686010040916,
+        0.05480313044549409
+      ],
+      "correct_interval": {
+        "mediated": [
+          0.9922892796106572,
+          0.9967608715325383
+        ],
+        "direct": [
+          0.9974314226342689,
+          0.9996110529626092
+        ]
+      }
+    },
+    {
+      "clock": "1s",
+      "sample_s": 1.0,
+      "phase": 0.75,
+      "pulse_start_s": 130.75,
+      "noise": "OU",
+      "scale_multiplier": 0.5,
+      "dprime_known_amplitudes": 20.772197376339943,
+      "ideal_balanced_accuracy": 1.0,
+      "confusion": {
+        "null": {
+          "unresolved": 3923,
+          "mediated": 38,
+          "direct": 39,
+          "detected_before_margin": 206
+        },
+        "mediated": {
+          "unresolved": 0,
+          "mediated": 4000,
+          "direct": 0,
+          "detected_before_margin": 4000
+        },
+        "direct": {
+          "unresolved": 0,
+          "mediated": 0,
+          "direct": 4000,
+          "detected_before_margin": 4000
+        }
+      },
+      "null_detection_interval": [
+        0.04507087791018925,
+        0.058789742720672986
+      ],
+      "correct_interval": {
+        "mediated": [
+          0.9990405567102987,
+          1
+        ],
+        "direct": [
+          0.9990405567102987,
+          1
+        ]
+      }
+    },
+    {
+      "clock": "1s",
+      "sample_s": 1.0,
+      "phase": 0.75,
+      "pulse_start_s": 130.75,
+      "noise": "OU",
+      "scale_multiplier": 1.0,
+      "dprime_known_amplitudes": 10.386098688169971,
+      "ideal_balanced_accuracy": 0.9999998965613377,
+      "confusion": {
+        "null": {
+          "unresolved": 3900,
+          "mediated": 53,
+          "direct": 47,
+          "detected_before_margin": 194
+        },
+        "mediated": {
+          "unresolved": 19,
+          "mediated": 3980,
+          "direct": 1,
+          "detected_before_margin": 3999
+        },
+        "direct": {
+          "unresolved": 0,
+          "mediated": 0,
+          "direct": 4000,
+          "detected_before_margin": 4000
+        }
+      },
+      "null_detection_interval": [
+        0.04226507035940136,
+        0.05560130693119909
+      ],
+      "correct_interval": {
+        "mediated": [
+          0.9922892796106572,
+          0.9967608715325383
+        ],
+        "direct": [
+          0.9990405567102987,
+          1
+        ]
+      }
+    },
+    {
+      "clock": "1s",
+      "sample_s": 1.0,
+      "phase": 0.75,
+      "pulse_start_s": 130.75,
+      "noise": "OU",
+      "scale_multiplier": 2.0,
+      "dprime_known_amplitudes": 5.193049344084986,
+      "ideal_balanced_accuracy": 0.9952913928854695,
+      "confusion": {
+        "null": {
+          "unresolved": 3914,
+          "mediated": 42,
+          "direct": 44,
+          "detected_before_margin": 196
+        },
+        "mediated": {
+          "unresolved": 1222,
+          "mediated": 2748,
+          "direct": 30,
+          "detected_before_margin": 3570
+        },
+        "direct": {
+          "unresolved": 23,
+          "mediated": 4,
+          "direct": 3973,
+          "detected_before_margin": 4000
+        }
+      },
+      "null_detection_interval": [
+        0.042732236188884304,
+        0.056133181658426456
+      ],
+      "correct_interval": {
+        "mediated": [
+          0.6724559664596799,
+          0.701185201749972
+        ],
+        "direct": [
+          0.9901967373916518,
+          0.9953567718030576
+        ]
+      }
+    },
+    {
+      "clock": "1s",
+      "sample_s": 1.0,
+      "phase": 0.99,
+      "pulse_start_s": 130.99,
+      "noise": "white",
+      "scale_multiplier": 0.5,
+      "dprime_known_amplitudes": 26.111555561334324,
+      "ideal_balanced_accuracy": 1.0,
+      "confusion": {
+        "null": {
+          "unresolved": 3982,
+          "mediated": 12,
+          "direct": 6,
+          "detected_before_margin": 200
+        },
+        "mediated": {
+          "unresolved": 0,
+          "mediated": 4000,
+          "direct": 0,
+          "detected_before_margin": 4000
+        },
+        "direct": {
+          "unresolved": 0,
+          "mediated": 0,
+          "direct": 4000,
+          "detected_before_margin": 4000
+        }
+      },
+      "null_detection_interval": [
+        0.043667138340424475,
+        0.05719636062030688
+      ],
+      "correct_interval": {
+        "mediated": [
+          0.9990405567102987,
+          1
+        ],
+        "direct": [
+          0.9990405567102987,
+          1
+        ]
+      }
+    },
+    {
+      "clock": "1s",
+      "sample_s": 1.0,
+      "phase": 0.99,
+      "pulse_start_s": 130.99,
+      "noise": "white",
+      "scale_multiplier": 1.0,
+      "dprime_known_amplitudes": 13.055777780667162,
+      "ideal_balanced_accuracy": 0.9999999999666485,
+      "confusion": {
+        "null": {
+          "unresolved": 3984,
+          "mediated": 5,
+          "direct": 11,
+          "detected_before_margin": 193
+        },
+        "mediated": {
+          "unresolved": 0,
+          "mediated": 4000,
+          "direct": 0,
+          "detected_before_margin": 4000
+        },
+        "direct": {
+          "unresolved": 0,
+          "mediated": 0,
+          "direct": 4000,
+          "detected_before_margin": 4000
+        }
+      },
+      "null_detection_interval": [
+        0.04203155996755503,
+        0.05533529704469027
+      ],
+      "correct_interval": {
+        "mediated": [
+          0.9990405567102987,
+          1
+        ],
+        "direct": [
+          0.9990405567102987,
+          1
+        ]
+      }
+    },
+    {
+      "clock": "1s",
+      "sample_s": 1.0,
+      "phase": 0.99,
+      "pulse_start_s": 130.99,
+      "noise": "white",
+      "scale_multiplier": 2.0,
+      "dprime_known_amplitudes": 6.527888890333581,
+      "ideal_balanced_accuracy": 0.9994506364641245,
+      "confusion": {
+        "null": {
+          "unresolved": 3981,
+          "mediated": 9,
+          "direct": 10,
+          "detected_before_margin": 177
+        },
+        "mediated": {
+          "unresolved": 26,
+          "mediated": 3971,
+          "direct": 3,
+          "detected_before_margin": 4000
+        },
+        "direct": {
+          "unresolved": 2,
+          "mediated": 1,
+          "direct": 3997,
+          "detected_before_margin": 4000
+        }
+      },
+      "null_detection_interval": [
+        0.038302290363755515,
+        0.051072242194807396
+      ],
+      "correct_interval": {
+        "mediated": [
+          0.9896072080079771,
+          0.9949472606300221
+        ],
+        "direct": [
+          0.997797095603605,
+          0.9997449002716282
+        ]
+      }
+    },
+    {
+      "clock": "1s",
+      "sample_s": 1.0,
+      "phase": 0.99,
+      "pulse_start_s": 130.99,
+      "noise": "OU",
+      "scale_multiplier": 0.5,
+      "dprime_known_amplitudes": 21.218524866638177,
+      "ideal_balanced_accuracy": 1.0,
+      "confusion": {
+        "null": {
+          "unresolved": 3908,
+          "mediated": 39,
+          "direct": 53,
+          "detected_before_margin": 190
+        },
+        "mediated": {
+          "unresolved": 0,
+          "mediated": 4000,
+          "direct": 0,
+          "detected_before_margin": 4000
+        },
+        "direct": {
+          "unresolved": 0,
+          "mediated": 0,
+          "direct": 4000,
+          "detected_before_margin": 4000
+        }
+      },
+      "null_detection_interval": [
+        0.04133132317032518,
+        0.05453697300685468
+      ],
+      "correct_interval": {
+        "mediated": [
+          0.9990405567102987,
+          1
+        ],
+        "direct": [
+          0.9990405567102987,
+          1
+        ]
+      }
+    },
+    {
+      "clock": "1s",
+      "sample_s": 1.0,
+      "phase": 0.99,
+      "pulse_start_s": 130.99,
+      "noise": "OU",
+      "scale_multiplier": 1.0,
+      "dprime_known_amplitudes": 10.609262433319088,
+      "ideal_balanced_accuracy": 0.9999999435494964,
+      "confusion": {
+        "null": {
+          "unresolved": 3909,
+          "mediated": 44,
+          "direct": 47,
+          "detected_before_margin": 225
+        },
+        "mediated": {
+          "unresolved": 14,
+          "mediated": 3982,
+          "direct": 4,
+          "detected_before_margin": 4000
+        },
+        "direct": {
+          "unresolved": 0,
+          "mediated": 0,
+          "direct": 4000,
+          "detected_before_margin": 4000
+        }
+      },
+      "null_detection_interval": [
+        0.049526332557096146,
+        0.06382517336251395
+      ],
+      "correct_interval": {
+        "mediated": [
+          0.9928976085009257,
+          0.9971515831989802
+        ],
+        "direct": [
+          0.9990405567102987,
+          1
+        ]
+      }
+    },
+    {
+      "clock": "1s",
+      "sample_s": 1.0,
+      "phase": 0.99,
+      "pulse_start_s": 130.99,
+      "noise": "OU",
+      "scale_multiplier": 2.0,
+      "dprime_known_amplitudes": 5.304631216659544,
+      "ideal_balanced_accuracy": 0.9960029110630919,
+      "confusion": {
+        "null": {
+          "unresolved": 3914,
+          "mediated": 38,
+          "direct": 48,
+          "detected_before_margin": 206
+        },
+        "mediated": {
+          "unresolved": 1185,
+          "mediated": 2784,
+          "direct": 31,
+          "detected_before_margin": 3548
+        },
+        "direct": {
+          "unresolved": 22,
+          "mediated": 1,
+          "direct": 3977,
+          "detected_before_margin": 4000
+        }
+      },
+      "null_detection_interval": [
+        0.04507087791018925,
+        0.058789742720672986
+      ],
+      "correct_interval": {
+        "mediated": [
+          0.6815628013461951,
+          0.7100610968842419
+        ],
+        "direct": [
+          0.991386245498183,
+          0.996165344809947
+        ]
+      }
+    },
+    {
+      "clock": "G01",
+      "sample_s": 65.58921813964844,
+      "phase": 0.0,
+      "pulse_start_s": 131.17843627929688,
+      "noise": "white",
+      "scale_multiplier": 0.5,
+      "dprime_known_amplitudes": 0.46043321189481007,
+      "ideal_balanced_accuracy": 0.5910382706473596,
+      "confusion": {
+        "null": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 226
+        },
+        "mediated": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 1313
+        },
+        "direct": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 702
+        }
+      },
+      "null_detection_interval": [
+        0.04976123892611694,
+        0.0640897872718483
+      ],
+      "correct_interval": {
+        "mediated": [
+          5.421010862427522e-20,
+          0.0009594432897014865
+        ],
+        "direct": [
+          5.421010862427522e-20,
+          0.0009594432897014865
+        ]
+      }
+    },
+    {
+      "clock": "G01",
+      "sample_s": 65.58921813964844,
+      "phase": 0.0,
+      "pulse_start_s": 131.17843627929688,
+      "noise": "white",
+      "scale_multiplier": 1.0,
+      "dprime_known_amplitudes": 0.23021660594740503,
+      "ideal_balanced_accuracy": 0.5458203605843919,
+      "confusion": {
+        "null": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 214
+        },
+        "mediated": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 593
+        },
+        "direct": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 441
+        }
+      },
+      "null_detection_interval": [
+        0.046945013402466845,
+        0.06091176945523659
+      ],
+      "correct_interval": {
+        "mediated": [
+          5.421010862427522e-20,
+          0.0009594432897014865
+        ],
+        "direct": [
+          5.421010862427522e-20,
+          0.0009594432897014865
+        ]
+      }
+    },
+    {
+      "clock": "G01",
+      "sample_s": 65.58921813964844,
+      "phase": 0.0,
+      "pulse_start_s": 131.17843627929688,
+      "noise": "white",
+      "scale_multiplier": 2.0,
+      "dprime_known_amplitudes": 0.11510830297370252,
+      "ideal_balanced_accuracy": 0.5229481145454699,
+      "confusion": {
+        "null": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 195
+        },
+        "mediated": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 373
+        },
+        "direct": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 292
+        }
+      },
+      "null_detection_interval": [
+        0.04249862921703139,
+        0.055867268351924224
+      ],
+      "correct_interval": {
+        "mediated": [
+          5.421010862427522e-20,
+          0.0009594432897014865
+        ],
+        "direct": [
+          5.421010862427522e-20,
+          0.0009594432897014865
+        ]
+      }
+    },
+    {
+      "clock": "G01",
+      "sample_s": 65.58921813964844,
+      "phase": 0.0,
+      "pulse_start_s": 131.17843627929688,
+      "noise": "OU",
+      "scale_multiplier": 0.5,
+      "dprime_known_amplitudes": 0.46562410631955387,
+      "ideal_balanced_accuracy": 0.5920463234952201,
+      "confusion": {
+        "null": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 195
+        },
+        "mediated": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 1306
+        },
+        "direct": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 720
+        }
+      },
+      "null_detection_interval": [
+        0.04249862921703139,
+        0.055867268351924224
+      ],
+      "correct_interval": {
+        "mediated": [
+          5.421010862427522e-20,
+          0.0009594432897014865
+        ],
+        "direct": [
+          5.421010862427522e-20,
+          0.0009594432897014865
+        ]
+      }
+    },
+    {
+      "clock": "G01",
+      "sample_s": 65.58921813964844,
+      "phase": 0.0,
+      "pulse_start_s": 131.17843627929688,
+      "noise": "OU",
+      "scale_multiplier": 1.0,
+      "dprime_known_amplitudes": 0.23281205315977693,
+      "ideal_balanced_accuracy": 0.5463346203268474,
+      "confusion": {
+        "null": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 222
+        },
+        "mediated": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 600
+        },
+        "direct": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 409
+        }
+      },
+      "null_detection_interval": [
+        0.04882185036972565,
+        0.06303109471481898
+      ],
+      "correct_interval": {
+        "mediated": [
+          5.421010862427522e-20,
+          0.0009594432897014865
+        ],
+        "direct": [
+          5.421010862427522e-20,
+          0.0009594432897014865
+        ]
+      }
+    },
+    {
+      "clock": "G01",
+      "sample_s": 65.58921813964844,
+      "phase": 0.0,
+      "pulse_start_s": 131.17843627929688,
+      "noise": "OU",
+      "scale_multiplier": 2.0,
+      "dprime_known_amplitudes": 0.11640602657988847,
+      "ideal_balanced_accuracy": 0.5232065397324439,
+      "confusion": {
+        "null": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 207
+        },
+        "mediated": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 386
+        },
+        "direct": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 295
+        }
+      },
+      "null_detection_interval": [
+        0.045304992146476264,
+        0.05905514876274112
+      ],
+      "correct_interval": {
+        "mediated": [
+          5.421010862427522e-20,
+          0.0009594432897014865
+        ],
+        "direct": [
+          5.421010862427522e-20,
+          0.0009594432897014865
+        ]
+      }
+    },
+    {
+      "clock": "G01",
+      "sample_s": 65.58921813964844,
+      "phase": 0.25,
+      "pulse_start_s": 147.57574081420898,
+      "noise": "white",
+      "scale_multiplier": 0.5,
+      "dprime_known_amplitudes": 0.9825452752635049,
+      "ideal_balanced_accuracy": 0.6883831850335517,
+      "confusion": {
+        "null": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 246
+        },
+        "mediated": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 3352
+        },
+        "direct": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 1995
+        }
+      },
+      "null_detection_interval": [
+        0.05446726635979738,
+        0.06937416540527085
+      ],
+      "correct_interval": {
+        "mediated": [
+          5.421010862427522e-20,
+          0.0009594432897014865
+        ],
+        "direct": [
+          5.421010862427522e-20,
+          0.0009594432897014865
+        ]
+      }
+    },
+    {
+      "clock": "G01",
+      "sample_s": 65.58921813964844,
+      "phase": 0.25,
+      "pulse_start_s": 147.57574081420898,
+      "noise": "white",
+      "scale_multiplier": 1.0,
+      "dprime_known_amplitudes": 0.49127263763175244,
+      "ideal_balanced_accuracy": 0.5970181139686292,
+      "confusion": {
+        "null": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 221
+        },
+        "mediated": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 1481
+        },
+        "direct": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 803
+        }
+      },
+      "null_detection_interval": [
+        0.048587102778867,
+        0.06276632202732248
+      ],
+      "correct_interval": {
+        "mediated": [
+          5.421010862427522e-20,
+          0.0009594432897014865
+        ],
+        "direct": [
+          5.421010862427522e-20,
+          0.0009594432897014865
+        ]
+      }
+    },
+    {
+      "clock": "G01",
+      "sample_s": 65.58921813964844,
+      "phase": 0.25,
+      "pulse_start_s": 147.57574081420898,
+      "noise": "white",
+      "scale_multiplier": 2.0,
+      "dprime_known_amplitudes": 0.24563631881587622,
+      "ideal_balanced_accuracy": 0.5488744529992193,
+      "confusion": {
+        "null": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 221
+        },
+        "mediated": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 664
+        },
+        "direct": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 447
+        }
+      },
+      "null_detection_interval": [
+        0.048587102778867,
+        0.06276632202732248
+      ],
+      "correct_interval": {
+        "mediated": [
+          5.421010862427522e-20,
+          0.0009594432897014865
+        ],
+        "direct": [
+          5.421010862427522e-20,
+          0.0009594432897014865
+        ]
+      }
+    },
+    {
+      "clock": "G01",
+      "sample_s": 65.58921813964844,
+      "phase": 0.25,
+      "pulse_start_s": 147.57574081420898,
+      "noise": "OU",
+      "scale_multiplier": 0.5,
+      "dprime_known_amplitudes": 0.9935838461733884,
+      "ideal_balanced_accuracy": 0.6903321042396464,
+      "confusion": {
+        "null": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 187
+        },
+        "mediated": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 3343
+        },
+        "direct": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 1965
+        }
+      },
+      "null_detection_interval": [
+        0.04063153566283215,
+        0.053738199679282256
+      ],
+      "correct_interval": {
+        "mediated": [
+          5.421010862427522e-20,
+          0.0009594432897014865
+        ],
+        "direct": [
+          5.421010862427522e-20,
+          0.0009594432897014865
+        ]
+      }
+    },
+    {
+      "clock": "G01",
+      "sample_s": 65.58921813964844,
+      "phase": 0.25,
+      "pulse_start_s": 147.57574081420898,
+      "noise": "OU",
+      "scale_multiplier": 1.0,
+      "dprime_known_amplitudes": 0.4967919230866942,
+      "ideal_balanced_accuracy": 0.5980859710438322,
+      "confusion": {
+        "null": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 203
+        },
+        "mediated": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 1583
+        },
+        "direct": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 856
+        }
+      },
+      "null_detection_interval": [
+        0.04436880356817323,
+        0.05799325622762358
+      ],
+      "correct_interval": {
+        "mediated": [
+          5.421010862427522e-20,
+          0.0009594432897014865
+        ],
+        "direct": [
+          5.421010862427522e-20,
+          0.0009594432897014865
+        ]
+      }
+    },
+    {
+      "clock": "G01",
+      "sample_s": 65.58921813964844,
+      "phase": 0.25,
+      "pulse_start_s": 147.57574081420898,
+      "noise": "OU",
+      "scale_multiplier": 2.0,
+      "dprime_known_amplitudes": 0.2483959615433471,
+      "ideal_balanced_accuracy": 0.5494207395138553,
+      "confusion": {
+        "null": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 200
+        },
+        "mediated": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 635
+        },
+        "direct": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 454
+        }
+      },
+      "null_detection_interval": [
+        0.043667138340424475,
+        0.05719636062030688
+      ],
+      "correct_interval": {
+        "mediated": [
+          5.421010862427522e-20,
+          0.0009594432897014865
+        ],
+        "direct": [
+          5.421010862427522e-20,
+          0.0009594432897014865
+        ]
+      }
+    },
+    {
+      "clock": "G01",
+      "sample_s": 65.58921813964844,
+      "phase": 0.5,
+      "pulse_start_s": 163.9730453491211,
+      "noise": "white",
+      "scale_multiplier": 0.5,
+      "dprime_known_amplitudes": 1.7435991233531996,
+      "ideal_balanced_accuracy": 0.8083411331149953,
+      "confusion": {
+        "null": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 183
+        },
+        "mediated": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 3999
+        },
+        "direct": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 3917
+        }
+      },
+      "null_detection_interval": [
+        0.03969920233662991,
+        0.052672451892063904
+      ],
+      "correct_interval": {
+        "mediated": [
+          5.421010862427522e-20,
+          0.0009594432897014865
+        ],
+        "direct": [
+          5.421010862427522e-20,
+          0.0009594432897014865
+        ]
+      }
+    },
+    {
+      "clock": "G01",
+      "sample_s": 65.58921813964844,
+      "phase": 0.5,
+      "pulse_start_s": 163.9730453491211,
+      "noise": "white",
+      "scale_multiplier": 1.0,
+      "dprime_known_amplitudes": 0.8717995616765998,
+      "ideal_balanced_accuracy": 0.6685452779252603,
+      "confusion": {
+        "null": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 216
+        },
+        "mediated": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 3430
+        },
+        "direct": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 2343
+        }
+      },
+      "null_detection_interval": [
+        0.047413974906787615,
+        0.061441848507626115
+      ],
+      "correct_interval": {
+        "mediated": [
+          5.421010862427522e-20,
+          0.0009594432897014865
+        ],
+        "direct": [
+          5.421010862427522e-20,
+          0.0009594432897014865
+        ]
+      }
+    },
+    {
+      "clock": "G01",
+      "sample_s": 65.58921813964844,
+      "phase": 0.5,
+      "pulse_start_s": 163.9730453491211,
+      "noise": "white",
+      "scale_multiplier": 2.0,
+      "dprime_known_amplitudes": 0.4358997808382999,
+      "ideal_balanced_accuracy": 0.586265922772879,
+      "confusion": {
+        "null": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 206
+        },
+        "mediated": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 1633
+        },
+        "direct": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 936
+        }
+      },
+      "null_detection_interval": [
+        0.04507087791018925,
+        0.058789742720672986
+      ],
+      "correct_interval": {
+        "mediated": [
+          5.421010862427522e-20,
+          0.0009594432897014865
+        ],
+        "direct": [
+          5.421010862427522e-20,
+          0.0009594432897014865
+        ]
+      }
+    },
+    {
+      "clock": "G01",
+      "sample_s": 65.58921813964844,
+      "phase": 0.5,
+      "pulse_start_s": 163.9730453491211,
+      "noise": "OU",
+      "scale_multiplier": 0.5,
+      "dprime_known_amplitudes": 1.762869054024231,
+      "ideal_balanced_accuracy": 0.8109586616204878,
+      "confusion": {
+        "null": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 195
+        },
+        "mediated": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 4000
+        },
+        "direct": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 3914
+        }
+      },
+      "null_detection_interval": [
+        0.04249862921703139,
+        0.055867268351924224
+      ],
+      "correct_interval": {
+        "mediated": [
+          5.421010862427522e-20,
+          0.0009594432897014865
+        ],
+        "direct": [
+          5.421010862427522e-20,
+          0.0009594432897014865
+        ]
+      }
+    },
+    {
+      "clock": "G01",
+      "sample_s": 65.58921813964844,
+      "phase": 0.5,
+      "pulse_start_s": 163.9730453491211,
+      "noise": "OU",
+      "scale_multiplier": 1.0,
+      "dprime_known_amplitudes": 0.8814345270121156,
+      "ideal_balanced_accuracy": 0.6702911514694635,
+      "confusion": {
+        "null": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 204
+        },
+        "mediated": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 3431
+        },
+        "direct": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 2234
+        }
+      },
+      "null_detection_interval": [
+        0.044602783312247256,
+        0.05825879676190469
+      ],
+      "correct_interval": {
+        "mediated": [
+          5.421010862427522e-20,
+          0.0009594432897014865
+        ],
+        "direct": [
+          5.421010862427522e-20,
+          0.0009594432897014865
+        ]
+      }
+    },
+    {
+      "clock": "G01",
+      "sample_s": 65.58921813964844,
+      "phase": 0.5,
+      "pulse_start_s": 163.9730453491211,
+      "noise": "OU",
+      "scale_multiplier": 2.0,
+      "dprime_known_amplitudes": 0.4407172635060578,
+      "ideal_balanced_accuracy": 0.5872040696888103,
+      "confusion": {
+        "null": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 237
+        },
+        "mediated": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 1581
+        },
+        "direct": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 919
+        }
+      },
+      "null_detection_interval": [
+        0.05234773625351233,
+        0.06699801300635953
+      ],
+      "correct_interval": {
+        "mediated": [
+          5.421010862427522e-20,
+          0.0009594432897014865
+        ],
+        "direct": [
+          5.421010862427522e-20,
+          0.0009594432897014865
+        ]
+      }
+    },
+    {
+      "clock": "G01",
+      "sample_s": 65.58921813964844,
+      "phase": 0.75,
+      "pulse_start_s": 180.3703498840332,
+      "noise": "white",
+      "scale_multiplier": 0.5,
+      "dprime_known_amplitudes": 0.2599096138127107,
+      "ideal_balanced_accuracy": 0.551698908873082,
+      "confusion": {
+        "null": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 192
+        },
+        "mediated": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 4000
+        },
+        "direct": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 4000
+        }
+      },
+      "null_detection_interval": [
+        0.04179809839755376,
+        0.055069238336336396
+      ],
+      "correct_interval": {
+        "mediated": [
+          5.421010862427522e-20,
+          0.0009594432897014865
+        ],
+        "direct": [
+          5.421010862427522e-20,
+          0.0009594432897014865
+        ]
+      }
+    },
+    {
+      "clock": "G01",
+      "sample_s": 65.58921813964844,
+      "phase": 0.75,
+      "pulse_start_s": 180.3703498840332,
+      "noise": "white",
+      "scale_multiplier": 1.0,
+      "dprime_known_amplitudes": 0.12995480690635536,
+      "ideal_balanced_accuracy": 0.5259040041708407,
+      "confusion": {
+        "null": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 213
+        },
+        "mediated": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 3987
+        },
+        "direct": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 3975
+        }
+      },
+      "null_detection_interval": [
+        0.04671059580282868,
+        0.06064666677651961
+      ],
+      "correct_interval": {
+        "mediated": [
+          5.421010862427522e-20,
+          0.0009594432897014865
+        ],
+        "direct": [
+          5.421010862427522e-20,
+          0.0009594432897014865
+        ]
+      }
+    },
+    {
+      "clock": "G01",
+      "sample_s": 65.58921813964844,
+      "phase": 0.75,
+      "pulse_start_s": 180.3703498840332,
+      "noise": "white",
+      "scale_multiplier": 2.0,
+      "dprime_known_amplitudes": 0.06497740345317768,
+      "ideal_balanced_accuracy": 0.5129588370045891,
+      "confusion": {
+        "null": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 197
+        },
+        "mediated": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 2643
+        },
+        "direct": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 2675
+        }
+      },
+      "null_detection_interval": [
+        0.04296589092782036,
+        0.056399047197845546
+      ],
+      "correct_interval": {
+        "mediated": [
+          5.421010862427522e-20,
+          0.0009594432897014865
+        ],
+        "direct": [
+          5.421010862427522e-20,
+          0.0009594432897014865
+        ]
+      }
+    },
+    {
+      "clock": "G01",
+      "sample_s": 65.58921813964844,
+      "phase": 0.75,
+      "pulse_start_s": 180.3703498840332,
+      "noise": "OU",
+      "scale_multiplier": 0.5,
+      "dprime_known_amplitudes": 0.2606063372480663,
+      "ideal_balanced_accuracy": 0.5518367133771601,
+      "confusion": {
+        "null": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 201
+        },
+        "mediated": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 4000
+        },
+        "direct": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 4000
+        }
+      },
+      "null_detection_interval": [
+        0.043900980762031014,
+        0.057462038477055485
+      ],
+      "correct_interval": {
+        "mediated": [
+          5.421010862427522e-20,
+          0.0009594432897014865
+        ],
+        "direct": [
+          5.421010862427522e-20,
+          0.0009594432897014865
+        ]
+      }
+    },
+    {
+      "clock": "G01",
+      "sample_s": 65.58921813964844,
+      "phase": 0.75,
+      "pulse_start_s": 180.3703498840332,
+      "noise": "OU",
+      "scale_multiplier": 1.0,
+      "dprime_known_amplitudes": 0.13030316862403316,
+      "ideal_balanced_accuracy": 0.5259733453502621,
+      "confusion": {
+        "null": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 187
+        },
+        "mediated": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 3983
+        },
+        "direct": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 3971
+        }
+      },
+      "null_detection_interval": [
+        0.04063153566283215,
+        0.053738199679282256
+      ],
+      "correct_interval": {
+        "mediated": [
+          5.421010862427522e-20,
+          0.0009594432897014865
+        ],
+        "direct": [
+          5.421010862427522e-20,
+          0.0009594432897014865
+        ]
+      }
+    },
+    {
+      "clock": "G01",
+      "sample_s": 65.58921813964844,
+      "phase": 0.75,
+      "pulse_start_s": 180.3703498840332,
+      "noise": "OU",
+      "scale_multiplier": 2.0,
+      "dprime_known_amplitudes": 0.06515158431201658,
+      "ideal_balanced_accuracy": 0.5129935626783211,
+      "confusion": {
+        "null": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 192
+        },
+        "mediated": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 2764
+        },
+        "direct": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 2708
+        }
+      },
+      "null_detection_interval": [
+        0.04179809839755376,
+        0.055069238336336396
+      ],
+      "correct_interval": {
+        "mediated": [
+          5.421010862427522e-20,
+          0.0009594432897014865
+        ],
+        "direct": [
+          5.421010862427522e-20,
+          0.0009594432897014865
+        ]
+      }
+    },
+    {
+      "clock": "G01",
+      "sample_s": 65.58921813964844,
+      "phase": 0.99,
+      "pulse_start_s": 196.11176223754885,
+      "noise": "white",
+      "scale_multiplier": 0.5,
+      "dprime_known_amplitudes": 0.44658302600883387,
+      "ideal_balanced_accuracy": 0.5883456839127422,
+      "confusion": {
+        "null": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 188
+        },
+        "mediated": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 1169
+        },
+        "direct": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 709
+        }
+      },
+      "null_detection_interval": [
+        0.04086474761936001,
+        0.05400450800110956
+      ],
+      "correct_interval": {
+        "mediated": [
+          5.421010862427522e-20,
+          0.0009594432897014865
+        ],
+        "direct": [
+          5.421010862427522e-20,
+          0.0009594432897014865
+        ]
+      }
+    },
+    {
+      "clock": "G01",
+      "sample_s": 65.58921813964844,
+      "phase": 0.99,
+      "pulse_start_s": 196.11176223754885,
+      "noise": "white",
+      "scale_multiplier": 1.0,
+      "dprime_known_amplitudes": 0.22329151300441694,
+      "ideal_balanced_accuracy": 0.5444478548245167,
+      "confusion": {
+        "null": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 180
+        },
+        "mediated": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 529
+        },
+        "direct": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 341
+        }
+      },
+      "null_detection_interval": [
+        0.03900050378261443,
+        0.051872589611013924
+      ],
+      "correct_interval": {
+        "mediated": [
+          5.421010862427522e-20,
+          0.0009594432897014865
+        ],
+        "direct": [
+          5.421010862427522e-20,
+          0.0009594432897014865
+        ]
+      }
+    },
+    {
+      "clock": "G01",
+      "sample_s": 65.58921813964844,
+      "phase": 0.99,
+      "pulse_start_s": 196.11176223754885,
+      "noise": "white",
+      "scale_multiplier": 2.0,
+      "dprime_known_amplitudes": 0.11164575650220847,
+      "ideal_balanced_accuracy": 0.5222585454248485,
+      "confusion": {
+        "null": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 222
+        },
+        "mediated": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 354
+        },
+        "direct": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 278
+        }
+      },
+      "null_detection_interval": [
+        0.04882185036972565,
+        0.06303109471481898
+      ],
+      "correct_interval": {
+        "mediated": [
+          5.421010862427522e-20,
+          0.0009594432897014865
+        ],
+        "direct": [
+          5.421010862427522e-20,
+          0.0009594432897014865
+        ]
+      }
+    },
+    {
+      "clock": "G01",
+      "sample_s": 65.58921813964844,
+      "phase": 0.99,
+      "pulse_start_s": 196.11176223754885,
+      "noise": "OU",
+      "scale_multiplier": 0.5,
+      "dprime_known_amplitudes": 0.4531968171149686,
+      "ideal_balanced_accuracy": 0.5896319850528173,
+      "confusion": {
+        "null": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 218
+        },
+        "mediated": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 1279
+        },
+        "direct": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 698
+        }
+      },
+      "null_detection_interval": [
+        0.04788310299269288,
+        0.061971760978431156
+      ],
+      "correct_interval": {
+        "mediated": [
+          5.421010862427522e-20,
+          0.0009594432897014865
+        ],
+        "direct": [
+          5.421010862427522e-20,
+          0.0009594432897014865
+        ]
+      }
+    },
+    {
+      "clock": "G01",
+      "sample_s": 65.58921813964844,
+      "phase": 0.99,
+      "pulse_start_s": 196.11176223754885,
+      "noise": "OU",
+      "scale_multiplier": 1.0,
+      "dprime_known_amplitudes": 0.2265984085574843,
+      "ideal_balanced_accuracy": 0.5451033259635073,
+      "confusion": {
+        "null": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 196
+        },
+        "mediated": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 548
+        },
+        "direct": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 360
+        }
+      },
+      "null_detection_interval": [
+        0.042732236188884304,
+        0.056133181658426456
+      ],
+      "correct_interval": {
+        "mediated": [
+          5.421010862427522e-20,
+          0.0009594432897014865
+        ],
+        "direct": [
+          5.421010862427522e-20,
+          0.0009594432897014865
+        ]
+      }
+    },
+    {
+      "clock": "G01",
+      "sample_s": 65.58921813964844,
+      "phase": 0.99,
+      "pulse_start_s": 196.11176223754885,
+      "noise": "OU",
+      "scale_multiplier": 2.0,
+      "dprime_known_amplitudes": 0.11329920427874215,
+      "ideal_balanced_accuracy": 0.5225878394182877,
+      "confusion": {
+        "null": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 188
+        },
+        "mediated": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 358
+        },
+        "direct": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 274
+        }
+      },
+      "null_detection_interval": [
+        0.04086474761936001,
+        0.05400450800110956
+      ],
+      "correct_interval": {
+        "mediated": [
+          5.421010862427522e-20,
+          0.0009594432897014865
+        ],
+        "direct": [
+          5.421010862427522e-20,
+          0.0009594432897014865
+        ]
+      }
+    },
+    {
+      "clock": "H1299_clock",
+      "sample_s": 300.0,
+      "phase": 0.0,
+      "pulse_start_s": 600.0,
+      "noise": "white",
+      "scale_multiplier": 0.5,
+      "dprime_known_amplitudes": 3.7469677331495996e-06,
+      "ideal_balanced_accuracy": 0.500000747411926,
+      "confusion": {
+        "null": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 177
+        },
+        "mediated": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 170
+        },
+        "direct": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 193
+        }
+      },
+      "null_detection_interval": [
+        0.038302290363755515,
+        0.051072242194807396
+      ],
+      "correct_interval": {
+        "mediated": [
+          5.421010862427522e-20,
+          0.0009594432897014865
+        ],
+        "direct": [
+          5.421010862427522e-20,
+          0.0009594432897014865
+        ]
+      }
+    },
+    {
+      "clock": "H1299_clock",
+      "sample_s": 300.0,
+      "phase": 0.0,
+      "pulse_start_s": 600.0,
+      "noise": "white",
+      "scale_multiplier": 1.0,
+      "dprime_known_amplitudes": 1.8734838665747998e-06,
+      "ideal_balanced_accuracy": 0.5000003737059631,
+      "confusion": {
+        "null": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 211
+        },
+        "mediated": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 184
+        },
+        "direct": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 195
+        }
+      },
+      "null_detection_interval": [
+        0.04624188830529401,
+        0.060116333717343984
+      ],
+      "correct_interval": {
+        "mediated": [
+          5.421010862427522e-20,
+          0.0009594432897014865
+        ],
+        "direct": [
+          5.421010862427522e-20,
+          0.0009594432897014865
+        ]
+      }
+    },
+    {
+      "clock": "H1299_clock",
+      "sample_s": 300.0,
+      "phase": 0.0,
+      "pulse_start_s": 600.0,
+      "noise": "white",
+      "scale_multiplier": 2.0,
+      "dprime_known_amplitudes": 9.367419332873999e-07,
+      "ideal_balanced_accuracy": 0.5000001868529815,
+      "confusion": {
+        "null": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 194
+        },
+        "mediated": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 173
+        },
+        "direct": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 206
+        }
+      },
+      "null_detection_interval": [
+        0.04226507035940136,
+        0.05560130693119909
+      ],
+      "correct_interval": {
+        "mediated": [
+          5.421010862427522e-20,
+          0.0009594432897014865
+        ],
+        "direct": [
+          5.421010862427522e-20,
+          0.0009594432897014865
+        ]
+      }
+    },
+    {
+      "clock": "H1299_clock",
+      "sample_s": 300.0,
+      "phase": 0.0,
+      "pulse_start_s": 600.0,
+      "noise": "OU",
+      "scale_multiplier": 0.5,
+      "dprime_known_amplitudes": 3.746968216372898e-06,
+      "ideal_balanced_accuracy": 0.5000007474120224,
+      "confusion": {
+        "null": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 205
+        },
+        "mediated": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 210
+        },
+        "direct": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 201
+        }
+      },
+      "null_detection_interval": [
+        0.0448368081964689,
+        0.05852429215603819
+      ],
+      "correct_interval": {
+        "mediated": [
+          5.421010862427522e-20,
+          0.0009594432897014865
+        ],
+        "direct": [
+          5.421010862427522e-20,
+          0.0009594432897014865
+        ]
+      }
+    },
+    {
+      "clock": "H1299_clock",
+      "sample_s": 300.0,
+      "phase": 0.0,
+      "pulse_start_s": 600.0,
+      "noise": "OU",
+      "scale_multiplier": 1.0,
+      "dprime_known_amplitudes": 1.873484108186449e-06,
+      "ideal_balanced_accuracy": 0.5000003737060112,
+      "confusion": {
+        "null": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 209
+        },
+        "mediated": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 206
+        },
+        "direct": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 200
+        }
+      },
+      "null_detection_interval": [
+        0.045773352977234574,
+        0.05958582848869311
+      ],
+      "correct_interval": {
+        "mediated": [
+          5.421010862427522e-20,
+          0.0009594432897014865
+        ],
+        "direct": [
+          5.421010862427522e-20,
+          0.0009594432897014865
+        ]
+      }
+    },
+    {
+      "clock": "H1299_clock",
+      "sample_s": 300.0,
+      "phase": 0.0,
+      "pulse_start_s": 600.0,
+      "noise": "OU",
+      "scale_multiplier": 2.0,
+      "dprime_known_amplitudes": 9.367420540932245e-07,
+      "ideal_balanced_accuracy": 0.5000001868530056,
+      "confusion": {
+        "null": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 195
+        },
+        "mediated": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 180
+        },
+        "direct": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 180
+        }
+      },
+      "null_detection_interval": [
+        0.04249862921703139,
+        0.055867268351924224
+      ],
+      "correct_interval": {
+        "mediated": [
+          5.421010862427522e-20,
+          0.0009594432897014865
+        ],
+        "direct": [
+          5.421010862427522e-20,
+          0.0009594432897014865
+        ]
+      }
+    },
+    {
+      "clock": "H1299_clock",
+      "sample_s": 300.0,
+      "phase": 0.25,
+      "pulse_start_s": 675.0,
+      "noise": "white",
+      "scale_multiplier": 0.5,
+      "dprime_known_amplitudes": 0.00015932407805374914,
+      "ideal_balanced_accuracy": 0.5000317805554771,
+      "confusion": {
+        "null": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 212
+        },
+        "mediated": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 190
+        },
+        "direct": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 200
+        }
+      },
+      "null_detection_interval": [
+        0.046476220676243206,
+        0.06038152162474993
+      ],
+      "correct_interval": {
+        "mediated": [
+          5.421010862427522e-20,
+          0.0009594432897014865
+        ],
+        "direct": [
+          5.421010862427522e-20,
+          0.0009594432897014865
+        ]
+      }
+    },
+    {
+      "clock": "H1299_clock",
+      "sample_s": 300.0,
+      "phase": 0.25,
+      "pulse_start_s": 675.0,
+      "noise": "white",
+      "scale_multiplier": 1.0,
+      "dprime_known_amplitudes": 7.966203902687457e-05,
+      "ideal_balanced_accuracy": 0.5000158902777512,
+      "confusion": {
+        "null": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 220
+        },
+        "mediated": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 225
+        },
+        "direct": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 209
+        }
+      },
+      "null_detection_interval": [
+        0.04835239551328616,
+        0.06250150901454818
+      ],
+      "correct_interval": {
+        "mediated": [
+          5.421010862427522e-20,
+          0.0009594432897014865
+        ],
+        "direct": [
+          5.421010862427522e-20,
+          0.0009594432897014865
+        ]
+      }
+    },
+    {
+      "clock": "H1299_clock",
+      "sample_s": 300.0,
+      "phase": 0.25,
+      "pulse_start_s": 675.0,
+      "noise": "white",
+      "scale_multiplier": 2.0,
+      "dprime_known_amplitudes": 3.9831019513437285e-05,
+      "ideal_balanced_accuracy": 0.5000079451388771,
+      "confusion": {
+        "null": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 183
+        },
+        "mediated": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 181
+        },
+        "direct": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 173
+        }
+      },
+      "null_detection_interval": [
+        0.03969920233662991,
+        0.052672451892063904
+      ],
+      "correct_interval": {
+        "mediated": [
+          5.421010862427522e-20,
+          0.0009594432897014865
+        ],
+        "direct": [
+          5.421010862427522e-20,
+          0.0009594432897014865
+        ]
+      }
+    },
+    {
+      "clock": "H1299_clock",
+      "sample_s": 300.0,
+      "phase": 0.25,
+      "pulse_start_s": 675.0,
+      "noise": "OU",
+      "scale_multiplier": 0.5,
+      "dprime_known_amplitudes": 0.00015932409860079403,
+      "ideal_balanced_accuracy": 0.5000317805595758,
+      "confusion": {
+        "null": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 208
+        },
+        "mediated": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 212
+        },
+        "direct": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 214
+        }
+      },
+      "null_detection_interval": [
+        0.04553915060205257,
+        0.059320510585519966
+      ],
+      "correct_interval": {
+        "mediated": [
+          5.421010862427522e-20,
+          0.0009594432897014865
+        ],
+        "direct": [
+          5.421010862427522e-20,
+          0.0009594432897014865
+        ]
+      }
+    },
+    {
+      "clock": "H1299_clock",
+      "sample_s": 300.0,
+      "phase": 0.25,
+      "pulse_start_s": 675.0,
+      "noise": "OU",
+      "scale_multiplier": 1.0,
+      "dprime_known_amplitudes": 7.966204930039701e-05,
+      "ideal_balanced_accuracy": 0.5000158902798004,
+      "confusion": {
+        "null": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 197
+        },
+        "mediated": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 199
+        },
+        "direct": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 189
+        }
+      },
+      "null_detection_interval": [
+        0.04296589092782036,
+        0.056399047197845546
+      ],
+      "correct_interval": {
+        "mediated": [
+          5.421010862427522e-20,
+          0.0009594432897014865
+        ],
+        "direct": [
+          5.421010862427522e-20,
+          0.0009594432897014865
+        ]
+      }
+    },
+    {
+      "clock": "H1299_clock",
+      "sample_s": 300.0,
+      "phase": 0.25,
+      "pulse_start_s": 675.0,
+      "noise": "OU",
+      "scale_multiplier": 2.0,
+      "dprime_known_amplitudes": 3.983102465019851e-05,
+      "ideal_balanced_accuracy": 0.5000079451399018,
+      "confusion": {
+        "null": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 207
+        },
+        "mediated": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 213
+        },
+        "direct": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 194
+        }
+      },
+      "null_detection_interval": [
+        0.045304992146476264,
+        0.05905514876274112
+      ],
+      "correct_interval": {
+        "mediated": [
+          5.421010862427522e-20,
+          0.0009594432897014865
+        ],
+        "direct": [
+          5.421010862427522e-20,
+          0.0009594432897014865
+        ]
+      }
+    },
+    {
+      "clock": "H1299_clock",
+      "sample_s": 300.0,
+      "phase": 0.5,
+      "pulse_start_s": 750.0,
+      "noise": "white",
+      "scale_multiplier": 0.5,
+      "dprime_known_amplitudes": 0.006774344052955069,
+      "ideal_balanced_accuracy": 0.5013512835484898,
+      "confusion": {
+        "null": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 208
+        },
+        "mediated": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 212
+        },
+        "direct": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 184
+        }
+      },
+      "null_detection_interval": [
+        0.04553915060205257,
+        0.059320510585519966
+      ],
+      "correct_interval": {
+        "mediated": [
+          5.421010862427522e-20,
+          0.0009594432897014865
+        ],
+        "direct": [
+          5.421010862427522e-20,
+          0.0009594432897014865
+        ]
+      }
+    },
+    {
+      "clock": "H1299_clock",
+      "sample_s": 300.0,
+      "phase": 0.5,
+      "pulse_start_s": 750.0,
+      "noise": "white",
+      "scale_multiplier": 1.0,
+      "dprime_known_amplitudes": 0.0033871720264775345,
+      "ideal_balanced_accuracy": 0.5006756427431939,
+      "confusion": {
+        "null": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 226
+        },
+        "mediated": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 204
+        },
+        "direct": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 228
+        }
+      },
+      "null_detection_interval": [
+        0.04976123892611694,
+        0.0640897872718483
+      ],
+      "correct_interval": {
+        "mediated": [
+          5.421010862427522e-20,
+          0.0009594432897014865
+        ],
+        "direct": [
+          5.421010862427522e-20,
+          0.0009594432897014865
+        ]
+      }
+    },
+    {
+      "clock": "H1299_clock",
+      "sample_s": 300.0,
+      "phase": 0.5,
+      "pulse_start_s": 750.0,
+      "noise": "white",
+      "scale_multiplier": 2.0,
+      "dprime_known_amplitudes": 0.0016935860132387673,
+      "ideal_balanced_accuracy": 0.5003378214927158,
+      "confusion": {
+        "null": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 178
+        },
+        "mediated": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 196
+        },
+        "direct": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 212
+        }
+      },
+      "null_detection_interval": [
+        0.03853497355178291,
+        0.05133907928513515
+      ],
+      "correct_interval": {
+        "mediated": [
+          5.421010862427522e-20,
+          0.0009594432897014865
+        ],
+        "direct": [
+          5.421010862427522e-20,
+          0.0009594432897014865
+        ]
+      }
+    },
+    {
+      "clock": "H1299_clock",
+      "sample_s": 300.0,
+      "phase": 0.5,
+      "pulse_start_s": 750.0,
+      "noise": "OU",
+      "scale_multiplier": 0.5,
+      "dprime_known_amplitudes": 0.006774344926600488,
+      "ideal_balanced_accuracy": 0.5013512837227558,
+      "confusion": {
+        "null": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 217
+        },
+        "mediated": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 225
+        },
+        "direct": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 215
+        }
+      },
+      "null_detection_interval": [
+        0.04764851826236749,
+        0.0617068254304014
+      ],
+      "correct_interval": {
+        "mediated": [
+          5.421010862427522e-20,
+          0.0009594432897014865
+        ],
+        "direct": [
+          5.421010862427522e-20,
+          0.0009594432897014865
+        ]
+      }
+    },
+    {
+      "clock": "H1299_clock",
+      "sample_s": 300.0,
+      "phase": 0.5,
+      "pulse_start_s": 750.0,
+      "noise": "OU",
+      "scale_multiplier": 1.0,
+      "dprime_known_amplitudes": 0.003387172463300244,
+      "ideal_balanced_accuracy": 0.5006756428303273,
+      "confusion": {
+        "null": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 217
+        },
+        "mediated": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 208
+        },
+        "direct": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 214
+        }
+      },
+      "null_detection_interval": [
+        0.04764851826236749,
+        0.0617068254304014
+      ],
+      "correct_interval": {
+        "mediated": [
+          5.421010862427522e-20,
+          0.0009594432897014865
+        ],
+        "direct": [
+          5.421010862427522e-20,
+          0.0009594432897014865
+        ]
+      }
+    },
+    {
+      "clock": "H1299_clock",
+      "sample_s": 300.0,
+      "phase": 0.5,
+      "pulse_start_s": 750.0,
+      "noise": "OU",
+      "scale_multiplier": 2.0,
+      "dprime_known_amplitudes": 0.001693586231650122,
+      "ideal_balanced_accuracy": 0.5003378215362825,
+      "confusion": {
+        "null": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 186
+        },
+        "mediated": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 173
+        },
+        "direct": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 203
+        }
+      },
+      "null_detection_interval": [
+        0.04039837476372546,
+        0.053471840300033796
+      ],
+      "correct_interval": {
+        "mediated": [
+          5.421010862427522e-20,
+          0.0009594432897014865
+        ],
+        "direct": [
+          5.421010862427522e-20,
+          0.0009594432897014865
+        ]
+      }
+    },
+    {
+      "clock": "H1299_clock",
+      "sample_s": 300.0,
+      "phase": 0.75,
+      "pulse_start_s": 825.0,
+      "noise": "white",
+      "scale_multiplier": 0.5,
+      "dprime_known_amplitudes": 0.2846534552179811,
+      "ideal_balanced_accuracy": 0.5565890320780462,
+      "confusion": {
+        "null": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 184
+        },
+        "mediated": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 694
+        },
+        "direct": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 452
+        }
+      },
+      "null_detection_interval": [
+        0.03993220770280679,
+        0.05293896680424217
+      ],
+      "correct_interval": {
+        "mediated": [
+          5.421010862427522e-20,
+          0.0009594432897014865
+        ],
+        "direct": [
+          5.421010862427522e-20,
+          0.0009594432897014865
+        ]
+      }
+    },
+    {
+      "clock": "H1299_clock",
+      "sample_s": 300.0,
+      "phase": 0.75,
+      "pulse_start_s": 825.0,
+      "noise": "white",
+      "scale_multiplier": 1.0,
+      "dprime_known_amplitudes": 0.14232672760899054,
+      "ideal_balanced_accuracy": 0.5283661305442549,
+      "confusion": {
+        "null": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 210
+        },
+        "mediated": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 398
+        },
+        "direct": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 289
+        }
+      },
+      "null_detection_interval": [
+        0.04600759897587289,
+        0.05985110276840995
+      ],
+      "correct_interval": {
+        "mediated": [
+          5.421010862427522e-20,
+          0.0009594432897014865
+        ],
+        "direct": [
+          5.421010862427522e-20,
+          0.0009594432897014865
+        ]
+      }
+    },
+    {
+      "clock": "H1299_clock",
+      "sample_s": 300.0,
+      "phase": 0.75,
+      "pulse_start_s": 825.0,
+      "noise": "white",
+      "scale_multiplier": 2.0,
+      "dprime_known_amplitudes": 0.07116336380449527,
+      "ideal_balanced_accuracy": 0.5141920426017782,
+      "confusion": {
+        "null": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 204
+        },
+        "mediated": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 287
+        },
+        "direct": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 253
+        }
+      },
+      "null_detection_interval": [
+        0.044602783312247256,
+        0.05825879676190469
+      ],
+      "correct_interval": {
+        "mediated": [
+          5.421010862427522e-20,
+          0.0009594432897014865
+        ],
+        "direct": [
+          5.421010862427522e-20,
+          0.0009594432897014865
+        ]
+      }
+    },
+    {
+      "clock": "H1299_clock",
+      "sample_s": 300.0,
+      "phase": 0.75,
+      "pulse_start_s": 825.0,
+      "noise": "OU",
+      "scale_multiplier": 0.5,
+      "dprime_known_amplitudes": 0.28465349192798334,
+      "ideal_balanced_accuracy": 0.55658903932684,
+      "confusion": {
+        "null": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 190
+        },
+        "mediated": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 682
+        },
+        "direct": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 486
+        }
+      },
+      "null_detection_interval": [
+        0.04133132317032518,
+        0.05453697300685468
+      ],
+      "correct_interval": {
+        "mediated": [
+          5.421010862427522e-20,
+          0.0009594432897014865
+        ],
+        "direct": [
+          5.421010862427522e-20,
+          0.0009594432897014865
+        ]
+      }
+    },
+    {
+      "clock": "H1299_clock",
+      "sample_s": 300.0,
+      "phase": 0.75,
+      "pulse_start_s": 825.0,
+      "noise": "OU",
+      "scale_multiplier": 1.0,
+      "dprime_known_amplitudes": 0.14232674596399167,
+      "ideal_balanced_accuracy": 0.5283661341962888,
+      "confusion": {
+        "null": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 189
+        },
+        "mediated": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 377
+        },
+        "direct": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 270
+        }
+      },
+      "null_detection_interval": [
+        0.04109801024846582,
+        0.05427076565035889
+      ],
+      "correct_interval": {
+        "mediated": [
+          5.421010862427522e-20,
+          0.0009594432897014865
+        ],
+        "direct": [
+          5.421010862427522e-20,
+          0.0009594432897014865
+        ]
+      }
+    },
+    {
+      "clock": "H1299_clock",
+      "sample_s": 300.0,
+      "phase": 0.75,
+      "pulse_start_s": 825.0,
+      "noise": "OU",
+      "scale_multiplier": 2.0,
+      "dprime_known_amplitudes": 0.07116337298199583,
+      "ideal_balanced_accuracy": 0.5141920444312662,
+      "confusion": {
+        "null": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 203
+        },
+        "mediated": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 306
+        },
+        "direct": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 220
+        }
+      },
+      "null_detection_interval": [
+        0.04436880356817323,
+        0.05799325622762358
+      ],
+      "correct_interval": {
+        "mediated": [
+          5.421010862427522e-20,
+          0.0009594432897014865
+        ],
+        "direct": [
+          5.421010862427522e-20,
+          0.0009594432897014865
+        ]
+      }
+    },
+    {
+      "clock": "H1299_clock",
+      "sample_s": 300.0,
+      "phase": 0.99,
+      "pulse_start_s": 897.0000000000001,
+      "noise": "white",
+      "scale_multiplier": 0.5,
+      "dprime_known_amplitudes": 5.2813977768749485,
+      "ideal_balanced_accuracy": 0.9958632392292109,
+      "confusion": {
+        "null": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 193
+        },
+        "mediated": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 722
+        },
+        "direct": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 4000
+        }
+      },
+      "null_detection_interval": [
+        0.04203155996755503,
+        0.05533529704469027
+      ],
+      "correct_interval": {
+        "mediated": [
+          5.421010862427522e-20,
+          0.0009594432897014865
+        ],
+        "direct": [
+          5.421010862427522e-20,
+          0.0009594432897014865
+        ]
+      }
+    },
+    {
+      "clock": "H1299_clock",
+      "sample_s": 300.0,
+      "phase": 0.99,
+      "pulse_start_s": 897.0000000000001,
+      "noise": "white",
+      "scale_multiplier": 1.0,
+      "dprime_known_amplitudes": 2.6406988884374742,
+      "ideal_balanced_accuracy": 0.9066408127375103,
+      "confusion": {
+        "null": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 175
+        },
+        "mediated": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 336
+        },
+        "direct": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 3645
+        }
+      },
+      "null_detection_interval": [
+        0.03783709004550936,
+        0.05053840195634326
+      ],
+      "correct_interval": {
+        "mediated": [
+          5.421010862427522e-20,
+          0.0009594432897014865
+        ],
+        "direct": [
+          5.421010862427522e-20,
+          0.0009594432897014865
+        ]
+      }
+    },
+    {
+      "clock": "H1299_clock",
+      "sample_s": 300.0,
+      "phase": 0.99,
+      "pulse_start_s": 897.0000000000001,
+      "noise": "white",
+      "scale_multiplier": 2.0,
+      "dprime_known_amplitudes": 1.3203494442187371,
+      "ideal_balanced_accuracy": 0.7454291440966784,
+      "confusion": {
+        "null": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 211
+        },
+        "mediated": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 302
+        },
+        "direct": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 1881
+        }
+      },
+      "null_detection_interval": [
+        0.04624188830529401,
+        0.060116333717343984
+      ],
+      "correct_interval": {
+        "mediated": [
+          5.421010862427522e-20,
+          0.0009594432897014865
+        ],
+        "direct": [
+          5.421010862427522e-20,
+          0.0009594432897014865
+        ]
+      }
+    },
+    {
+      "clock": "H1299_clock",
+      "sample_s": 300.0,
+      "phase": 0.99,
+      "pulse_start_s": 897.0000000000001,
+      "noise": "OU",
+      "scale_multiplier": 0.5,
+      "dprime_known_amplitudes": 5.281398457985116,
+      "ideal_balanced_accuracy": 0.995863243387038,
+      "confusion": {
+        "null": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 202
+        },
+        "mediated": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 652
+        },
+        "direct": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 4000
+        }
+      },
+      "null_detection_interval": [
+        0.044134869278676186,
+        0.05772767023876546
+      ],
+      "correct_interval": {
+        "mediated": [
+          5.421010862427522e-20,
+          0.0009594432897014865
+        ],
+        "direct": [
+          5.421010862427522e-20,
+          0.0009594432897014865
+        ]
+      }
+    },
+    {
+      "clock": "H1299_clock",
+      "sample_s": 300.0,
+      "phase": 0.99,
+      "pulse_start_s": 897.0000000000001,
+      "noise": "OU",
+      "scale_multiplier": 1.0,
+      "dprime_known_amplitudes": 2.640699228992558,
+      "ideal_balanced_accuracy": 0.9066408411500255,
+      "confusion": {
+        "null": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 212
+        },
+        "mediated": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 417
+        },
+        "direct": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 3640
+        }
+      },
+      "null_detection_interval": [
+        0.046476220676243206,
+        0.06038152162474993
+      ],
+      "correct_interval": {
+        "mediated": [
+          5.421010862427522e-20,
+          0.0009594432897014865
+        ],
+        "direct": [
+          5.421010862427522e-20,
+          0.0009594432897014865
+        ]
+      }
+    },
+    {
+      "clock": "H1299_clock",
+      "sample_s": 300.0,
+      "phase": 0.99,
+      "pulse_start_s": 897.0000000000001,
+      "noise": "OU",
+      "scale_multiplier": 2.0,
+      "dprime_known_amplitudes": 1.320349614496279,
+      "ideal_balanced_accuracy": 0.745429171411477,
+      "confusion": {
+        "null": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 199
+        },
+        "mediated": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 278
+        },
+        "direct": {
+          "unresolved": 4000,
+          "mediated": 0,
+          "direct": 0,
+          "detected_before_margin": 1766
+        }
+      },
+      "null_detection_interval": [
+        0.04343334234002318,
+        0.05693063634235302
+      ],
+      "correct_interval": {
+        "mediated": [
+          5.421010862427522e-20,
+          0.0009594432897014865
+        ],
+        "direct": [
+          5.421010862427522e-20,
+          0.0009594432897014865
+        ]
+      }
+    },
+    {
+      "clock": "G01_near_frame",
+      "sample_s": 65.58921813964844,
+      "phase": null,
+      "pulse_start_s": 130.0,
+      "noise": "white",
+      "scale_multiplier": 0.5,
+      "dprime_known_amplitudes": 0.9483011688376215,
+      "ideal_balanced_accuracy": 0.6823037355745368,
+      "confusion": {
+        "null": {
+          "unresolved": 3914,
+          "mediated": 42,
+          "direct": 44,
+          "detected_before_margin": 182
+        },
+        "mediated": {
+          "unresolved": 3608,
+          "mediated": 325,
+          "direct": 67,
+          "detected_before_margin": 901
+        },
+        "direct": {
+          "unresolved": 3704,
+          "mediated": 61,
+          "direct": 235,
+          "detected_before_margin": 689
+        }
+      },
+      "null_detection_interval": [
+        0.0394662496193434,
+        0.052405884330995266
+      ],
+      "correct_interval": {
+        "mediated": [
+          0.07317931982432091,
+          0.09012421393080408
+        ],
+        "direct": [
+          0.05187712630570979,
+          0.06646958239745178
+        ]
+      }
+    },
+    {
+      "clock": "G01_near_frame",
+      "sample_s": 65.58921813964844,
+      "phase": null,
+      "pulse_start_s": 130.0,
+      "noise": "white",
+      "scale_multiplier": 1.0,
+      "dprime_known_amplitudes": 0.47415058441881075,
+      "ideal_balanced_accuracy": 0.5937008100109474,
+      "confusion": {
+        "null": {
+          "unresolved": 3926,
+          "mediated": 30,
+          "direct": 44,
+          "detected_before_margin": 178
+        },
+        "mediated": {
+          "unresolved": 3788,
+          "mediated": 151,
+          "direct": 61,
+          "detected_before_margin": 474
+        },
+        "direct": {
+          "unresolved": 3848,
+          "mediated": 52,
+          "direct": 100,
+          "detected_before_margin": 377
+        }
+      },
+      "null_detection_interval": [
+        0.03853497355178291,
+        0.05133907928513515
+      ],
+      "correct_interval": {
+        "mediated": [
+          0.032273332718575236,
+          0.04411367260275379
+        ],
+        "direct": [
+          0.020598357145241535,
+          0.030313113979974878
+        ]
+      }
+    },
+    {
+      "clock": "G01_near_frame",
+      "sample_s": 65.58921813964844,
+      "phase": null,
+      "pulse_start_s": 130.0,
+      "noise": "white",
+      "scale_multiplier": 2.0,
+      "dprime_known_amplitudes": 0.23707529220940537,
+      "ideal_balanced_accuracy": 0.5471791659629585,
+      "confusion": {
+        "null": {
+          "unresolved": 3926,
+          "mediated": 34,
+          "direct": 40,
+          "detected_before_margin": 179
+        },
+        "mediated": {
+          "unresolved": 3901,
+          "mediated": 62,
+          "direct": 37,
+          "detected_before_margin": 254
+        },
+        "direct": {
+          "unresolved": 3901,
+          "mediated": 41,
+          "direct": 58,
+          "detected_before_margin": 237
+        }
+      },
+      "null_detection_interval": [
+        0.038767711502907864,
+        0.05160586161236534
+      ],
+      "correct_interval": {
+        "mediated": [
+          0.012110378777386396,
+          0.019819321770334346
+        ],
+        "direct": [
+          0.011233895537857731,
+          0.018697723896442416
+        ]
+      }
+    },
+    {
+      "clock": "G01_near_frame",
+      "sample_s": 65.58921813964844,
+      "phase": null,
+      "pulse_start_s": 130.0,
+      "noise": "OU",
+      "scale_multiplier": 0.5,
+      "dprime_known_amplitudes": 0.9662363390619875,
+      "ideal_balanced_accuracy": 0.6854940831600549,
+      "confusion": {
+        "null": {
+          "unresolved": 3919,
+          "mediated": 42,
+          "direct": 39,
+          "detected_before_margin": 210
+        },
+        "mediated": {
+          "unresolved": 3520,
+          "mediated": 409,
+          "direct": 71,
+          "detected_before_margin": 1060
+        },
+        "direct": {
+          "unresolved": 3642,
+          "mediated": 67,
+          "direct": 291,
+          "detected_before_margin": 788
+        }
+      },
+      "null_detection_interval": [
+        0.04600759897587289,
+        0.05985110276840995
+      ],
+      "correct_interval": {
+        "mediated": [
+          0.09323919238858519,
+          0.11202404474837233
+        ],
+        "direct": [
+          0.0651045126639887,
+          0.08121533162706121
+        ]
+      }
+    },
+    {
+      "clock": "G01_near_frame",
+      "sample_s": 65.58921813964844,
+      "phase": null,
+      "pulse_start_s": 130.0,
+      "noise": "OU",
+      "scale_multiplier": 1.0,
+      "dprime_known_amplitudes": 0.48311816953099374,
+      "ideal_balanced_accuracy": 0.5954390855629605,
+      "confusion": {
+        "null": {
+          "unresolved": 3935,
+          "mediated": 37,
+          "direct": 28,
+          "detected_before_margin": 166
+        },
+        "mediated": {
+          "unresolved": 3811,
+          "mediated": 135,
+          "direct": 54,
+          "detected_before_margin": 419
+        },
+        "direct": {
+          "unresolved": 3867,
+          "mediated": 48,
+          "direct": 85,
+          "detected_before_margin": 329
+        }
+      },
+      "null_detection_interval": [
+        0.03574652025319747,
+        0.048133289243458804
+      ],
+      "correct_interval": {
+        "mediated": [
+          0.028585882635801245,
+          0.0398087982318454
+        ],
+        "direct": [
+          0.017218686691144347,
+          0.02619998025874483
+        ]
+      }
+    },
+    {
+      "clock": "G01_near_frame",
+      "sample_s": 65.58921813964844,
+      "phase": null,
+      "pulse_start_s": 130.0,
+      "noise": "OU",
+      "scale_multiplier": 2.0,
+      "dprime_known_amplitudes": 0.24155908476549687,
+      "ideal_balanced_accuracy": 0.5480671728602741,
+      "confusion": {
+        "null": {
+          "unresolved": 3908,
+          "mediated": 51,
+          "direct": 41,
+          "detected_before_margin": 249
+        },
+        "mediated": {
+          "unresolved": 3861,
+          "mediated": 78,
+          "direct": 61,
+          "detected_before_margin": 369
+        },
+        "direct": {
+          "unresolved": 3889,
+          "mediated": 50,
+          "direct": 61,
+          "detected_before_margin": 319
+        }
+      },
+      "null_detection_interval": [
+        0.05517440833359025,
+        0.0701655842665434
+      ],
+      "correct_interval": {
+        "mediated": [
+          0.0156532464480853,
+          0.024268778553317827
+        ],
+        "direct": [
+          0.01189086623024601,
+          0.019539314039119578
+        ]
+      }
+    }
+  ]
+}

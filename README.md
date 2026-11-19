@@ -2,13 +2,13 @@
 
 Companion software for “Regulator or actin memory and autonomous chaos in mechanochemical models of protrusion motion.” The software simulates the exact paired models, compares the information supplied by a calibrated reporter and rebuilds the numerical tests, the three main figures, the seven supporting figures and the manuscript and supporting-information reading copies. The biological application motivates a prospective test. The quantitative checks compare synthetic or analytical results and previously published source data.
 
-The manuscript cites [v1.1.0](https://github.com/renatosocodato/protrusion-memory-reproducibility/releases/tag/v1.1.0) as the reference release for its original analyses. The v1.6.0 bundle contains the final reading copy prepared for *Biophysical Journal*. Cite the version used for any further software analyses.
+The manuscript cites [v1.1.0](https://github.com/renatosocodato/protrusion-memory-reproducibility/releases/tag/v1.1.0) as the reference release for its original analyses. The v1.7.0 bundle contains the final reading copy prepared for *Biophysical Journal*. Cite the version used for any further software analyses.
 
 ## Install and run
 
-Download the wheel and paper bundle from [GitHub Release v1.6.0](https://github.com/renatosocodato/protrusion-memory-reproducibility/releases/tag/v1.6.0). Python 3.13 or 3.14 is supported by the pinned numerical dependencies. The modeling and calibration commands need only the Python installation.
+Download the wheel and paper bundle from [GitHub Release v1.7.0](https://github.com/renatosocodato/protrusion-memory-reproducibility/releases/tag/v1.7.0). Python 3.13 or 3.14 is supported by the pinned numerical dependencies. The modeling and calibration commands need only the Python installation.
 
-    python -m pip install protrusion_memory-1.6.0-py3-none-any.whl
+    python -m pip install protrusion_memory-1.7.0-py3-none-any.whl
     protrusion-memory simulate
     protrusion-memory compare
 
@@ -24,6 +24,10 @@ The [ode-v1 specification](PORTABLE_MODELS.md) describes state equations, parame
 
 [`ode-v2`](PORTABLE_MODELS.md#reporter-and-camera-acquisition-with-ode-v2) adds reporter response, exposure, delay and linear channel mixing. The [actin and motion benchmarks](benchmarks/acquisition/README.md) compare direct and actin-mediated response under these acquisition laws.
 
+## Simulate noisy trajectories
+
+[`sde-v1`](PORTABLE_MODELS.md#seeded-stochastic-trajectories-with-sde-v1) simulates seeded Itô paths with causal acquisition. The [stochastic pulse benchmark](benchmarks/stochastic/README.md) tests direct and actin-mediated response under assigned noise and recorded sampling clocks.
+
 ## Calibrate and test on independent preparations
 
 [Calibrate from a laboratory CSV and score a frozen fit](CALIBRATION.md). The [CK666 benchmark](benchmarks/ck666/README.md) uses two external calibration experiments and an independently acquired screen to test the transfer of a treatment effect relative to same-plate controls.
@@ -38,9 +42,9 @@ The [ode-v1 specification](PORTABLE_MODELS.md) describes state equations, parame
 
 Extract the paper bundle and then run:
 
-    python -m pip install -r protrusion-memory-paper-1.6.0/requirements.txt
-    Rscript --vanilla protrusion-memory-paper-1.6.0/scripts/install_r_dependencies.R
-    protrusion-memory reproduce --target paper --bundle protrusion-memory-paper-1.6.0 --output build/paper
+    python -m pip install -r protrusion-memory-paper-1.7.0/requirements.txt
+    Rscript --vanilla protrusion-memory-paper-1.7.0/scripts/install_r_dependencies.R
+    protrusion-memory reproduce --target paper --bundle protrusion-memory-paper-1.7.0 --output build/paper
 
 The paper bundle includes the reading copies, vector figures, panel exports, plotting inputs, all source, and a manifest checked against the listed files before reconstruction. Verify the downloaded archive against `SHA256SUMS` on the release page. The wheel supplies the modeling interface and entry point. The paper rebuild uses the R and document tools described below. A trusted Git checkout of the same version can serve as `--bundle`.
 
@@ -48,7 +52,7 @@ The paper bundle includes the reading copies, vector figures, panel exports, plo
 
 The reference run used Python 3.14.7 and R 4.5.2. For figure and document generation install R with Cairo support, Pandoc, XeLaTeX, Poppler and the Arial font or a compatible substitute. The PDF template also supports Liberation Sans, Liberation Serif and Latin Modern Math. On Debian or Ubuntu, the system packages commonly needed include fontconfig, fonts-liberation, texlive-xetex, texlive-latex-extra, poppler-utils, libcairo2-dev, libfreetype6-dev, libharfbuzz-dev, libfribidi-dev, libpng-dev, libjpeg-dev and libtiff-dev.
 
-    git clone --branch v1.6.0 https://github.com/renatosocodato/protrusion-memory-reproducibility.git
+    git clone --branch v1.7.0 https://github.com/renatosocodato/protrusion-memory-reproducibility.git
     cd protrusion-memory-reproducibility
     python3 -m venv .venv
     . .venv/bin/activate
