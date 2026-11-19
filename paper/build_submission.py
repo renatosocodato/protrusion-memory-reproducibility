@@ -59,21 +59,8 @@ def main():
     assert len(abstract.split()) <= 300 and len(significance.split()) <= 120
 
     byline = (HERE / "AUTHOR_FRONT_MATTER.md").read_text().strip()
-    end = """## Funding
-
-Renato Socodato holds an employment contract funded by the Fundação para a Ciência e a Tecnologia (FCT), Portugal (2023.06380.CEECIND).
-
-## AI disclosure
-
-AI-assisted tools were used for code review and manuscript proofreading.
-
-## Data and code availability
-
-The article reports analytical results and simulations. Previously published measurements used for comparison are cited where they are discussed. Code and figure reproduction materials are maintained in a private repository pending release.
-
-"""
-    article_body = "## Introduction" + text + end + "## References" + refs
-    supplementary_refs = re.sub(r"(?m)^26\. CD11b-enriched mouse brain proteome[^\n]*\n?", "", refs)
+    article_body = "## Introduction" + text + "## References" + refs
+    supplementary_refs = re.sub(r"(?m)^26\. [^\n]*\n?", "", refs)
     supplement = (
         "# Supporting information\n\n" + title.removeprefix("# ") + "\n\n"
         "## Supplementary Results" + supplemental + "\n## References used in the article and supplement" + supplementary_refs
