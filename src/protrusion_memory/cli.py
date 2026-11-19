@@ -139,7 +139,7 @@ def main(argv=None):
     forecast_fit = commands.add_parser("forecast-fit", help="fit temporal forecasters on calibration preparations")
     forecast_score = commands.add_parser("forecast-score", help="score frozen forecasters on reserved preparations")
     for command in (forecast_fit, forecast_score):
-        command.add_argument("--plan", type=Path, required=True, help="forecast-v1 TOML plan")
+        command.add_argument("--plan", type=Path, required=True, help="forecast-v1 or edge-forecast-v1 TOML plan")
         command.add_argument("--data", type=Path, required=True, help="paired time series CSV for this split")
         command.add_argument("--output", type=Path, required=True, help="new JSON file")
     forecast_score.add_argument("--fit", type=Path, required=True, help="frozen JSON from forecast-fit")

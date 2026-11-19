@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.5.0
+
+- Added a preparation-held-out edge forecast for signed velocity after a scheduled perturbation. Both fitted models receive two motion lags and the pulse history. One additionally receives local actin.
+- Added paired synthetic perturbation controls and an extractor for a public two-channel vesicle recording. Biological forecast validation requires paired series with preparation identities.
+- Preserved the paper and its original software citation.
+
 ## 1.4.0
 
 - Added causal-prefix forecast fitting and held-out scoring on paired actin and motion records.

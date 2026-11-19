@@ -1,0 +1,776 @@
+{
+  "data_kind": "synthetic",
+  "replicates_per_mechanism": 40,
+  "practical_gain_um_per_min": 0.05,
+  "horizon_s": 5,
+  "cases": {
+    "pulse_and_motion": {
+      "true_coupling": 0.0,
+      "rmse_difference_um_per_min": [
+        0.0003924814175692293,
+        2.816536832911387e-05,
+        0.00017935183702760815,
+        -7.914868323843915e-05,
+        0.00013436553272885843,
+        0.0003371369544473979,
+        -5.606641566291426e-07,
+        0.00015756078332040957,
+        5.0682375280275416e-05,
+        5.967857058786219e-05,
+        2.9411287495006988e-05,
+        1.2475160788616435e-05,
+        0.0006021774486978937,
+        0.00016584049164125592,
+        -0.0003221341007076939,
+        0.00025734796644988345,
+        0.00010542520755982276,
+        8.34834923272576e-05,
+        4.207473241341075e-06,
+        -6.53742048845607e-05,
+        -7.308888035462147e-05,
+        4.419993109985865e-05,
+        4.4791863574034085e-06,
+        0.0009148484422077385,
+        -3.508970088594854e-05,
+        9.517315998874842e-05,
+        -7.790053395240193e-05,
+        3.4779133245094185e-05,
+        -8.34604894167923e-05,
+        0.0003595556840007563,
+        0.00018751271969352779,
+        9.87696199029886e-05,
+        0.0003628475360069605,
+        0.00013201321644995545,
+        -0.00012519409454331276,
+        0.0002679427030306547,
+        9.238792207960644e-05,
+        0.00021594485253723095,
+        -4.136651922598267e-05,
+        -7.380769661594067e-05
+      ],
+      "median_rmse_difference_um_per_min": 7.15810314575599e-05,
+      "gains_exceeding_practical_threshold": 0,
+      "first_replicate": {
+        "schema": "edge-forecast-v1",
+        "software_version": "1.5.0",
+        "fit_sha256": "26f8a70824ca41c75e8b7cc34542d10d2688f28c806725976059d9f803673c02",
+        "heldout_sha256": "306b324bbb104453d6dbc8fd0130ca294b82296a41582cfec5d05b336f9d2c55",
+        "heldout_preparations": [
+          "reserved-0",
+          "reserved-1",
+          "reserved-2",
+          "reserved-3",
+          "reserved-4",
+          "reserved-5",
+          "reserved-6",
+          "reserved-7"
+        ],
+        "clock": {
+          "sample_s": 5.0,
+          "horizon_s": 5.0,
+          "prefix_frames": 6,
+          "motion_delay_frames": 0,
+          "motion_unit": "um/min",
+          "actin_delay_frames": 0
+        },
+        "counts": {
+          "preparations": 8,
+          "cells": 16,
+          "origins": 1168,
+          "regions": 32
+        },
+        "candidates": {
+          "stationary": {
+            "scaled_mse": 0.300896617099682,
+            "scaled_rmse": 0.5485404425379062,
+            "channel_rmse": {
+              "region-0": 0.5115761187779028,
+              "region-1": 0.5831664504200333
+            },
+            "channel_mean_signed_error": {
+              "region-0": -0.3120105082021146,
+              "region-1": -0.3281318162579891
+            }
+          },
+          "persistence": {
+            "scaled_mse": 0.060661278229733315,
+            "scaled_rmse": 0.24629510394998377,
+            "channel_rmse": {
+              "region-0": 0.25019488716813904,
+              "region-1": 0.24233257084921297
+            },
+            "channel_mean_signed_error": {
+              "region-0": 0.0019769415734121635,
+              "region-1": 0.004653717695475374
+            }
+          },
+          "motion_only": {
+            "scaled_mse": 0.04286875353015352,
+            "scaled_rmse": 0.20704770834315825,
+            "channel_rmse": {
+              "region-0": 0.20595342057856778,
+              "region-1": 0.20813624290904892
+            },
+            "channel_mean_signed_error": {
+              "region-0": 0.027612908144846154,
+              "region-1": 0.02480285972920768
+            }
+          },
+          "actin_modulated": {
+            "scaled_mse": 0.04303143232796662,
+            "scaled_rmse": 0.20744018976072748,
+            "channel_rmse": {
+              "region-0": 0.20647172204081876,
+              "region-1": 0.20840415699652473
+            },
+            "channel_mean_signed_error": {
+              "region-0": 0.028199890891946758,
+              "region-1": 0.024387713153753637
+            }
+          }
+        },
+        "by_preparation": {
+          "stationary": {
+            "reserved-0": {
+              "rmse": 0.36280479099452817,
+              "preparations": 1,
+              "cells": 2,
+              "origins": 152,
+              "regions": 4
+            },
+            "reserved-1": {
+              "rmse": 0.5003196671449166,
+              "preparations": 1,
+              "cells": 2,
+              "origins": 148,
+              "regions": 4
+            },
+            "reserved-2": {
+              "rmse": 0.5605843041472925,
+              "preparations": 1,
+              "cells": 2,
+              "origins": 144,
+              "regions": 4
+            },
+            "reserved-3": {
+              "rmse": 0.47665425904198033,
+              "preparations": 1,
+              "cells": 2,
+              "origins": 140,
+              "regions": 4
+            },
+            "reserved-4": {
+              "rmse": 0.557217923743349,
+              "preparations": 1,
+              "cells": 2,
+              "origins": 152,
+              "regions": 4
+            },
+            "reserved-5": {
+              "rmse": 0.5311080230491975,
+              "preparations": 1,
+              "cells": 2,
+              "origins": 148,
+              "regions": 4
+            },
+            "reserved-6": {
+              "rmse": 0.5544073115073147,
+              "preparations": 1,
+              "cells": 2,
+              "origins": 144,
+              "regions": 4
+            },
+            "reserved-7": {
+              "rmse": 0.7640921362223702,
+              "preparations": 1,
+              "cells": 2,
+              "origins": 140,
+              "regions": 4
+            }
+          },
+          "persistence": {
+            "reserved-0": {
+              "rmse": 0.24832103809447953,
+              "preparations": 1,
+              "cells": 2,
+              "origins": 152,
+              "regions": 4
+            },
+            "reserved-1": {
+              "rmse": 0.23609395269297787,
+              "preparations": 1,
+              "cells": 2,
+              "origins": 148,
+              "regions": 4
+            },
+            "reserved-2": {
+              "rmse": 0.2540700873324298,
+              "preparations": 1,
+              "cells": 2,
+              "origins": 144,
+              "regions": 4
+            },
+            "reserved-3": {
+              "rmse": 0.2316651158249699,
+              "preparations": 1,
+              "cells": 2,
+              "origins": 140,
+              "regions": 4
+            },
+            "reserved-4": {
+              "rmse": 0.254135203376647,
+              "preparations": 1,
+              "cells": 2,
+              "origins": 152,
+              "regions": 4
+            },
+            "reserved-5": {
+              "rmse": 0.26794416814228644,
+              "preparations": 1,
+              "cells": 2,
+              "origins": 148,
+              "regions": 4
+            },
+            "reserved-6": {
+              "rmse": 0.21642007473617186,
+              "preparations": 1,
+              "cells": 2,
+              "origins": 144,
+              "regions": 4
+            },
+            "reserved-7": {
+              "rmse": 0.2577785301891634,
+              "preparations": 1,
+              "cells": 2,
+              "origins": 140,
+              "regions": 4
+            }
+          },
+          "motion_only": {
+            "reserved-0": {
+              "rmse": 0.20994553274833413,
+              "preparations": 1,
+              "cells": 2,
+              "origins": 152,
+              "regions": 4
+            },
+            "reserved-1": {
+              "rmse": 0.1953703670143128,
+              "preparations": 1,
+              "cells": 2,
+              "origins": 148,
+              "regions": 4
+            },
+            "reserved-2": {
+              "rmse": 0.19199361328126474,
+              "preparations": 1,
+              "cells": 2,
+              "origins": 144,
+              "regions": 4
+            },
+            "reserved-3": {
+              "rmse": 0.21091536082331724,
+              "preparations": 1,
+              "cells": 2,
+              "origins": 140,
+              "regions": 4
+            },
+            "reserved-4": {
+              "rmse": 0.21446249554268446,
+              "preparations": 1,
+              "cells": 2,
+              "origins": 152,
+              "regions": 4
+            },
+            "reserved-5": {
+              "rmse": 0.21611961725707488,
+              "preparations": 1,
+              "cells": 2,
+              "origins": 148,
+              "regions": 4
+            },
+            "reserved-6": {
+              "rmse": 0.19599345901335205,
+              "preparations": 1,
+              "cells": 2,
+              "origins": 144,
+              "regions": 4
+            },
+            "reserved-7": {
+              "rmse": 0.21963878825734334,
+              "preparations": 1,
+              "cells": 2,
+              "origins": 140,
+              "regions": 4
+            }
+          },
+          "actin_modulated": {
+            "reserved-0": {
+              "rmse": 0.2094458525186008,
+              "preparations": 1,
+              "cells": 2,
+              "origins": 152,
+              "regions": 4
+            },
+            "reserved-1": {
+              "rmse": 0.19508225861165315,
+              "preparations": 1,
+              "cells": 2,
+              "origins": 148,
+              "regions": 4
+            },
+            "reserved-2": {
+              "rmse": 0.19316294983570223,
+              "preparations": 1,
+              "cells": 2,
+              "origins": 144,
+              "regions": 4
+            },
+            "reserved-3": {
+              "rmse": 0.2115307084757041,
+              "preparations": 1,
+              "cells": 2,
+              "origins": 140,
+              "regions": 4
+            },
+            "reserved-4": {
+              "rmse": 0.21489738162770913,
+              "preparations": 1,
+              "cells": 2,
+              "origins": 152,
+              "regions": 4
+            },
+            "reserved-5": {
+              "rmse": 0.21670681226697894,
+              "preparations": 1,
+              "cells": 2,
+              "origins": 148,
+              "regions": 4
+            },
+            "reserved-6": {
+              "rmse": 0.19543155737530712,
+              "preparations": 1,
+              "cells": 2,
+              "origins": 144,
+              "regions": 4
+            },
+            "reserved-7": {
+              "rmse": 0.2212089946464732,
+              "preparations": 1,
+              "cells": 2,
+              "origins": 140,
+              "regions": 4
+            }
+          }
+        },
+        "actin_modulated_minus": {
+          "motion_only": {
+            "rmse_difference": 0.0003924814175692293,
+            "paired_mse_difference_by_preparation": {
+              "reserved-0": -0.00020956158373836714,
+              "reserved-1": -0.00011249268228336051,
+              "reserved-2": 0.0004503776484341762,
+              "reserved-3": 0.00025995119700320674,
+              "reserved-4": 0.00018672263604930378,
+              "reserved-5": 0.00025415351957112226,
+              "reserved-6": -0.00021994235788055233,
+              "reserved-7": 0.0006922220053493106
+            },
+            "leave_one_preparation_out_rmse_difference_range": [
+              0.00021196590592273412,
+              0.0005216653595186971
+            ]
+          }
+        },
+        "coverage": {
+          "recorded_regions": 32,
+          "excluded_regions": 0
+        }
+      }
+    },
+    "local_actin_increment": {
+      "true_coupling": 1.1,
+      "rmse_difference_um_per_min": [
+        -0.23936244876845506,
+        -0.20209458295546814,
+        -0.2228943503803228,
+        -0.214238101265048,
+        -0.17006585511048639,
+        -0.21899256357941124,
+        -0.23805684688543108,
+        -0.208345712808037,
+        -0.21964570144315973,
+        -0.22272950148023313,
+        -0.2299687875607767,
+        -0.21906019426033888,
+        -0.21406628934201447,
+        -0.19930742829149672,
+        -0.19355592764057983,
+        -0.2174630334266984,
+        -0.21925233159755764,
+        -0.22630431357209158,
+        -0.2160610819317338,
+        -0.21611522119263182,
+        -0.19046013045606813,
+        -0.18421673571298175,
+        -0.23048159796032006,
+        -0.20205351056180332,
+        -0.23532808101876795,
+        -0.21434659319551846,
+        -0.21314614704134613,
+        -0.21951773490909626,
+        -0.23535328790030635,
+        -0.20832133032360872,
+        -0.20859297502493201,
+        -0.20581966783358335,
+        -0.22560190772453448,
+        -0.20907725588984077,
+        -0.19057912356343815,
+        -0.22047592815541056,
+        -0.21298045455619447,
+        -0.22027987692827292,
+        -0.21508828459926418,
+        -0.242264138246001
+      ],
+      "median_rmse_difference_um_per_min": -0.2160881515621828,
+      "gains_exceeding_practical_threshold": 40,
+      "first_replicate": {
+        "schema": "edge-forecast-v1",
+        "software_version": "1.5.0",
+        "fit_sha256": "92b88094cb0671a89c8d213b58f0b70010b409f7862f18a698ae7533609f200e",
+        "heldout_sha256": "3c8da6b9069a51644510b12a9c70cd9a035c4c69e5cc1c5f293d09cc9166d495",
+        "heldout_preparations": [
+          "reserved-0",
+          "reserved-1",
+          "reserved-2",
+          "reserved-3",
+          "reserved-4",
+          "reserved-5",
+          "reserved-6",
+          "reserved-7"
+        ],
+        "clock": {
+          "sample_s": 5.0,
+          "horizon_s": 5.0,
+          "prefix_frames": 6,
+          "motion_delay_frames": 0,
+          "motion_unit": "um/min",
+          "actin_delay_frames": 0
+        },
+        "counts": {
+          "preparations": 8,
+          "cells": 16,
+          "origins": 1168,
+          "regions": 32
+        },
+        "candidates": {
+          "stationary": {
+            "scaled_mse": 6.229649604006328,
+            "scaled_rmse": 2.4959266022874806,
+            "channel_rmse": {
+              "region-0": 2.361940751139723,
+              "region-1": 2.6230774094788316
+            },
+            "channel_mean_signed_error": {
+              "region-0": -1.6870271222736248,
+              "region-1": -1.818557781688998
+            }
+          },
+          "persistence": {
+            "scaled_mse": 0.35104541629086505,
+            "scaled_rmse": 0.5924908575588868,
+            "channel_rmse": {
+              "region-0": 0.602662317796078,
+              "region-1": 0.5821417037890252
+            },
+            "channel_mean_signed_error": {
+              "region-0": 0.00020557368565544618,
+              "region-1": 0.01602256238027237
+            }
+          },
+          "motion_only": {
+            "scaled_mse": 0.22830038558087942,
+            "scaled_rmse": 0.47780789610562047,
+            "channel_rmse": {
+              "region-0": 0.48515562828078534,
+              "region-1": 0.47034539171680556
+            },
+            "channel_mean_signed_error": {
+              "region-0": 0.05753627759045352,
+              "region-1": 0.049166650046311856
+            }
+          },
+          "actin_modulated": {
+            "scaled_mse": 0.05685623135582092,
+            "scaled_rmse": 0.2384454473371654,
+            "channel_rmse": {
+              "region-0": 0.23196057065873202,
+              "region-1": 0.24475856751361583
+            },
+            "channel_mean_signed_error": {
+              "region-0": 0.021104549919051058,
+              "region-1": 0.038603707567952644
+            }
+          }
+        },
+        "by_preparation": {
+          "stationary": {
+            "reserved-0": {
+              "rmse": 2.3965364583331255,
+              "preparations": 1,
+              "cells": 2,
+              "origins": 152,
+              "regions": 4
+            },
+            "reserved-1": {
+              "rmse": 2.5166536649300673,
+              "preparations": 1,
+              "cells": 2,
+              "origins": 148,
+              "regions": 4
+            },
+            "reserved-2": {
+              "rmse": 2.274959011622342,
+              "preparations": 1,
+              "cells": 2,
+              "origins": 144,
+              "regions": 4
+            },
+            "reserved-3": {
+              "rmse": 2.3896269288120564,
+              "preparations": 1,
+              "cells": 2,
+              "origins": 140,
+              "regions": 4
+            },
+            "reserved-4": {
+              "rmse": 2.414787280688436,
+              "preparations": 1,
+              "cells": 2,
+              "origins": 152,
+              "regions": 4
+            },
+            "reserved-5": {
+              "rmse": 2.4801779403239888,
+              "preparations": 1,
+              "cells": 2,
+              "origins": 148,
+              "regions": 4
+            },
+            "reserved-6": {
+              "rmse": 2.297086536527035,
+              "preparations": 1,
+              "cells": 2,
+              "origins": 144,
+              "regions": 4
+            },
+            "reserved-7": {
+              "rmse": 3.1008743960891403,
+              "preparations": 1,
+              "cells": 2,
+              "origins": 140,
+              "regions": 4
+            }
+          },
+          "persistence": {
+            "reserved-0": {
+              "rmse": 0.6001050898095875,
+              "preparations": 1,
+              "cells": 2,
+              "origins": 152,
+              "regions": 4
+            },
+            "reserved-1": {
+              "rmse": 0.5541637143542415,
+              "preparations": 1,
+              "cells": 2,
+              "origins": 148,
+              "regions": 4
+            },
+            "reserved-2": {
+              "rmse": 0.6162729557697988,
+              "preparations": 1,
+              "cells": 2,
+              "origins": 144,
+              "regions": 4
+            },
+            "reserved-3": {
+              "rmse": 0.6063351737775906,
+              "preparations": 1,
+              "cells": 2,
+              "origins": 140,
+              "regions": 4
+            },
+            "reserved-4": {
+              "rmse": 0.594910520591351,
+              "preparations": 1,
+              "cells": 2,
+              "origins": 152,
+              "regions": 4
+            },
+            "reserved-5": {
+              "rmse": 0.5910923864365306,
+              "preparations": 1,
+              "cells": 2,
+              "origins": 148,
+              "regions": 4
+            },
+            "reserved-6": {
+              "rmse": 0.5637861439433156,
+              "preparations": 1,
+              "cells": 2,
+              "origins": 144,
+              "regions": 4
+            },
+            "reserved-7": {
+              "rmse": 0.6103618085328856,
+              "preparations": 1,
+              "cells": 2,
+              "origins": 140,
+              "regions": 4
+            }
+          },
+          "motion_only": {
+            "reserved-0": {
+              "rmse": 0.4692846420701179,
+              "preparations": 1,
+              "cells": 2,
+              "origins": 152,
+              "regions": 4
+            },
+            "reserved-1": {
+              "rmse": 0.4673043903225382,
+              "preparations": 1,
+              "cells": 2,
+              "origins": 148,
+              "regions": 4
+            },
+            "reserved-2": {
+              "rmse": 0.4872649686063703,
+              "preparations": 1,
+              "cells": 2,
+              "origins": 144,
+              "regions": 4
+            },
+            "reserved-3": {
+              "rmse": 0.5059681205475356,
+              "preparations": 1,
+              "cells": 2,
+              "origins": 140,
+              "regions": 4
+            },
+            "reserved-4": {
+              "rmse": 0.47493998752411365,
+              "preparations": 1,
+              "cells": 2,
+              "origins": 152,
+              "regions": 4
+            },
+            "reserved-5": {
+              "rmse": 0.5000062453469377,
+              "preparations": 1,
+              "cells": 2,
+              "origins": 148,
+              "regions": 4
+            },
+            "reserved-6": {
+              "rmse": 0.44122227633925143,
+              "preparations": 1,
+              "cells": 2,
+              "origins": 144,
+              "regions": 4
+            },
+            "reserved-7": {
+              "rmse": 0.47341249797056145,
+              "preparations": 1,
+              "cells": 2,
+              "origins": 140,
+              "regions": 4
+            }
+          },
+          "actin_modulated": {
+            "reserved-0": {
+              "rmse": 0.23183948109374822,
+              "preparations": 1,
+              "cells": 2,
+              "origins": 152,
+              "regions": 4
+            },
+            "reserved-1": {
+              "rmse": 0.23145143267012197,
+              "preparations": 1,
+              "cells": 2,
+              "origins": 148,
+              "regions": 4
+            },
+            "reserved-2": {
+              "rmse": 0.22955306567042721,
+              "preparations": 1,
+              "cells": 2,
+              "origins": 144,
+              "regions": 4
+            },
+            "reserved-3": {
+              "rmse": 0.25625869189787764,
+              "preparations": 1,
+              "cells": 2,
+              "origins": 140,
+              "regions": 4
+            },
+            "reserved-4": {
+              "rmse": 0.24351656329799629,
+              "preparations": 1,
+              "cells": 2,
+              "origins": 152,
+              "regions": 4
+            },
+            "reserved-5": {
+              "rmse": 0.2502179884301285,
+              "preparations": 1,
+              "cells": 2,
+              "origins": 148,
+              "regions": 4
+            },
+            "reserved-6": {
+              "rmse": 0.2106505621879359,
+              "preparations": 1,
+              "cells": 2,
+              "origins": 144,
+              "regions": 4
+            },
+            "reserved-7": {
+              "rmse": 0.2507676122453092,
+              "preparations": 1,
+              "cells": 2,
+              "origins": 140,
+              "regions": 4
+            }
+          }
+        },
+        "actin_modulated_minus": {
+          "motion_only": {
+            "rmse_difference": -0.23936244876845506,
+            "paired_mse_difference_by_preparation": {
+              "reserved-0": -0.16647853028906023,
+              "reserved-1": -0.1648036275296671,
+              "reserved-2": -0.18473253967227557,
+              "reserved-3": -0.19033522183719415,
+              "reserved-4": -0.1662676751489382,
+              "reserved-5": -0.18739720365192214,
+              "reserved-6": -0.1503034377878973,
+              "reserved-7": -0.1612349978835131
+            },
+            "leave_one_preparation_out_rmse_difference_range": [
+              -0.24179974958494163,
+              -0.23675270404922366
+            ]
+          }
+        },
+        "coverage": {
+          "recorded_regions": 32,
+          "excluded_regions": 0
+        }
+      }
+    }
+  }
+}
