@@ -55,6 +55,20 @@ class EdgeForecastTests(unittest.TestCase):
         del series[4]
         self.assertEqual([r.frame for r in edge_origins(records, plan)], [6])
 
+    def test_trailing_velocity_can_be_undefined_at_first_frame(self):
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory) / "plan.toml"
+            path.write_text(PLAN)
+            plan = Plan(path)
+        series = {i: (i * 1.0, -i * 2.0) for i in range(8)}
+        series[0] = (0.0, None)
+        rows = edge_origins({("a", "one", "left"): series}, plan)
+        self.assertEqual(rows[0].frame, 3)
+        self.assertEqual(rows[0].baseline, -3.0)
+        series[1] = (1.0, None)
+        with self.assertRaisesRegex(ValueError, "no eligible edge forecasts"):
+            edge_origins({("a", "one", "left"): series}, plan)
+
     def test_edge_regions_do_not_inflate_cells_or_preparations(self):
         with tempfile.TemporaryDirectory() as directory:
             path = Path(directory) / "plan.toml"

@@ -167,16 +167,29 @@ def edge_origins(records, plan):
     origins = []
     for (preparation, unit, region), series in sorted(records.items()):
         onset, offset = plan.perturbations[preparation]
-        prefix = [series.get(frame, (None, None)) for frame in range(plan.prefix)]
-        if any(None in values for values in prefix):
+        prefix = []
+        baseline_end = None
+        for frame, values in sorted(series.items()):
+            if frame >= onset:
+                break
+            if None in values:
+                prefix.clear()
+                continue
+            if prefix and frame != prefix[-1] + 1:
+                prefix.clear()
+            prefix.append(frame)
+            if len(prefix) == plan.prefix:
+                baseline_end = frame
+                break
+        if baseline_end is None:
             continue
-        base_actin, base_motion = map(float, np.mean(prefix, axis=0))
+        base_actin, base_motion = map(float, np.mean([series[t] for t in prefix], axis=0))
         for frame in sorted(series):
             lag = frame - plan.motion_delay
             actin_frame = frame - plan.actin_delay
             future = frame + plan.horizon
             first = min(lag - 1, actin_frame)
-            if (frame < onset or first < plan.prefix - 1
+            if (frame < onset or first < baseline_end
                     or any(t not in series for t in range(first, future + 1))):
                 continue
             actin = series[actin_frame][0]
