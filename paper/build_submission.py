@@ -93,7 +93,7 @@ def main():
                 + "\\par\\vspace{4mm}\\end{minipage}}]\n```\n\n"
             )
             latex = front + pdf_source(article_body, wide=True)
-            latex = latex.replace('## References', '```{=latex}\n\\end{multicols}\n\\clearpage\n```\n\n' + '## References\n\n' + '```{=latex}\n\\begin{multicols}{2}\\small\n```\n\n', 1)
+            latex = latex.replace('## References', '```{=latex}\n\\end{multicols}\n```\n\n' + '## References\n\n' + '```{=latex}\n\\begin{multicols}{2}\\small\n```\n\n', 1)
             latex += '\n\n' + '```{=latex}\n\\end{multicols}\n```\n\n'
             latex = latex.replace("## Discussion", '```{=latex}\n\\onecolumn\n\\begin{multicols}{2}\n```\n\n' + "## Discussion", 1)
         else:

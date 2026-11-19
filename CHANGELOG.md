@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.5.1
+
+- Synchronized the title, text, significance statement and reading-copy layout with the final article prepared for Biophysical Journal.
+- Linked the companion manuscript in the software citation and retained v1.1.0 as the reference for the original article analyses.
+
 ## 1.5.0
 
 - Added a preparation-held-out edge forecast for signed velocity after a scheduled perturbation. Both fitted models receive two motion lags and the pulse history. One additionally receives local actin.

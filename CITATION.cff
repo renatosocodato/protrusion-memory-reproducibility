@@ -2,8 +2,8 @@ cff-version: 1.2.0
 message: "Please cite this software version when using Protrusion Memory."
 title: "Protrusion Memory"
 type: software
-version: "1.5.0"
-url: "https://github.com/renatosocodato/protrusion-memory-reproducibility/releases/tag/v1.5.0"
+version: "1.5.1"
+url: "https://github.com/renatosocodato/protrusion-memory-reproducibility/releases/tag/v1.5.1"
 repository-code: "https://github.com/renatosocodato/protrusion-memory-reproducibility"
 authors:
   - family-names: Socodato
@@ -12,3 +12,14 @@ authors:
     given-names: Inês
   - family-names: Relvas
     given-names: João
+references:
+  - type: unpublished
+    title: "Regulator or actin memory and autonomous chaos in mechanochemical models of protrusion motion"
+    authors:
+      - family-names: Socodato
+        given-names: Renato
+      - family-names: Mendes Pinto
+        given-names: Inês
+      - family-names: Relvas
+        given-names: João
+    url: "https://github.com/renatosocodato/protrusion-memory-reproducibility/blob/v1.5.1/paper/MANUSCRIPT_WORKING_DRAFT_EN.md"

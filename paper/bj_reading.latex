@@ -10,7 +10,7 @@ $if(onecolumn)$$else$\usepackage{multicol}$endif$
 \hypersetup{colorlinks,linkcolor=black,urlcolor=blue!55!black}
 \setlength{\columnsep}{5.4mm}
 \setlength{\parindent}{0pt}
-\setlength{\parskip}{4pt}
+$if(onecolumn)$\setlength{\parskip}{4pt}$else$\setlength{\parskip}{3.5pt}$endif$
 \titleformat{\section}{\sffamily\bfseries\fontsize{17}{20}\selectfont}{}{0pt}{}
 \titleformat{\subsection}{\sffamily\bfseries\fontsize{10}{12}\selectfont}{}{0pt}{\MakeUppercase}
 \titleformat{\subsubsection}{\sffamily\bfseries\fontsize{10}{12}\selectfont}{}{0pt}{}
