@@ -1,0 +1,20 @@
+schema = "ode-v1"
+
+# Nominal clock: the published output is one aggregate migration endpoint.
+[time]
+stop_s = 1
+sample_s = 1
+
+[states]
+offset = 0
+
+[parameters]
+shift = 0
+exposed = 0
+
+[equations]
+offset = "0"
+
+[observations.log_speed_ratio]
+expression = "offset + exposed * shift"
+unit = "log_ratio"
