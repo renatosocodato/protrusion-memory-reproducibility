@@ -1,0 +1,34 @@
+{
+  "cases": {
+    "canonical": {
+      "spectrum": [
+        0.9187354077677485
+      ]
+    },
+    "feedback": {
+      "spectrum": [
+        0.903587316347384
+      ]
+    },
+    "initial_b": {
+      "spectrum": [
+        0.9068400144941298
+      ]
+    },
+    "initial_c": {
+      "spectrum": [
+        0.9011379581067739
+      ]
+    },
+    "half_step": {
+      "spectrum": [
+        0.9051463772247677
+      ]
+    },
+    "low_control": {
+      "spectrum": [
+        -0.5096832019030952
+      ]
+    }
+  }
+}

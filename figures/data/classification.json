@@ -1,0 +1,49 @@
+{
+  "classification": {
+    "u": {
+      "x": {
+        "accuracy": 0.52
+      },
+      "FRET": {
+        "accuracy": 0.995
+      },
+      "actin": {
+        "accuracy": 0.4775
+      },
+      "joint": {
+        "accuracy": 0.9975
+      }
+    },
+    "v": {
+      "x": {
+        "accuracy": 0.9725
+      },
+      "FRET": {
+        "accuracy": 0.5075
+      },
+      "actin": {
+        "accuracy": 1.0
+      },
+      "joint": {
+        "accuracy": 1.0
+      }
+    },
+    "both": {
+      "x": {
+        "accuracy": 0.995
+      },
+      "FRET": {
+        "accuracy": 0.9925
+      },
+      "actin": {
+        "accuracy": 1.0
+      },
+      "joint": {
+        "accuracy": 1.0
+      }
+    }
+  },
+  "adversarial_twin": {
+    "latent_gate_max_difference": 0.12590721500489369
+  }
+}

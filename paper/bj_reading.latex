@@ -1,0 +1,48 @@
+\documentclass[10pt,$if(onecolumn)$onecolumn$else$twocolumn$endif$]{article}
+\usepackage[letterpaper,top=18mm,bottom=17mm,left=17mm,right=17mm]{geometry}
+\usepackage{fontspec,unicode-math}
+\IfFontExistsTF{Times New Roman}{\setmainfont{Times New Roman}}{\setmainfont{Liberation Serif}}
+\IfFontExistsTF{Helvetica}{\setsansfont{Helvetica}}{\setsansfont{Liberation Sans}}
+\IfFontExistsTF{STIX Two Math}{\setmathfont{STIX Two Math}}{\setmathfont{Latin Modern Math}}
+\usepackage{graphicx,booktabs,longtable,array,amsmath}
+\usepackage{xcolor,hyperref,titlesec}
+$if(onecolumn)$$else$\usepackage{multicol}$endif$
+\hypersetup{colorlinks,linkcolor=black,urlcolor=blue!55!black}
+\setlength{\columnsep}{5.4mm}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{4pt}
+\titleformat{\section}{\sffamily\bfseries\fontsize{17}{20}\selectfont}{}{0pt}{}
+\titleformat{\subsection}{\sffamily\bfseries\fontsize{10}{12}\selectfont}{}{0pt}{\MakeUppercase}
+\titleformat{\subsubsection}{\sffamily\bfseries\fontsize{10}{12}\selectfont}{}{0pt}{}
+\titlespacing*{\section}{0pt}{10pt}{6pt}
+\titlespacing*{\subsection}{0pt}{9pt}{4.5pt}
+\titlespacing*{\subsubsection}{0pt}{7pt}{3.5pt}
+\setcounter{secnumdepth}{-1}
+\usepackage{caption}
+\captionsetup{font=small,labelfont={bf,sf}}
+\setlength{\floatsep}{10pt plus 2pt minus 2pt}
+\setlength{\textfloatsep}{12pt plus 3pt minus 2pt}
+\setlength{\dbltextfloatsep}{12pt plus 3pt minus 2pt}
+\renewcommand{\topfraction}{.90}
+\renewcommand{\textfraction}{.09}
+\renewcommand{\floatpagefraction}{.68}
+\renewcommand{\dbltopfraction}{.90}
+\renewcommand{\dblfloatpagefraction}{.66}
+\makeatletter
+\setlength{\@fptop}{0pt}
+\setlength{\@dblfptop}{0pt}
+\def\ps@paper{%
+ \def\@oddhead{\sffamily\color{black!62}\fontsize{8}{9}\selectfont
+  $if(onecolumn)$Supporting information$else$Conformational and actin memory$endif$\hfil}%
+ \let\@evenhead\@oddhead
+ \def\@oddfoot{\hfil\sffamily\fontsize{8.5}{10}\selectfont\thepage\hfil}%
+ \let\@evenfoot\@oddfoot}
+\makeatother
+\pagestyle{paper}
+\setlength{\emergencystretch}{2em}
+\providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\providecommand{\pandocbounded}[1]{#1}
+\begin{document}
+\thispagestyle{plain}
+$body$
+\end{document}

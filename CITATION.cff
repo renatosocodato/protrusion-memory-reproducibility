@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "Please cite the companion manuscript when using this repository."
+title: "Distinguishing conformational memory from actin memory in protrusion dynamics"
+type: software
+authors:
+  - family-names: Socodato
+    given-names: Renato
+  - family-names: Mendes Pinto
+    given-names: Inês
+  - family-names: Relvas
+    given-names: João

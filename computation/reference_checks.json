@@ -1,0 +1,407 @@
+{
+  "main": [
+    {
+      "file": "joint_fret_actin_mechanics/results_v1/results.json",
+      "values": {
+        "heldout_parents": 200,
+        "classification/u/x/correct": [
+          103,
+          105
+        ],
+        "classification/u/FRET/correct": [
+          199,
+          199
+        ],
+        "classification/u/actin/correct": [
+          100,
+          91
+        ],
+        "classification/u/joint/correct": [
+          199,
+          200
+        ],
+        "classification/v/x/correct": [
+          197,
+          192
+        ],
+        "classification/v/FRET/correct": [
+          104,
+          99
+        ],
+        "classification/v/actin/correct": [
+          200,
+          200
+        ],
+        "classification/v/joint/correct": [
+          200,
+          200
+        ],
+        "classification/both/x/correct": [
+          199,
+          199
+        ],
+        "classification/both/FRET/correct": [
+          199,
+          198
+        ],
+        "classification/both/actin/correct": [
+          200,
+          200
+        ],
+        "classification/both/joint/correct": [
+          200,
+          200
+        ],
+        "primary_gain_bootstrap95": [
+          0.0,
+          0.012499999999999956
+        ],
+        "sham_detection/false_positive_count": 15,
+        "sham_detection/both_detected_by_family": [
+          199,
+          159
+        ],
+        "equal_time_null/called_fast_by_repeat": [
+          129,
+          135
+        ],
+        "adversarial_twin/FRET_preoptical": 2.220446049250313e-16,
+        "adversarial_twin/actin": 1.6653345369377348e-16,
+        "adversarial_twin/deformation": 8.326672684688674e-17,
+        "adversarial_twin/latent_gate_max_difference": 0.12590721500489369
+      },
+      "absolute_tolerance": 1e-12
+    },
+    {
+      "file": "joint_fret_actin_mechanics/results_v1/symbolic_twin.json",
+      "values": {
+        "qprime_residual": "0",
+        "actin_residual": "0"
+      }
+    },
+    {
+      "file": "joint_fret_actin_mechanics/independent_gate_readout.json",
+      "values": {
+        "equal_mean_null_declared": 0.053,
+        "equal_mean_null_theory": 0.05,
+        "rows/12/correct": 0.9993613271974936,
+        "rows/13/correct": 0.6757338704621452,
+        "rows/15/correct": 0.7851569899162975,
+        "rows/16/correct": 0.17648883171666618
+      }
+    },
+    {
+      "file": "frontier_conformation_chaos/results_v1/results.json",
+      "values": {
+        "conditions/same/joint/correct": [
+          200,
+          200
+        ],
+        "conditions/same/x/correct": [
+          200,
+          199
+        ],
+        "conditions/reverse/joint/correct": [
+          200,
+          0
+        ],
+        "conditions/reverse/x/correct": [
+          200,
+          0
+        ],
+        "conditions/wide/joint/correct": [
+          200,
+          200
+        ],
+        "conditions/wide/x/correct": [
+          164,
+          155
+        ],
+        "conditions/reverse_wide/joint/correct": [
+          200,
+          0
+        ],
+        "conditions/reverse_wide/x/correct": [
+          200,
+          0
+        ],
+        "relative_to_same_schedule/reverse/joint/parent_bootstrap95_percentage_points": [
+          -50.0,
+          -50.0
+        ],
+        "optical_reference_calibration/fitted_matrix": [
+          [
+            0.9979567802548059,
+            0.15097615673957437
+          ],
+          [
+            0.2499733591253074,
+            0.9960666404996302
+          ]
+        ],
+        "optical_reference_calibration/median_absolute_relative_ratio_error_naive": 0.2110273703461784,
+        "optical_reference_calibration/median_absolute_relative_ratio_error_corrected": 0.039474603160761956,
+        "conditional_stability/largest_conditional_exponent": -0.04
+      }
+    },
+    {
+      "file": "frontier_conformation_chaos/feedback_boundary_results.json",
+      "values": {
+        "linear_instability_threshold_K": 8.0,
+        "cases/0/largest_real_part": -0.23369056760644719,
+        "cases/1/largest_real_part": 0.07721734501594181
+      }
+    },
+    {
+      "file": "autonomous_ensemble_chaos/results_v1/results.json",
+      "values": {
+        "all_checks_pass": true,
+        "cases/low_control/spectrum/0": -0.5096832019030952
+      },
+      "absolute_tolerance": 0.002
+    },
+    {
+      "file": "autonomous_ensemble_chaos/results_v1/results.json",
+      "values": {
+        "cases/canonical/spectrum/0": 0.9187354077677485,
+        "cases/feedback/spectrum/0": 0.903587316347384,
+        "cases/initial_b/spectrum/0": 0.9068400144941298,
+        "cases/initial_c/spectrum/0": 0.9011379581067739,
+        "cases/half_step/spectrum/0": 0.9051463772247677
+      },
+      "absolute_tolerance": 0.05
+    },
+    {
+      "file": "autonomous_ensemble_chaos/dop853_check.json",
+      "values": {
+        "check_pass": true,
+        "spectrum/0": 0.9076108725186022
+      },
+      "absolute_tolerance": 0.05
+    },
+    {
+      "file": "wasl_omics_gate/results.json",
+      "values": {
+        "rna_ratio_scenario": 1.46,
+        "fixed_scenarios/6/delta_F": -0.05876557096443491,
+        "fixed_scenarios/7/delta_F": 0.06279220137907338,
+        "prior_predictive/1/delta_F_quantiles_025_50_975": [
+          -0.3199296319776564,
+          0.019182540954355565,
+          0.36774491753110866
+        ],
+        "prior_predictive/1/fraction_delta_F_positive": 0.5446,
+        "prior_predictive/3/delta_F_quantiles_025_50_975": [
+          -0.5655573845916964,
+          0.017394759054087938,
+          0.530899159863607
+        ],
+        "prior_predictive/3/fraction_delta_F_positive": 0.5192,
+        "stationary_nonidentifiability_example/0/z": 0.25,
+        "stationary_nonidentifiability_example/1/z": 0.25,
+        "stationary_nonidentifiability_example/0/F": 0.3722813232690143,
+        "stationary_nonidentifiability_example/1/F": 0.3722813232690143
+      }
+    }
+  ],
+  "supplement": [
+    {
+      "file": "mechanochemical_disorder/synthetic_v1/results.json",
+      "values": {
+        "equilibrium/largest_real": -0.638217602584533,
+        "cases/periodic/force_sensor_kendall_tau": -0.8593333515428417,
+        "cases/stochastic/force_sensor_kendall_tau": -0.8253465346534655
+      }
+    },
+    {
+      "file": "wasl_omics_gate/dynamic_results.json",
+      "values": {
+        "cases/periodic/0/delta_load_mean_from_m_1": -0.05869426804065875,
+        "cases/periodic/2/delta_load_mean_from_m_1": 0.06294270096495058,
+        "cases/stochastic/0/delta_load_mean_from_m_1": -0.057838781769715186,
+        "cases/stochastic/2/delta_load_mean_from_m_1": 0.06130501580635328
+      }
+    },
+    {
+      "file": "wasl_omics_gate/measurement_results.json",
+      "values": {
+        "source_human_atlas_ntpm": 34.7,
+        "cases/0/quantiles_025_50_975/simulated_relative_protein_readout": [
+          0.05430086024938939,
+          0.9843339545072043,
+          17.669557664799523
+        ],
+        "cases/1/quantiles_025_50_975/simulated_relative_protein_readout": [
+          0.019758804723419884,
+          1.0030106490577344,
+          45.55521274306038
+        ]
+      }
+    },
+    {
+      "file": "autonomous_ensemble_chaos/formalism_note/symbolic_checks.json",
+      "values": {
+        "identity_checks_all_zero": true
+      }
+    },
+    {
+      "file": "autonomous_ensemble_chaos/formalism_note/symmetry_checks.json",
+      "values": {
+        "all_exact_zero": true
+      }
+    },
+    {
+      "file": "molecular_organization_protrusion/results_v1/results.json",
+      "values": {
+        "regimes/0.3/position/overall_accuracy": 0.6511111111111111,
+        "regimes/0.3/position_plus_organization/overall_accuracy": 0.9977777777777778,
+        "regimes/1.0/position/overall_accuracy": 0.79,
+        "regimes/1.0/position_plus_organization/overall_accuracy": 0.9977777777777778
+      }
+    },
+    {
+      "file": "molecular_organization_protrusion/results_v1/paired_uncertainty.json",
+      "values": {
+        "0.3/accuracy_gain_organization_minus_position/cluster_bootstrap_95": [
+          0.3177777777777778,
+          0.37555555555555553
+        ],
+        "1.0/accuracy_gain_organization_minus_position/cluster_bootstrap_95": [
+          0.1877777777777777,
+          0.22777777777777786
+        ]
+      }
+    },
+    {
+      "file": "molecular_organization_protrusion/results_v1/exploratory_matched_recruitment_v2.json",
+      "values": {
+        "0.3/max_abs_at_minute_r_b_x": 3.4296400610256406e-05,
+        "1.0/max_abs_at_minute_r_b_x": 3.429717051905978e-05
+      },
+      "absolute_tolerance": 1e-07
+    },
+    {
+      "file": "spatial_molecular_protrusion/results_v1/results.json",
+      "values": {
+        "regimes/0.3/D/called_demixing": 200,
+        "regimes/0.3/R/called_demixing": 0,
+        "regimes/0.3/A/called_demixing": 200,
+        "regimes/1.0/D/called_demixing": 200,
+        "regimes/1.0/R/called_demixing": 0,
+        "regimes/1.0/A/called_demixing": 200,
+        "reference_checks/passed": true
+      }
+    },
+    {
+      "file": "spatial_molecular_protrusion/results_v1/second_challenge.json",
+      "values": {
+        "0.3/D/spectral_plus_force/predicted_demixing": 193,
+        "0.3/R/spectral_plus_force/predicted_demixing": 0,
+        "0.3/A/spectral_plus_force/predicted_demixing": 0,
+        "1.0/D/spectral_plus_force/predicted_demixing": 200,
+        "1.0/R/spectral_plus_force/predicted_demixing": 0,
+        "1.0/A/spectral_plus_force/predicted_demixing": 0
+      }
+    },
+    {
+      "file": "spatial_molecular_protrusion/results_v1/third_challenge.json",
+      "values": {
+        "0.3/spectral_plus_force/false_positive": 191,
+        "1.0/spectral_plus_force/false_positive": 200
+      }
+    },
+    {
+      "file": "spatial_molecular_protrusion/results_v1/fourth_challenge.json",
+      "values": {
+        "0.3/D/called_demixing": 199,
+        "0.3/H/called_demixing": 0,
+        "1.0/D/called_demixing": 200,
+        "1.0/H/called_demixing": 0
+      }
+    },
+    {
+      "file": "spatial_molecular_protrusion/results_v1/nonlinear_formula_independent_check.json",
+      "values": {
+        "observed/D/Q": 2.9236333955459526,
+        "observed/H/Q": 0.3333333333334214
+      }
+    },
+    {
+      "file": "conformational_ensemble/results_v1/results.json",
+      "values": {
+        "m/0.3/position_only/accuracy": 0.835,
+        "m/0.3/position_plus_gate/accuracy": 0.9975,
+        "m/0.3/paired_gain_bootstrap95": [
+          0.13,
+          0.19500000000000006
+        ]
+      }
+    },
+    {
+      "file": "conformational_ensemble/results_v2_fresh/results.json",
+      "values": {
+        "position_only/accuracy": 0.9925,
+        "position_plus_gate/accuracy": 1.0,
+        "paired_gain_bootstrap95": [
+          0.0,
+          0.01749999999999996
+        ]
+      }
+    },
+    {
+      "file": "conformational_ensemble/results_v1/filter_twin.json",
+      "values": {
+        "max_deformation_abs_difference": 3.885780586188048e-16,
+        "gate_abs_difference_t35": 0.12558694459406483
+      },
+      "absolute_tolerance": 1e-12
+    }
+  ],
+  "amiri": [
+    {
+      "file": "mechanochemical_disorder/amiri_summary.json",
+      "values": {
+        "source_sha256": "dcf21574fbcd5318d1581b3e1c80bd77893c9214dd871a71f174bda49f23b907",
+        "n_independent_cells_per_curve": 1,
+        "conditions/sensor_calyculin/first_last_change/traction_pa": 72.1015038034999,
+        "conditions/sensor_calyculin/first_last_change/fret_efficiency": -0.03083690392423699,
+        "conditions/sensor_calyculin/within_cell_kendall_tau": -0.7052631578947369,
+        "conditions/sensor_blebbistatin/first_last_change/traction_pa": -14.2201630711418,
+        "conditions/sensor_blebbistatin/first_last_change/fret_efficiency": 0.004817519693476047,
+        "conditions/sensor_blebbistatin/within_cell_kendall_tau": -0.5147058823529411,
+        "conditions/control_calyculin/first_last_change/traction_pa": 38.545635010000005,
+        "conditions/control_calyculin/first_last_change/fret_efficiency": 0.063458404,
+        "conditions/control_calyculin/within_cell_kendall_tau": 0.281045751633987,
+        "conditions/sensor_blebbistatin/gaps_minutes": [
+          5.0,
+          5.0,
+          5.0,
+          5.0,
+          5.0,
+          5.0,
+          5.0,
+          5.0,
+          30.0,
+          5.0,
+          5.0,
+          5.0,
+          5.0,
+          5.0,
+          5.0,
+          5.0
+        ]
+      }
+    },
+    {
+      "file": "wasl_paired_reconciliation/calibration_reference_screen.json",
+      "values": {
+        "conditions/CTS/n_values": 53,
+        "conditions/CTS/median": 0.222176,
+        "conditions/Lysed TS/n_values": 9,
+        "conditions/Lysed TS/median": 0.2166,
+        "conditions/Lysed CTS/n_values": 6,
+        "conditions/Lysed CTS/median": 0.1962565
+      }
+    }
+  ]
+}

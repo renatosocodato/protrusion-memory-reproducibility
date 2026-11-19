@@ -1,0 +1,28 @@
+{
+  "0.3": {
+    "position_only": {
+      "accuracy": 0.835
+    },
+    "position_plus_gate": {
+      "accuracy": 0.9975
+    },
+    "paired_gain": 0.1625000000000001,
+    "paired_gain_bootstrap95": [
+      0.13,
+      0.19500000000000006
+    ]
+  },
+  "1.0": {
+    "position_only": {
+      "accuracy": 0.9925
+    },
+    "position_plus_gate": {
+      "accuracy": 1.0
+    },
+    "paired_gain": 0.007499999999999951,
+    "paired_gain_bootstrap95": [
+      0.0,
+      0.01749999999999996
+    ]
+  }
+}
