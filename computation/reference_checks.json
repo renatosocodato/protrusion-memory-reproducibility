@@ -182,21 +182,6 @@
     {
       "file": "wasl_omics_gate/results.json",
       "values": {
-        "rna_ratio_scenario": 1.46,
-        "fixed_scenarios/6/delta_F": -0.05876557096443491,
-        "fixed_scenarios/7/delta_F": 0.06279220137907338,
-        "prior_predictive/1/delta_F_quantiles_025_50_975": [
-          -0.3199296319776564,
-          0.019182540954355565,
-          0.36774491753110866
-        ],
-        "prior_predictive/1/fraction_delta_F_positive": 0.5446,
-        "prior_predictive/3/delta_F_quantiles_025_50_975": [
-          -0.5655573845916964,
-          0.017394759054087938,
-          0.530899159863607
-        ],
-        "prior_predictive/3/fraction_delta_F_positive": 0.5192,
         "stationary_nonidentifiability_example/0/z": 0.25,
         "stationary_nonidentifiability_example/1/z": 0.25,
         "stationary_nonidentifiability_example/0/F": 0.3722813232690143,
@@ -211,31 +196,6 @@
         "equilibrium/largest_real": -0.638217602584533,
         "cases/periodic/force_sensor_kendall_tau": -0.8593333515428417,
         "cases/stochastic/force_sensor_kendall_tau": -0.8253465346534655
-      }
-    },
-    {
-      "file": "wasl_omics_gate/dynamic_results.json",
-      "values": {
-        "cases/periodic/0/delta_load_mean_from_m_1": -0.05869426804065875,
-        "cases/periodic/2/delta_load_mean_from_m_1": 0.06294270096495058,
-        "cases/stochastic/0/delta_load_mean_from_m_1": -0.057838781769715186,
-        "cases/stochastic/2/delta_load_mean_from_m_1": 0.06130501580635328
-      }
-    },
-    {
-      "file": "wasl_omics_gate/measurement_results.json",
-      "values": {
-        "source_human_atlas_ntpm": 34.7,
-        "cases/0/quantiles_025_50_975/simulated_relative_protein_readout": [
-          0.05430086024938939,
-          0.9843339545072043,
-          17.669557664799523
-        ],
-        "cases/1/quantiles_025_50_975/simulated_relative_protein_readout": [
-          0.019758804723419884,
-          1.0030106490577344,
-          45.55521274306038
-        ]
       }
     },
     {
@@ -401,6 +361,53 @@
         "conditions/Lysed TS/median": 0.2166,
         "conditions/Lysed CTS/n_values": 6,
         "conditions/Lysed CTS/median": 0.1962565
+      }
+    }
+  ],
+  "exploratory": [
+    {
+      "file": "wasl_omics_gate/results.json",
+      "values": {
+        "rna_ratio_scenario": 1.46,
+        "fixed_scenarios/6/delta_F": -0.05876557096443491,
+        "fixed_scenarios/7/delta_F": 0.06279220137907338,
+        "prior_predictive/1/delta_F_quantiles_025_50_975": [
+          -0.3199296319776564,
+          0.019182540954355565,
+          0.36774491753110866
+        ],
+        "prior_predictive/1/fraction_delta_F_positive": 0.5446,
+        "prior_predictive/3/delta_F_quantiles_025_50_975": [
+          -0.5655573845916964,
+          0.017394759054087938,
+          0.530899159863607
+        ],
+        "prior_predictive/3/fraction_delta_F_positive": 0.5192
+      }
+    },
+    {
+      "file": "wasl_omics_gate/dynamic_results.json",
+      "values": {
+        "cases/periodic/0/delta_load_mean_from_m_1": -0.05869426804065875,
+        "cases/periodic/2/delta_load_mean_from_m_1": 0.06294270096495058,
+        "cases/stochastic/0/delta_load_mean_from_m_1": -0.057838781769715186,
+        "cases/stochastic/2/delta_load_mean_from_m_1": 0.06130501580635328
+      }
+    },
+    {
+      "file": "wasl_omics_gate/measurement_results.json",
+      "values": {
+        "source_human_atlas_ntpm": 34.7,
+        "cases/0/quantiles_025_50_975/simulated_relative_protein_readout": [
+          0.05430086024938939,
+          0.9843339545072043,
+          17.669557664799523
+        ],
+        "cases/1/quantiles_025_50_975/simulated_relative_protein_readout": [
+          0.019758804723419884,
+          1.0030106490577344,
+          45.55521274306038
+        ]
       }
     }
   ]

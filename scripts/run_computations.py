@@ -29,7 +29,6 @@ MAIN = {
 
 SUPPLEMENT = {
     "mechanochemical_disorder": ("run_mechanochemical",),
-    "wasl_omics_gate": ("run_wasl_dynamics", "simulate_wasl_measurement"),
     "autonomous_ensemble_chaos": (
         "plot_autonomous",
         "formalism_note/check_identities",
@@ -56,6 +55,8 @@ SUPPLEMENT = {
         "render_validated_comparison",
     ),
 }
+
+EXPLORATORY = {"wasl_omics_gate": ("run_wasl_dynamics", "simulate_wasl_measurement")}
 
 AMIRI = {
     "mechanochemical_disorder": ("inspect_amiri", "plot_comparison"),
@@ -153,6 +154,8 @@ def main() -> None:
     public = parser.add_mutually_exclusive_group()
     public.add_argument("--amiri-workbook", type=Path, help="existing, unmodified public Source Data XLSX")
     public.add_argument("--skip-public", action="store_true", help="run synthetic and analytic calculations offline")
+    parser.add_argument("--include-exploratory", action="store_true",
+                        help="also run abundance scenarios retained outside the article")
     args = parser.parse_args()
     if args.scope == "main" and args.amiri_workbook:
         parser.error("--amiri-workbook requires --scope supplement or all")
@@ -169,6 +172,7 @@ def main() -> None:
         "PYTHONDONTWRITEBYTECODE": "1",
         "MPLCONFIGDIR": str(output / ".matplotlib"),
         "PROTRUSION_REPRO_OUTPUT": str(output),
+        "PROTRUSION_REPRO_EXPLORATORY": "1" if args.include_exploratory else "0",
     }
     suites = [MAIN]
     groups = ["main"]
@@ -185,6 +189,10 @@ def main() -> None:
                 ) from error
             suites.append(AMIRI)
             groups.append("amiri")
+
+    if args.include_exploratory:
+        suites.append(EXPLORATORY)
+        groups.append("exploratory")
 
     elapsed = run_steps(suites, output, env)
     counts = verify_results(output, groups)

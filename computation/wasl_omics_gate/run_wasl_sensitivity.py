@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Prespecified prior-predictive illustration, not cellular data fitting."""
 import json
+import os
 from pathlib import Path
 from reproduction_io import output_directory
 
@@ -32,7 +33,25 @@ def state(m):
     return q, a, f
 
 
+def stationary_pairs():
+    # Equal accessible pool z at different gate states and partition factors.
+    z = 0.25
+    equilibrium_a = brentq(lambda a: z/(1+z)*(1-a)*(1+.5*a)-.4*a, 0, 1)
+    twins = []
+    for p, q in ((.5, .5), (1., .25)):
+        bias = np.log(q/(1-q)) + .4*equilibrium_a
+        twins.append({'P': 1., 'p': p, 'q': q, 'b': float(bias), 'z': p*q,
+                      'a': equilibrium_a, 'F': equilibrium_a, 's': .26-.08*equilibrium_a})
+    return twins
+
+
 def main():
+    twins = stationary_pairs()
+    if os.environ.get("PROTRUSION_REPRO_EXPLORATORY") != "1":
+        output = {"stationary_nonidentifiability_example": twins}
+        (HERE / "results.json").write_text(json.dumps(output, indent=2) + "\n")
+        return
+
     baseline_q, baseline_a, baseline_resid = [float(x) for x in state(1.0)]
     scenarios = []
     for beta in (0.0, 0.5, 1.0):
@@ -70,14 +89,6 @@ def main():
             return z/(1+z)*(1-y)*(1+.5*y)-.4*y
         checks.append(abs(float(a)-brentq(residual, 0, 1, xtol=1e-14)))
     assert max_residual < 1e-12 and max(checks) < 1e-12
-    # Equal accessible pool z at different gate states and partition factors.
-    z = 0.25
-    equilibrium_a = brentq(lambda a: z/(1+z)*(1-a)*(1+.5*a)-.4*a, 0, 1)
-    twins = []
-    for p, q in ((.5, .5), (1., .25)):
-        bias = np.log(q/(1-q)) + .4*equilibrium_a
-        twins.append({'P': 1., 'p': p, 'q': q, 'b': float(bias), 'z': p*q,
-                      'a': equilibrium_a, 'F': equilibrium_a, 's': .26-.08*equilibrium_a})
     output = {'description': 'Assumption-sensitive prior predictive, not a posterior or biological prediction',
               'seed': SEED, 'draws_per_combination': N, 'rna_ratio_scenario': RATIO,
               'parameters': {'kp': 1., 'kd': .4, 'rho': .5, 'alpha': .4, 'b': .2, 'Fp': 1., 'k': 1.},

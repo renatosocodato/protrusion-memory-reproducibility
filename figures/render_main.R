@@ -288,7 +288,7 @@ exponent_plot <- ggplot(exponents,aes(exponent,setting,fill=setting)) +
   geom_text(aes(label=sprintf("%.4f",exponent)),nudge_y=.18,family=figure_font,size=3.0,colour=ink) +
   scale_fill_manual(values=c("r = 10"=green_pale,"r = 28"=lilac_fill),guide="none") +
   coord_cartesian(xlim=c(-.8,1.18),ylim=c(.72,2.46)) +
-  labs(x="Largest exponent / model time",y=NULL,title="Fixed point and chaotic benchmark") +
+  labs(x="Largest exponent / model time",y=NULL,title="Largest full-state Lyapunov estimates") +
   th()
 p12 <- aligned_row(list(phase_plot, exponent_plot))
 

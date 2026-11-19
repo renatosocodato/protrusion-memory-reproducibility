@@ -33,3 +33,5 @@ See [Results and source map](RESULTS_MAP.md) for the computations behind the fig
 The conditional kinetic comparisons use fixed seeds and independent streams for test draws. Chaotic trajectories are sensitive to floating-point differences. The checks compare the early trace and late variability, the bounded state range and Lyapunov estimates. Long chaotic trajectories can separate pointwise on another machine. For a comparison with the exact artwork displayed in the manuscript, use the supplied figure inputs. The fonts and PDF metadata can also differ between systems. Reproduction was exercised on macOS. Linux-compatible fonts and tools are specified for a portable build.
 
 The private proteomic dataset is cited as background. No restricted measurements or access credentials are needed for any computation or figure.
+
+Use `--include-exploratory` on the computation runner to replay abundance scenarios retained outside the article. The default run checks the stationary comparison used in Figure 3b.
